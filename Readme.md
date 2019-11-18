@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Виталий Нестеренко](https://up.htmlacademy.ru/adaptive/18/user/18001).
-* Наставник: `Неизвестно`.
+- Студент: [Виталий Нестеренко](https://up.htmlacademy.ru/adaptive/18/user/18001).
+- Наставник: `Александр Оксанич`.
 
 ---
 
