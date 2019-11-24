@@ -4,54 +4,61 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="logo" class="page-header__logo-image" alt="Pink">
-    </a>
+
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__header">
+        <a class="page-header__logo">
+          <img src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image" alt="Pink logo">
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <img src="img/icon-menu-burger.svg" />
+        </button>
+      </div>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+        <ul class="main-nav__list main-nav__list--closed">
+          <li class="main-nav__item">
             <a>Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="photos.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="contest.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </div>
-      <img src="https://via.placeholder.com/320x462" alt="background">
+      <div class="header">
+        <div class="header__wrapper">
+          Фотографии
+          <br> пользователей
+        </div>
+      </div>
     </nav>
+
+
   </header>
   <main class="page-main">
-    <div class="header-wrapper">
-      <div class="header">
-        Фотографии
-        <br>пользователей
-      </div>
-    </div>
-    <div class="call-wrapper">
-      <div class="call">
+    <div class="call">
+      <div class="call__wrapper">
         Взгляните на фотографии, которые
         <br> выкладывают пользователи!
         <br> Видите, как не хватает ваших?
       </div>
     </div>
-    <div class="panorama-wrapper">
-      <img src="https://via.placeholder.com/320x137" alt="panorama" class="panorama">
-      <div class="panorama-text">Панорама дня</div>
+    <div class="panorama">
+      <img src="img/panorama-mobile@1x.jpg" alt="panorama" class="panorama__image">
+      <div class="panorama__text">Панорама дня</div>
     </div>
-    <div class="comment">
+    <div class="comment comment--short">
       <span class="comment__author">Анна</span>
       <span class="comment__time">(5 минут назад)</span>
       <div class="comment__text">
@@ -65,9 +72,9 @@
         <div class="comment__likes-text">Нравится: 215</div>
       </div>
     </div>
-    <div class="photos-wrapper">
-      <div class="photo">
-        <img src="https://via.placeholder.com/280x180" alt="photo">
+    <div class="photos">
+      <div class="photos__item">
+        <img src="img/photo-car-mobile@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Левон</span>
           <span class="comment__time">(5 часов назад)</span>
@@ -81,8 +88,8 @@
           </div>
         </div>
       </div>
-      <div class="photo">
-        <img src="https://via.placeholder.com/280x180" alt="photo">
+      <div class="photos__item">
+        <img src="img/photo-drumset-mobile@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Антон</span>
           <span class="comment__time">(12 часов назад)</span>
@@ -95,8 +102,8 @@
           </div>
         </div>
       </div>
-      <div class="photo">
-        <img src="https://via.placeholder.com/280x180" alt="photo">
+      <div class="photos__item">
+        <img src="img/photo-window-mobile@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Борис</span>
           <span class="comment__time">(20 часов назад)</span>
@@ -110,8 +117,8 @@
           </div>
         </div>
       </div>
-      <div class="photo">
-        <img src="https://via.placeholder.com/280x180" alt="photo">
+      <div class="photos__item">
+        <img src="img/photo-fair-mobile@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Сергей</span>
           <span class="comment__time">(25 часов назад)</span>
@@ -124,8 +131,8 @@
           </div>
         </div>
       </div>
-      <div class="photo">
-        <img src="photo" alt="photo">
+      <div class="photos__item">
+        <img src="img/photo-pov-mobile@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Максим</span>
           <span class="comment__time">(40 часов назад)</span>
@@ -138,8 +145,8 @@
           </div>
         </div>
       </div>
-      <div class="photo">
-        <img src="https://via.placeholder.com/280x180" alt="photo">
+      <div class="photos__item">
+        <img src="img/photo-wing-mobile@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Надежда</span>
           <span class="comment__time">(45 часов назад)</span>
