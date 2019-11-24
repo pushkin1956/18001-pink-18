@@ -4,7 +4,8 @@
   position: relative;
   padding-top: 50px;
   text-align: center;
-  &:before {
+
+  &::before {
     content: "";
     width: 320px;
     position: absolute;
@@ -18,11 +19,10 @@
 
 .advantages__item {
   margin-bottom: 40px;
-
-
 }
+
 .advantages__title {
-  font-family: "OpenSansBold", Helvetica, sans-serif;
+  font-family: "OpenSansBold", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: @black-two;
