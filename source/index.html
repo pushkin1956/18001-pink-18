@@ -4,49 +4,59 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="logo" class="page-header__logo-image" alt="Pink logo">
-    </a>
+
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__header">
+        <a class="page-header__logo">
+          <img src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image" alt="Pink logo">
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <img src="img/icon-menu-burger.svg" />
+        </button>
+      </div>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+        <ul class="main-nav__list main-nav__list--open">
+          <li class="main-nav__item">
             <a>Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="photos.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="contest.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="https://htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </div>
+      <div class="header">
+        <div class="header__wrapper">
+          Взгляните на жизнь
+          <br> иначе!
+        </div>
+        <img class="page-header__image" src="img/iphone-hand-mobile@1x.png" alt="background">
+      </div>
     </nav>
-    <img src="https://via.placeholder.com/320x462" alt="background">
+
+
   </header>
   <main class="page-main">
-    <div class="header-wrapper">
-      <div class="header">
-        Взгляните на жизнь иначе!
-      </div>
-    </div>
+
     <div class="apps">
-      <button class="download-button">
+      <button class="apps__download-button">
         Скачать приложение
       </button>
       <div class="apps__items">
-        <div class="apps-item apps-item__ios"></div>
-        <div class="apps-item apps-item__android"></div>
-        <div class="apps-item apps-item__win"></div>
+        <img class="apps__item apps__item--ios" src="img/logo-apple.svg" />
+        <img class="apps__item apps__item--android" src="img/logo-android.svg" />
+        <img class="apps__item apps__item--win" src="img/logo-microsoft.svg" />
       </div>
       <div class="apps__info">
         Доступно для IPhone, IPad, Android
@@ -54,9 +64,9 @@
       </div>
     </div>
     <div class="offer">
-      <div class="offer-question">Устали от серости
+      <div class="offer__question">Устали от серости
         <br>мегаполиса?</div>
-      <div class="offer-answer">Нам есть, что вам
+      <div class="offer__answer">Нам есть, что вам
         <br>предложить</div>
     </div>
     <div class="advantages slider">
@@ -91,7 +101,7 @@
         </div>
       </div>
       <div class="advantages__image">
-        <img src="https://via.placeholder.com/157x320" alt="Advantages image">
+        <img src="img/iphone-screen-mobile@1x.png" alt="Advantages image">
       </div>
     </div>
     <div class="reviews slider">
