@@ -1,0 +1,20 @@
+.plans {
+  background-color: @light-grey;
+  padding-top: 60px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 320px;
+    position: absolute;
+    left: 0;
+    top: -32px;
+    height: 60px;
+    transform: skew(0, -10deg);
+    background-color: #f2f2f2;
+  }
+
+  table {
+    background-color: @white;
+  }
+}
