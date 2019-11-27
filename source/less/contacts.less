@@ -26,3 +26,34 @@
   text-transform: uppercase;
   color: @lipstick;
 }
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .contacts__questions {
+    font-size: 40px;
+    text-transform: none;
+    width: 100%;
+  }
+
+  .contacts__item {
+    width: 50%;
+    &:last-child {
+      // margin-left: 100px;
+    }
+  }
+
+  .contacts__item--title {
+    font-size: 18px;
+  }
+
+  .contacts__item--description {
+    text-transform: none;
+
+  }
+
+}

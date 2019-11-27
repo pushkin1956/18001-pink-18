@@ -4,6 +4,7 @@
   line-height: 24px;
   padding-left: 17px;
   padding-top: 25px;
+  width: 280px;
 }
 
 .comment--short {
@@ -24,4 +25,17 @@
 .comment__text {
   font-size: 12px;
   margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .comment {
+    // padding: 0;
+    width: 100%;
+    flex: 1;
+  }
+
+  .comment--short {
+    margin-bottom: 50px;
+    width: calc(100% - 40px);
+  }
 }

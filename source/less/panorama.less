@@ -18,3 +18,23 @@
   color: @white;
   background-color: @lipstick;
 }
+
+.panorama__image {
+  background-image: url(/img/panorama-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 137px;
+}
+
+@media (min-width: @tablet-width) {
+  .panorama {
+    height: 509px;
+  }
+
+  .panorama__image {
+    background-image: url(/img/panorama-tablet@1x.jpg);
+    height: 509px;
+  }
+
+
+}

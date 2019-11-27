@@ -13,3 +13,24 @@
     object-fit: contain;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .photos__item {
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+    }
+  }
+
+}
