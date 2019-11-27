@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -10,7 +11,6 @@
 <body>
 
   <header class="page-header">
-
     <nav class="main-nav">
       <div class="main-nav__header">
         <a class="page-header__logo">
@@ -21,7 +21,7 @@
         </button>
       </div>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list main-nav__list--open">
+        <ul class="main-nav__list main-nav__list--closed">
           <li class="main-nav__item">
             <a>Главная</a>
           </li>
@@ -36,19 +36,15 @@
           </li>
         </ul>
       </div>
-      <div class="header">
-        <div class="header__wrapper">
-          Взгляните на жизнь
-          <br> иначе!
-        </div>
-        <img class="page-header__image" src="img/iphone-hand-mobile@1x.png" alt="background">
-      </div>
     </nav>
-
-
-  </header>
-  <main class="page-main">
-
+    <div class="header">
+      <div class="header__wrapper">
+        Взгляните
+        <br> на жизнь
+        <br> иначе!
+      </div>
+    </div>
+    <div class="page-header__image"></div>
     <div class="apps">
       <button class="apps__download-button">
         Скачать приложение
@@ -63,6 +59,12 @@
         <br> Windows Phone, OS X, Windows 8
       </div>
     </div>
+
+
+  </header>
+  <main class="page-main">
+
+
     <div class="offer">
       <div class="offer__question">Устали от серости
         <br>мегаполиса?</div>

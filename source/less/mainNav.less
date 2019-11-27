@@ -1,12 +1,12 @@
 .main-nav {
-  background-image: url("/img/bg-back-mobile@1x.jpg");
-  width: 320px;
   min-height: 240px;
+  width: 320px;
 }
 
 .main-nav__toggle {
   background: transparent;
   border: none;
+  position: relative;
 }
 
 .main-nav__header {
@@ -48,3 +48,35 @@
 .main-nav__list--open {
   display: block;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: @tablet-width;
+    min-height: 240px;
+
+
+  }
+
+  .main-nav__header {
+    height: 110px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      height: 110px;
+      opacity: 0.3;
+      background-color: #17212E;
+    }
+
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+
+}
+
+

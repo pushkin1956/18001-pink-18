@@ -1,6 +1,6 @@
 .header {
   width: 320px;
-  margin-top: 30px;
+  margin-top: -150px;
 }
 
 .header__wrapper {
@@ -8,4 +8,22 @@
   font-size: 24px;
   text-align: center;
   margin-bottom: 33px;
+
+  br:first-child {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    margin-top: -45px;
+  }
+
+  .header__wrapper {
+    font-size: 40px;
+    br:first-child {
+      display: inline;
+    }
+  }
+
 }

@@ -1,6 +1,8 @@
 .page-header {
   width: 320px;
   background-color: #233243;
+  background-image: url("/img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
   color: @white;
   position: relative;
 
@@ -12,4 +14,32 @@
 .page-header__logo {
   width: 75px;
   height: 22px;
+  position: relative;
+}
+
+.page-header__image {
+  display: block;
+  background-image: url("/img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 287px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: @tablet-width;
+    background-image: url("/img/bg-back-tablet@1x.jpg");
+    position: relative;
+    height: 735px;
+  }
+
+  .page-header__image {
+      background-image: url("/img/iphone-hand-tablet@1x.png");
+      width: 100%;
+      position: absolute;
+      height: 545px;
+      right: 20px;
+      top: 189px;
+    }
+
 }
