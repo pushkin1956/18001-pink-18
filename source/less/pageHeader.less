@@ -40,6 +40,27 @@
       height: 545px;
       right: 20px;
       top: 189px;
-    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+    background-image: url("/img/bg-back-desktop@1x.jpg");
+    position: relative;
+    height: 853px;
+    object-fit: contain;
+    background-position: center;
+  }
+
+  .page-header__image {
+    background-image: url("/img/iphone-hand-desktop@1x.png");
+    width: 1050px;
+    position: absolute;
+    height: 645px;
+    right: 20px;
+    top: 207px;
+  }
+
 
 }
