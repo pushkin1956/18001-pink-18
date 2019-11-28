@@ -29,7 +29,6 @@
 
 @media (min-width: @tablet-width) {
   .comment {
-    // padding: 0;
     width: 100%;
     flex: 1;
   }
@@ -37,5 +36,14 @@
   .comment--short {
     margin-bottom: 50px;
     width: calc(100% - 40px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment--short {
+    margin-bottom: 50px;
+    width: calc(100% - 260px);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
