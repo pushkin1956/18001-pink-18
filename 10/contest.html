@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/18001-pink-18/10/">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="main-nav">
+      <div class="main-nav__header">
+        <a class="page-header__logo">
+          <img src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image" alt="Pink logo">
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <img src="img/icon-menu-burger.svg" />
+        </button>
+      </div>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list main-nav__list--closed">
+          <li class="main-nav__item">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photos.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="contest.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header">
+      <div class="header__wrapper">
+        Конкурс на самое
+        <br> безбашенное
+        <br> путешествие с Пинк
+      </div>
+    </div>
+
+  </header>
+
+  <main class="page-main">
+    <div class="call">
+      <div class="call__wrapper">
+        Поделитесь своей историей и получите
+        <br> шанс выиграть ценный приз — 1000
+        <br> миль на вашу бонусную карту!
+      </div>
+    </div>
+    <form class="contest-form" method="POST" action="https://echo.htmlacademy.ru">
+      <div class="contest-form__section contest-form__section--names">
+        <div class="contest-form__group">
+          <div class="contest-form__item">
+            <label for="lastname">Фамилия:</label>
+            <input id="lastname" name="lastname" placeholder="Укажите фамилию*">
+          </div>
+        </div>
+        <div class="contest-form__group">
+          <div class="contest-form__item">
+            <label for="name">Имя:</label>
+            <input id="name" name="name" placeholder="Введите ваше имя*">
+          </div>
+        </div>
+        <div class="contest-form__group">
+          <div class="contest-form__item">
+            <label for="patronymic">Отчество:</label>
+            <input id="patronymic" name="patronymic" placeholder="Ну и отчество тоже*">
+          </div>
+        </div>
+      </div>
+      <div class="contest-form__section contest-form__section--jorneys">
+        <div class="contest-form__title">
+          Ваши безбашенные
+          <br> достижения в путешествии
+        </div>
+        <div class="contest-form__achievements">
+          <div class="contest-form__achievement">
+            <div class="contest-form__check">
+            </div>
+            <div class="contest-form__achievement-text">Сделал селфи с акулой</div>
+          </div>
+          <div class="contest-form__achievement">
+            <div class="contest-form__check">
+            </div>
+            <div class="contest-form__achievement-text">Обгорел на пляже</div>
+          </div>
+          <div class="contest-form__achievement">
+            <div class="contest-form__check">
+            </div>
+            <div class="contest-form__achievement-text">Видел Чака Норриса</div>
+          </div>
+          <div class="contest-form__achievement">
+            <div class="contest-form__check">
+            </div>
+            <div class="contest-form__achievement-text">Накупил сувенирова</div>
+          </div>
+          <div class="contest-form__achievement">
+            <div class="contest-form__check">
+            </div>
+            <div class="contest-form__achievement-text">Удержал башню</div>
+          </div>
+          <div class="contest-form__achievement">
+            <div class="contest-form__check">
+            </div>
+            <div class="contest-form__achievement-text">Разгоромил отель</div>
+          </div>
+        </div>
+      </div>
+      <div class="contest-form__contacts">
+        <div class="contest-form__group">
+          <div class="contest-form__item">
+            <label for="phone">Номер телефона:</label>
+            <input id="phone" name="phone" placeholder="Номер пожалуйста">
+          </div>
+        </div>
+        <div class="contest-form__group">
+          <div class="contest-form__item">
+            <label for="email">Адрес почты:</label>
+            <input id="email" name="email" placeholder="Введите почту*">
+          </div>
+        </div>
+      </div>
+      <div class="contest-form__section contest-form__section--app">
+        <div class="contest-form__title">
+          С каким приложением
+          <br>путеществовали?
+        </div>
+        <div class="contest-form__apps">
+          <div class="contest-form__app">
+            <div class="contest-form__radio">
+            </div>
+            <div class="contest-form__radio-text">Pink для iOS</div>
+          </div>
+          <div class="contest-form__app">
+            <div class="contest-form__radio">
+            </div>
+            <div class="contest-form__radio-text">Pink на Android</div>
+          </div>
+          <div class="contest-form__app">
+            <div class="contest-form__radio">
+            </div>
+            <div class="contest-form__radio-text">Windows Phone</div>
+          </div>
+        </div>
+      </div>
+      <div class="contest-form__section contest-form__section--emotions">
+        <div class="contest-form__title">
+          Опишите свои эмоции
+        </div>
+        <div class="contest-form__emotions">
+          <textarea class="contest-form__emotions-area" cols="24" rows="4" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </div>
+      </div>
+      <div class="contest-form__send">
+        <button class="contest-form__button">Отправить форму</button>
+        <div class="contest-form__required">
+          <span>*</span> - обязательные поля
+        </div>
+      </div>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="img/logo-pink-blue-mobile.svg" alt="footer-logo">
+    </div>
+    <div class="social-icons">
+      <div class="social-icons__item">
+        <img src="img/icon-twitter.svg" alt="twitter" class="social-icons__twitter">
+      </div>
+      <div class="social-icons__item">
+        <img src="img/icon-facebook.svg" alt="facebook" class="social-icons__facebook">
+      </div>
+      <div class="social-icons__item">
+        <img src="img/icon-youtube.svg" alt="youtube" class="social-icons__youtube">
+      </div>
+    </div>
+    <div class="made-by">
+      <div class="made-by__text">Рарзработано</div>
+      <img src="img/htmlacademy.svg" width="27" height="34" alt="madeby" class="made-by__logo">
+    </div>
+  </footer>
+</body>
+
+</html>
