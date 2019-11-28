@@ -59,24 +59,20 @@
     height: 110px;
     position: relative;
 
-    &:before {
+    &::before {
       position: absolute;
       content: "";
       left: 0;
       right: 0;
       height: 110px;
       opacity: 0.3;
-      background-color: #17212E;
+      background-color: #17212e;
     }
-
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .main-nav__header {
     width: @desktop-width;
   }
 }
-
-
