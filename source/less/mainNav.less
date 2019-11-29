@@ -53,11 +53,6 @@
   .main-nav {
     width: @tablet-width;
     min-height: 240px;
-  }
-
-  .main-nav__header {
-    height: 110px;
-    position: relative;
 
     &::before {
       position: absolute;
@@ -69,10 +64,43 @@
       background-color: #17212e;
     }
   }
+
+  .main-nav__header {
+    height: 110px;
+    position: relative;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav__header {
-    width: @desktop-width;
+    // width: @desktop-width;
+    margin-right: 170px;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    min-height: 110px;
+    width: 100%;
+    padding-left: 110px;
+    padding-right: 130px;
+    justify-content: space-between;
+  }
+
+  .main-nav__wrapper {
+    width: 100%;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: transparent;
+    justify-content: space-between;
+    position: relative;
   }
 }
