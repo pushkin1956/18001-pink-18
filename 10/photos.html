@@ -14,28 +14,32 @@
     <nav class="main-nav">
       <div class="main-nav__header">
         <a class="page-header__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image" alt="Pink logo">
+          <picture>
+            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
+            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+            <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
+              alt="Pink logo">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button">
           <img src="img/icon-menu-burger.svg" />
         </button>
       </div>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list main-nav__list--closed">
-          <li class="main-nav__item">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="photos.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="contest.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list main-nav__list--closed">
+        <li class="main-nav__item">
+          <a>Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="photos.html">Фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contest.html">Конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </li>
+      </ul>
     </nav>
     <div class="header">
       <div class="header__wrapper">

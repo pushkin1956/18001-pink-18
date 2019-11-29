@@ -356,6 +356,7 @@
   display: block;
   background-color: #ffffff;
   padding-top: 40px;
+  margin: 0 auto;
 }
 .footer__logo-image {
   width: 147px;
@@ -388,9 +389,10 @@
 @media (min-width: 1200px) {
   .header {
     margin-bottom: 60px;
+    margin-top: 107px;
   }
   .header__wrapper {
-    font-weight: 50px;
+    font-size: 50px;
   }
 }
 .main-nav {
@@ -456,11 +458,7 @@
     width: 660px;
     min-height: 240px;
   }
-  .main-nav__header {
-    height: 110px;
-    position: relative;
-  }
-  .main-nav__header::before {
+  .main-nav::before {
     position: absolute;
     content: "";
     left: 0;
@@ -469,10 +467,51 @@
     opacity: 0.3;
     background-color: #17212e;
   }
+  .main-nav__header {
+    height: 110px;
+    position: relative;
+  }
 }
 @media (min-width: 1200px) {
   .main-nav__header {
-    width: 1200px;
+    margin-right: 170px;
+  }
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 110px;
+    width: 100%;
+    padding-left: 110px;
+    padding-right: 130px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-nav__wrapper {
+    width: 100%;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+  .main-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    background-color: transparent;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
   }
 }
 .offer {
@@ -515,22 +554,25 @@
 .page-header {
   width: 320px;
   background-color: #233243;
-  background-image: url("/img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   color: #ffffff;
   position: relative;
+  margin: 0 auto;
 }
 .page-header a {
   color: #ffffff;
 }
 .page-header__logo {
+  position: relative;
+}
+.page-header__logo-image {
   width: 75px;
   height: 22px;
-  position: relative;
 }
 .page-header__image {
   display: block;
-  background-image: url("/img/iphone-hand-mobile@1x.png");
+  background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
   width: 320px;
   height: 287px;
@@ -538,12 +580,16 @@
 @media (min-width: 660px) {
   .page-header {
     width: 660px;
-    background-image: url("/img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
     position: relative;
     height: 735px;
   }
+  .page-header__logo-image {
+    width: 147px;
+    height: 40px;
+  }
   .page-header__image {
-    background-image: url("/img/iphone-hand-tablet@1x.png");
+    background-image: url("../img/iphone-hand-tablet@1x.png");
     width: 100%;
     position: absolute;
     height: 545px;
@@ -554,7 +600,7 @@
 @media (min-width: 1200px) {
   .page-header {
     width: 1200px;
-    background-image: url("/img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     position: relative;
     height: 853px;
     -o-object-fit: contain;
@@ -562,7 +608,7 @@
     background-position: center;
   }
   .page-header__image {
-    background-image: url("/img/iphone-hand-desktop@1x.png");
+    background-image: url("../img/iphone-hand-desktop@1x.png");
     width: 1050px;
     position: absolute;
     height: 645px;
@@ -572,6 +618,7 @@
 }
 .page-main {
   width: 320px;
+  margin: 0 auto;
 }
 @media (min-width: 660px) {
   .page-main {
@@ -609,7 +656,7 @@
   background-color: #d22856;
 }
 .panorama__image {
-  background-image: url("/img/panorama-mobile@1x.jpg");
+  background-image: url("../img/panorama-mobile@1x.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height: 137px;
@@ -619,13 +666,13 @@
     height: 509px;
   }
   .panorama__image {
-    background-image: url("/img/panorama-tablet@1x.jpg");
+    background-image: url("../img/panorama-tablet@1x.jpg");
     height: 509px;
   }
 }
 @media (min-width: 660px) {
   .panorama__image {
-    background-image: url("/img/panorama-desktop@1x.jpg");
+    background-image: url("../img/panorama-desktop@1x.jpg");
   }
 }
 .photos {
@@ -877,13 +924,13 @@
   }
 }
 .map__image {
-  background-image: url("/img/bg-map-mobile@1x.png");
+  background-image: url("../img/bg-map-mobile@1x.png");
   width: 100%;
   height: 200px;
 }
 @media (min-width: 660px) {
   .map__image {
-    background-image: url("/img/bg-map-tablet@1x.jpg");
+    background-image: url("../img/bg-map-tablet@1x.jpg");
   }
 }
 body {
