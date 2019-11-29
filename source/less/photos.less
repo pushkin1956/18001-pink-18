@@ -13,3 +13,37 @@
     object-fit: contain;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+
+  .photos__item {
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos {
+    width: 940px;
+    margin: auto;
+  }
+
+  .photos__item {
+    margin-right: 0;
+
+    img {
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

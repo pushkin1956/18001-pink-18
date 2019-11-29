@@ -1,5 +1,5 @@
 .offer {
-  width: 320px;
+  font-family: "OpenSansLight", "Helvetica", sans-serif;
   color: @dark;
   padding-top: 46px;
   font-size: 24px;
@@ -14,4 +14,31 @@
 
 .offer__question {
   margin-bottom: 46px;
+}
+
+@media (min-width: @tablet-width) {
+  .offer {
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+
+  .offer__question {
+    margin-bottom: 0;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .offer {
+    font-size: 40px;
+    padding-bottom: 40px;
+  }
+
+  .offer__question {
+    margin-bottom: 0;
+
+    br {
+      display: none;
+    }
+  }
 }

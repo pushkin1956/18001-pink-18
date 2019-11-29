@@ -5,7 +5,7 @@
 
   &::before {
     content: "";
-    width: 320px;
+    width: 100%;
     position: absolute;
     left: 0;
     top: -32px;
@@ -16,5 +16,29 @@
 
   table {
     background-color: @white;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 10px;
+    border: solid 1px #e5e5e5;
+  }
+
+  thead {
+    background-color: @dark;
+    color: @white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .plans {
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+    &::before {
+      transform: skew(0, -5deg);
+    }
   }
 }

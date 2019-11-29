@@ -1,0 +1,39 @@
+.image---mobile {
+  display: block;
+}
+
+.image--tablet {
+  display: none;
+}
+
+.image--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .image--mobile {
+    display: none;
+  }
+
+  .image--desktop {
+    display: none;
+  }
+
+  .image--tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .image--mobile {
+    display: none;
+  }
+
+  .image--desktop {
+    display: block;
+  }
+
+  .image--tablet {
+    display: none;
+  }
+}

@@ -3,49 +3,52 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
   <header class="page-header">
-
     <nav class="main-nav">
       <div class="main-nav__header">
         <a class="page-header__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image" alt="Pink logo">
+          <picture>
+            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
+            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+            <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
+              alt="Pink logo">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button">
           <img src="img/icon-menu-burger.svg" />
         </button>
       </div>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list main-nav__list--closed">
-          <li class="main-nav__item">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="photos.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="contest.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-      <div class="header">
-        <div class="header__wrapper">
-          Фотографии
-          <br> пользователей
-        </div>
-      </div>
+      <ul class="main-nav__list main-nav__list--closed">
+        <li class="main-nav__item">
+          <a>Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="photos.html">Фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contest.html">Конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </li>
+      </ul>
     </nav>
-
-
+    <div class="header">
+      <div class="header__wrapper">
+        Фотографии
+        <br> пользователей
+      </div>
+    </div>
   </header>
+
+
   <main class="page-main">
     <div class="call">
       <div class="call__wrapper">
@@ -55,7 +58,7 @@
       </div>
     </div>
     <div class="panorama">
-      <img src="img/panorama-mobile@1x.jpg" alt="panorama" class="panorama__image">
+      <div alt="panorama" class="panorama__image"></div>
       <div class="panorama__text">Панорама дня</div>
     </div>
     <div class="comment comment--short">
@@ -74,7 +77,10 @@
     </div>
     <div class="photos">
       <div class="photos__item">
-        <img src="img/photo-car-mobile@1x.jpg" alt="photo">
+        <img class="image--mobile" src="img/photo-car-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-car-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-car-desktop@1x.jpg" alt="photo">
+
         <div class="comment">
           <span class="comment__author">Левон</span>
           <span class="comment__time">(5 часов назад)</span>
@@ -89,7 +95,9 @@
         </div>
       </div>
       <div class="photos__item">
-        <img src="img/photo-drumset-mobile@1x.jpg" alt="photo">
+        <img class="image--mobile" src="img/photo-drumset-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-drumset-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-drumset-desktop@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Антон</span>
           <span class="comment__time">(12 часов назад)</span>
@@ -103,7 +111,9 @@
         </div>
       </div>
       <div class="photos__item">
-        <img src="img/photo-window-mobile@1x.jpg" alt="photo">
+        <img class="image--mobile" src="img/photo-window-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-window-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-window-desktop@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Борис</span>
           <span class="comment__time">(20 часов назад)</span>
@@ -118,7 +128,9 @@
         </div>
       </div>
       <div class="photos__item">
-        <img src="img/photo-fair-mobile@1x.jpg" alt="photo">
+        <img class="image--mobile" src="img/photo-fair-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-fair-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-fair-desktop@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Сергей</span>
           <span class="comment__time">(25 часов назад)</span>
@@ -132,7 +144,9 @@
         </div>
       </div>
       <div class="photos__item">
-        <img src="img/photo-pov-mobile@1x.jpg" alt="photo">
+        <img class="image--mobile" src="img/photo-pov-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-pov-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-pov-desktop@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Максим</span>
           <span class="comment__time">(40 часов назад)</span>
@@ -146,7 +160,9 @@
         </div>
       </div>
       <div class="photos__item">
-        <img src="img/photo-wing-mobile@1x.jpg" alt="photo">
+        <img class="image--mobile" src="img/photo-wing-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-wing-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-wing-desktop@1x.jpg" alt="photo">
         <div class="comment">
           <span class="comment__author">Надежда</span>
           <span class="comment__time">(45 часов назад)</span>
@@ -168,7 +184,8 @@
       </div>
     </div>
     <div class="upload-photo">
-      <img src="img/photo-road-mobile@1x.jpg" alt="photo">
+      <img class="image--mobile" src="img/photo-road-mobile@1x.jpg" alt="photo">
+      <img class="image--tablet" src="img/photo-road-tablet@1x.jpg" alt="photo">
       <div class="upload-photo__controls">
         <div class="upload-photo__controls-item">crop</div>
         <div class="upload-photo__controls-item">fill</div>
@@ -185,8 +202,8 @@
     </div>
   </main>
   <footer class="footer">
-    <div class="footer-logo">
-      <img src="img/logo-pink-blue-mobile.svg" alt="footer-logo">
+    <div class="footer__logo">
+      <img class="footer__logo-image" src="img/logotype-blue-tablet.svg" alt="footer-logo">
     </div>
     <div class="social-icons">
       <div class="social-icons__item">

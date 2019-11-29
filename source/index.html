@@ -3,52 +3,51 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
   <header class="page-header">
-
     <nav class="main-nav">
       <div class="main-nav__header">
         <a class="page-header__logo">
-          <img src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image" alt="Pink logo">
+          <picture>
+            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
+            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+            <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
+              alt="Pink logo">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button">
           <img src="img/icon-menu-burger.svg" />
         </button>
       </div>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list main-nav__list--open">
-          <li class="main-nav__item">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="photos.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="contest.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
-          </li>
-        </ul>
-      </div>
-      <div class="header">
-        <div class="header__wrapper">
-          Взгляните на жизнь
-          <br> иначе!
-        </div>
-        <img class="page-header__image" src="img/iphone-hand-mobile@1x.png" alt="background">
-      </div>
+      <ul class="main-nav__list main-nav__list--closed">
+        <li class="main-nav__item">
+          <a>Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="photos.html">Фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contest.html">Конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </li>
+      </ul>
     </nav>
-
-
-  </header>
-  <main class="page-main">
-
+    <div class="header header--index">
+      <div class="header__wrapper">
+        Взгляните
+        <br> на жизнь
+        <br> иначе!
+      </div>
+    </div>
+    <div class="page-header__image"></div>
     <div class="apps">
       <button class="apps__download-button">
         Скачать приложение
@@ -63,6 +62,8 @@
         <br> Windows Phone, OS X, Windows 8
       </div>
     </div>
+  </header>
+  <main class="page-main">
     <div class="offer">
       <div class="offer__question">Устали от серости
         <br>мегаполиса?</div>
@@ -70,38 +71,56 @@
         <br>предложить</div>
     </div>
     <div class="advantages slider">
-      <div class="advantages__item">
-        <div class="advantages__title">
-          Поднимает настроение
+      <div class="advantages__wrapper">
+        <div class="advantages__item">
+          <div class="advantages__title">
+            Поднимает
+            <br> настроение
+          </div>
+          <div class="advantages__description">
+            Приложение позволит вам победить
+            <br> осеннюю хандру и депрессию
+            <br> буквально в несколько кликов!
+          </div>
+          <img class="image--desktop advantages__image" src="img/iphone-screen-1-desktop@1x.png" alt="image" />
         </div>
-        <div class="advantages__description">
-          Приложение позволит вам победить
-          <br> осеннюю хандру и депрессию
-          <br> буквально в несколько кликов!
+        <div class="advantages__item">
+          <div class="advantages__title">
+            Меняет мир
+            <br>вокруг
+          </div>
+          <div class="advantages__description">
+            Сделайте снимок и украстье его
+            <br> смайликом или текстовой подписью
+            <br> чтобы усилить эффект
+          </div>
+          <img class="image--desktop advantages__image" src="img/iphone-screen-2-desktop@1x.png" alt="image" />
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__title">
+            Заводит
+            <br>новых друзей
+          </div>
+          <div class="advantages__description">
+            Ставьте лайки, комментируйте
+            <br> делитесь фотографиями с друзьями и
+            <br> заводите новых
+          </div>
+          <img class="image--mobile" src="img/iphone-screen-mobile@1x.png" alt="image" />
+          <img class="image--tablet advantages__image" src="img/iphone-screen-3-tablet@1x.png" alt="image" />
+          <img class="image--desktop advantages__image" src="img/iphone-screen-3-desktop@1x.png" alt="image" />
         </div>
       </div>
-      <div class="advantages__item">
-        <div class="advantages__title">
-          Меняет мир вокруг
+    </div>
+    <div class="effect">
+      <img src="img/icon-timer.svg" alt="" class="effect__diagramm">
+      <div class="effect__description">
+        <div class="effect__title">Эффект
+          <br> на 24 часа!</div>
+        <div class="effect__text">
+          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+          Узнать больше об исследовании
         </div>
-        <div class="advantages__description">
-          Сделайте снимок и украстье его
-          <br> смайликом или текстовой подписью
-          <br> чтобы усилить эффект
-        </div>
-      </div>
-      <div class="advantages__item">
-        <div class="advantages__title">
-          Заводит новых друзей
-        </div>
-        <div class="advantages__description">
-          Ставьте лайки, комментируйте
-          <br> делитесь фотографиями с друзьями и
-          <br> заводите новых
-        </div>
-      </div>
-      <div class="advantages__image">
-        <img src="img/iphone-screen-mobile@1x.png" alt="Advantages image">
       </div>
     </div>
     <div class="reviews slider">
@@ -207,8 +226,8 @@
         </div>
       </div>
     </div>
-    <div class="map-wrapper">
-      <img src="img/bg-map-mobile@1x.png" alt="map" />
+    <div class="map">
+      <div class="map__image"></div>
     </div>
   </main>
 </body>

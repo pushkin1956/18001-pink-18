@@ -1,12 +1,12 @@
 .main-nav {
-  background-image: url("/img/bg-back-mobile@1x.jpg");
-  width: 320px;
   min-height: 240px;
+  width: 320px;
 }
 
 .main-nav__toggle {
   background: transparent;
   border: none;
+  position: relative;
 }
 
 .main-nav__header {
@@ -47,4 +47,60 @@
 
 .main-nav__list--open {
   display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: @tablet-width;
+    min-height: 240px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      height: 110px;
+      opacity: 0.3;
+      background-color: #17212e;
+    }
+  }
+
+  .main-nav__header {
+    height: 110px;
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__header {
+    // width: @desktop-width;
+    margin-right: 170px;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    min-height: 110px;
+    width: 100%;
+    padding-left: 110px;
+    padding-right: 130px;
+    justify-content: space-between;
+  }
+
+  .main-nav__wrapper {
+    width: 100%;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: transparent;
+    justify-content: space-between;
+    position: relative;
+  }
 }
