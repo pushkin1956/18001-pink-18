@@ -1,0 +1,45 @@
+.social-icons__item {
+  width: 46px;
+  height: 46px;
+  border: solid 3px @dark;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    opacity: 0.1;
+    background-color: #fefefe;
+    border-radius: 50%;
+  }
+}
+
+.social-icons__image {
+  fill: @lipstick;
+  position: relative;
+}
+
+.social-icons {
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.footer__logo {
+  margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .social-icons {
+    display: flex;
+    width: 170px;
+    justify-content: space-between;
+  }
+}
