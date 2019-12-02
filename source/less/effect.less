@@ -37,10 +37,86 @@
 
 @media (min-width: @desktop-width) {
   .effect {
-    margin-left: 130px;
+    padding-left: 111px;
+    background-color: @light-grey;
+    // position: relative;
+    padding-top: 0;
+    padding-bottom: 61px;
+  }
+
+  .effect__title {
+    font-size: 30px;
+    line-height: 30px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .effect__text {
+    font-size: 18px;
+    line-height: 30px;
+    width: 525px;
+    margin-bottom: 37px;
   }
 
   .effect__description {
     width: 525px;
+    padding-top: 93px;
+    padding-left: 67px;
+
   }
+
+  .effect__diagramm {
+    width: 298px;
+    height: 345px;
+    fill: @dark-grey;
+  }
+
+  .effect__more {
+    font-size: 18px;
+    line-height: 24px;
+    color: @lipstick;
+  }
+
+  .effect__diagramm-wrap {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 253px;
+      height: 253px;
+      position: absolute;
+      top: 68px;
+      left: 42px;
+      border: solid 16px @lipstick;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: "24";
+      box-sizing: border-box;
+      position: absolute;
+      width: 131px;
+      height: 87px;
+      font-family: "OpenSansBold", "Helvetica", sans-serif;
+      font-size: 120px;
+      line-height: 187px;
+      color: @lipstick;
+      left: 100px;
+      top: 94px;
+    }
+  }
+
+  .effect__diagramm-circle {
+    width: 253px;
+    height: 253px;
+    position: absolute;
+    top: 68px;
+    left: 42px;
+    border: solid 16px @lipstick;
+    border-radius: 50%;
+  }
+
 }
