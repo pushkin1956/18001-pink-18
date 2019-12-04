@@ -7,6 +7,7 @@
   .effect {
     display: flex;
     padding-top: 60px;
+    margin-bottom: 50px;
   }
 
   .effect__diagramm {
@@ -15,15 +16,45 @@
     margin-left: 20px;
   }
 
+  .effect__diagramm-wrap {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 202px;
+      height: 202px;
+      position: absolute;
+      top: 53px;
+      left: 39px;
+      border: solid 16px @lipstick;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      content: "24";
+      box-sizing: border-box;
+      position: absolute;
+      width: 106px;
+      height: 70px;
+      font-family: "OpenSansBold", "Helvetica", sans-serif;
+      font-size: 96px;
+      line-height: 149.5px;
+      color: @lipstick;
+      left: 84px;
+      top: 74px;
+    }
+  }
+
   .effect__title {
     font-family: "OpenSansBold", "Helvetica", sans-serif;
     font-size: 30px;
     line-height: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .effect__description {
-    padding-top: 43px;
+    padding-top: 35px;
     padding-left: 70px;
     padding-bottom: 31px;
   }
@@ -31,6 +62,13 @@
   .effect__text {
     font-size: 14px;
     line-height: 24px;
+    margin-bottom: 7px;
+  }
+
+  .effect__more {
+    font-size: 14px;
+    line-height: 24px;
+    color: @lipstick;
   }
 }
 
@@ -42,11 +80,14 @@
     // position: relative;
     padding-top: 0;
     padding-bottom: 61px;
+    margin-bottom: 118px;
+    margin-top: -147px;
   }
 
   .effect__title {
     font-size: 30px;
     line-height: 30px;
+    margin-bottom: 27px;
 
     br {
       display: none;
@@ -57,14 +98,13 @@
     font-size: 18px;
     line-height: 30px;
     width: 525px;
-    margin-bottom: 37px;
+    margin-bottom: 34px;
   }
 
   .effect__description {
     width: 525px;
     padding-top: 93px;
     padding-left: 67px;
-
   }
 
   .effect__diagramm {
@@ -80,8 +120,6 @@
   }
 
   .effect__diagramm-wrap {
-    position: relative;
-
     &::before {
       content: "";
       width: 253px;
@@ -118,5 +156,4 @@
     border: solid 16px @lipstick;
     border-radius: 50%;
   }
-
 }

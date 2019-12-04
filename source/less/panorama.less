@@ -31,8 +31,13 @@
     height: 509px;
   }
 
+  .panorama__text {
+    top: 56px;
+  }
+
   .panorama__image {
     background-image: url("../img/panorama-tablet@1x.jpg");
+    background-position: bottom;
     height: 509px;
   }
 }
@@ -40,5 +45,9 @@
 @media (min-width: @desktop-width) {
   .panorama__image {
     background-image: url("../img/panorama-desktop@1x.jpg");
+  }
+
+  .panorama__text {
+    right: 130px;
   }
 }

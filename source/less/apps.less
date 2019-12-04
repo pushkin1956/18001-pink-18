@@ -26,7 +26,7 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 31px;
+  margin-bottom: 21px;
 }
 
 .apps__item--apple {
@@ -58,11 +58,23 @@
 @media (min-width: @tablet-width) {
   .apps {
     background: transparent;
-    position: relative;
+    position: absolute;
+    top: 604px;
+    left: 9px;
+  }
+
+  .apps__download-button {
+    width: 300px;
+    height: 55px;
+    margin-bottom: 45px;
   }
 
   .apps__info {
     font-size: 18px;
+  }
+
+  .apps__items {
+    margin-bottom: 37px;
   }
 }
 
@@ -71,7 +83,7 @@
     width: 600px;
     position: relative;
     left: -20px;
-    top: -1px;
+    top: 7px;
     height: auto;
   }
 
