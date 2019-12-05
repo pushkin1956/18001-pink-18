@@ -1,7 +1,7 @@
 .offer {
   font-family: "OpenSansLight", "Helvetica", sans-serif;
   color: @dark;
-  padding-top: 46px;
+  padding-top: 34px;
   font-size: 24px;
   font-weight: 300;
   font-stretch: normal;
@@ -9,17 +9,19 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .offer__question {
-  margin-bottom: 46px;
+  margin-bottom: 22px;
 }
 
 @media (min-width: @tablet-width) {
   .offer {
     font-size: 40px;
-    padding-bottom: 40px;
+    padding-top: 46px;
+    line-height: 49px;
+    margin-bottom: 47px;
   }
 
   .offer__question {
@@ -30,8 +32,16 @@
 
 @media (min-width: @desktop-width) {
   .offer {
-    font-size: 40px;
-    padding-bottom: 40px;
+    font-family: "OpenSansLight", "Helvetica", sans-serif;
+    font-size: 50px;
+    padding-top: 63px;
+    padding-bottom: 0;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin-bottom: 80px;
   }
 
   .offer__question {
@@ -40,5 +50,13 @@
     br {
       display: none;
     }
+  }
+
+  .offer__answer {
+    line-height: 50px;
+  }
+
+  .offer__answer--last {
+    line-height: 72px;
   }
 }

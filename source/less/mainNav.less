@@ -3,6 +3,10 @@
   width: 320px;
 }
 
+.main-nav__check {
+  visibility: hidden;
+}
+
 .main-nav__toggle {
   background: transparent;
   border: none;
@@ -24,8 +28,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "OpenSansBold", "Helvetica", sans-serif;
   font-size: 18px;
+  font-family: "OpenSansBold", "Helvetica", sans-serif;
   box-shadow: 0 1px 0 0 @black-two;
 
   a {
@@ -73,8 +77,8 @@
 
 @media (min-width: @desktop-width) {
   .main-nav__header {
-    // width: @desktop-width;
-    margin-right: 170px;
+    margin-right: 152px;
+    padding-top: 11px;
   }
 
   .main-nav {
@@ -102,5 +106,6 @@
     background-color: transparent;
     justify-content: space-between;
     position: relative;
+    margin-top: -3px;
   }
 }

@@ -6,10 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("pic/pink-index-mobile.jpg");
+    }
+
+    /* Tablet */
+
+    @media ( min-width: 660px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("pic/pink-index-tablet.jpg");
+      }
+    }
+
+    /* Desktop */
+
+    @media ( min-width: 1200px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("pic/pink-index-desktop.jpg");
+      }
+    }
+  </style>
+  <link href="/pic/styles.css" rel="stylesheet">
+  <script src="/pic/script.js"></script>
+
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header page-header--index">
+
     <nav class="main-nav">
       <div class="main-nav__header">
         <a class="page-header__logo">
@@ -22,10 +54,10 @@
           </picture>
         </a>
         <button class="main-nav__toggle" type="button">
-          <img src="img/icon-menu-burger.svg" />
+          <!-- <img src="img/icon-menu-burger.svg" /> -->
         </button>
       </div>
-      <ul class="main-nav__list main-nav__list--closed">
+      <ul class="main-nav__list main-nav__list--open">
         <li class="main-nav__item">
           <a>Главная</a>
         </li>
@@ -40,12 +72,14 @@
         </li>
       </ul>
     </nav>
+
     <div class="header header--index">
-      <div class="header__wrapper">
-        Взгляните
-        <br> на жизнь
-        <br> иначе!
-      </div>
+      Взгляните
+      <br class="tablet-break">
+      <br class="desktop-break">на жизнь
+      <br class="mobile-break">
+      <br class="desktop-break">
+      <br class="tablet-break"> иначе!
     </div>
     <div class="page-header__image"></div>
     <div class="apps">
@@ -62,80 +96,101 @@
         <br> Windows Phone, OS X, Windows 8
       </div>
     </div>
+
+
   </header>
   <main class="page-main">
     <div class="offer">
-      <div class="offer__question">Устали от серости
-        <br>мегаполиса?</div>
-      <div class="offer__answer">Нам есть, что вам
-        <br>предложить</div>
+      <div class="offer__question">Устали от серости мегаполиса?
+        <br>
+      </div>
+      <div class="offer__answer">
+        <span>Нам есть, что вам</span>
+        <br>
+        <span class="offer__answer--last">предложить</span>
+      </div>
     </div>
     <div class="advantages slider">
       <div class="advantages__wrapper">
         <div class="advantages__item">
           <div class="advantages__title">
             Поднимает
-            <br> настроение
+            <br class="desktop-break"> настроение
           </div>
           <div class="advantages__description">
-            Приложение позволит вам победить
-            <br> осеннюю хандру и депрессию
-            <br> буквально в несколько кликов!
+            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
           </div>
           <img class="image--desktop advantages__image" src="img/iphone-screen-1-desktop@1x.png" alt="image" />
         </div>
         <div class="advantages__item">
           <div class="advantages__title">
             Меняет мир
-            <br>вокруг
+            <br class="desktop-break"> вокруг
           </div>
           <div class="advantages__description">
-            Сделайте снимок и украстье его
-            <br> смайликом или текстовой подписью
-            <br> чтобы усилить эффект
+            Сделайте снимок и украстье его смайликом или текстовой подписью чтобы усилить эффект
           </div>
           <img class="image--desktop advantages__image" src="img/iphone-screen-2-desktop@1x.png" alt="image" />
         </div>
-        <div class="advantages__item">
+        <div class="advantages__item advantages__item--last">
           <div class="advantages__title">
             Заводит
-            <br>новых друзей
+            <br class="desktop-break">новых друзей
           </div>
           <div class="advantages__description">
-            Ставьте лайки, комментируйте
-            <br> делитесь фотографиями с друзьями и
-            <br> заводите новых
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
           </div>
-          <img class="image--mobile" src="img/iphone-screen-mobile@1x.png" alt="image" />
+          <img class="image--mobile advantages__image" src="img/iphone-screen-mobile@1x.png" alt="image" />
           <img class="image--tablet advantages__image" src="img/iphone-screen-3-tablet@1x.png" alt="image" />
           <img class="image--desktop advantages__image" src="img/iphone-screen-3-desktop@1x.png" alt="image" />
         </div>
       </div>
     </div>
     <div class="effect">
-      <img src="img/icon-timer.svg" alt="" class="effect__diagramm">
+      <div class="effect__diagramm-wrap">
+        <svg class="effect__diagramm" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="298px" height="345.097px" viewBox="0 0 298 345.097" enable-background="new 0 0 298 345.097"
+          xml:space="preserve">
+          <path d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z"
+          />
+        </svg>
+      </div>
+
       <div class="effect__description">
         <div class="effect__title">Эффект
           <br> на 24 часа!</div>
         <div class="effect__text">
           Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-          Узнать больше об исследовании
         </div>
+
+        <a class="effect__more" href="#">Узнать больше об исследовании</a>
+
       </div>
     </div>
     <div class="reviews slider">
-      <div class="reviews__slider">
+      <div class="reviews__slider-wrap">
+        <svg class="reviews__slider-quote" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="78.672px" height="63.789px" viewBox="0 0 78.672 63.789" enable-background="new 0 0 78.672 63.789"
+          xml:space="preserve">
+          <g>
+            <path d="M34.967,7.063L30.713,0C28.272,1.495,0,12.207,0,39.617c0,7.231,0.336,24.172,18.9,24.172 c11.187,0,13.94-10.279,13.94-13.584c0-21.977-21.382-14.177-21.382-14.177C11.458,17.957,31.263,9.184,34.967,7.063z"
+            />
+          </g>
+          <g>
+            <path d="M78.672,7.063L74.418,0c-2.44,1.495-30.713,12.207-30.713,39.617c0,7.231,0.337,24.172,18.9,24.172 c11.187,0,13.939-10.279,13.939-13.584c0-21.977-21.381-14.177-21.381-14.177C55.165,17.957,74.969,9.184,78.672,7.063z"
+            />
+          </g>
+        </svg>
+
         <div class="reviews__item">
+          <div class="reviews__position">25 лет, водитель трамвая</div>
           <div class="reviews__name">
             Николай Петров
           </div>
+
           <div class="reviews__description">
-            «Это приложение перевернуло мой мир
-            <br>и позволило по-новому взглянуть на
-            <br>привычные серые вещи! А еще я
-            <br>познакомился со своей будущей женой
-            <br>в комментариях к выложенной
-            <br>фотографии!»
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей
+            будущей женой в комментариях к выложенной фотографии!»
           </div>
         </div>
       </div>
@@ -146,45 +201,115 @@
       </div>
     </div>
     <div class="plans slider">
-      <table>
+      <table class="plans__table">
         <thead>
           <tr>
             <th></th>
-            <th>База
-              <br>1,99 USD
+            <th>
+              <span class="plans__header-text">База</span>
+              <br>
+              <span class="plans__header-price">1,99 USD</span>
             </th>
-            <th>Стандарт
-              <br>3,99 USD
+            <th class="plans__hit">
+              <img class="plans__hit-image" src="img/bg-hit.svg" alt="plans hit">
+              <span class="plans__header-text">Стандарт</span>
+              <br>
+              <span class="plans__header-price">3,99 USD</span>
             </th>
-            <th>Анлим
-              <br>9,99 USD
+            <th>
+              <span class="plans__header-text">Анлим</span>
+              <br>
+              <span class="plans__header-price">9,99 USD</span>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
+            <td class="plans__cell--first">
               Розовый фильтр
             </td>
-            <td>V</td>
-            <td>V</td>
-            <td>V</td>
+            <td class="plans__cell">
+              <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                />
+              </svg>
+            </td>
+            <td class="plans__cell">
+              <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                />
+              </svg>
+            </td>
+            <td class="plans__cell">
+              <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                />
+              </svg>
+            </td>
           </tr>
           <tr>
-            <td>
+            <td class="plans__cell--first">
               Смайлики
             </td>
-            <td>X</td>
-            <td>V</td>
-            <td>V</td>
+            <td class="plans__cell">
+              <svg class="plans__no" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752"
+                xml:space="preserve">
+                <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"
+                />
+              </svg>
+            </td>
+            <td class="plans__cell">
+              <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                />
+              </svg>
+            </td>
+            <td class="plans__cell">
+              <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                />
+              </svg>
+            </td>
           </tr>
           <tr>
-            <td>
+            <td class="plans__cell--first">
               Комментарии
             </td>
-            <td>X</td>
-            <td>X</td>
-            <td>V</td>
+            <td class="plans__cell">
+              <svg class="plans__no" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752"
+                xml:space="preserve">
+                <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"
+                />
+              </svg>
+            </td>
+            <td class="plans__cell">
+              <svg class="plans__no" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752"
+                xml:space="preserve">
+                <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"
+                />
+              </svg>
+            </td>
+            <td class="plans__cell">
+              <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                xml:space="preserve">
+                <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                />
+              </svg>
+            </td>
           </tr>
 
         </tbody>

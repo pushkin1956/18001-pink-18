@@ -6,6 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("pic/pink-form-mobile.jpg");
+    }
+
+    /* Tablet */
+
+    @media ( min-width: 660px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("pic/pink-form-tablet.jpg");
+      }
+    }
+
+    /* Desktop */
+
+    @media ( min-width: 1200px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("pic/pink-form-desktop.jpg");
+      }
+    }
+  </style>
+  <link href="/pic/styles.css" rel="stylesheet">
+  <script src="/pic/script.js"></script>
 </head>
 
 <body>
@@ -25,7 +55,7 @@
           <img src="img/icon-menu-burger.svg" />
         </button>
       </div>
-      <ul class="main-nav__list main-nav__list--closed">
+      <ul class="main-nav__list main-nav__list--open">
         <li class="main-nav__item">
           <a>Главная</a>
         </li>
@@ -43,19 +73,26 @@
     <div class="header">
       <div class="header__wrapper">
         Конкурс на самое
-        <br> безбашенное
-        <br> путешествие с Пинк
+        <br class="mobile-break">
+        <br class="tablet-break"> безбашенное
+        <br class="mobile-break">
+        <br class="tablet-break">
+        <br class="desktop-break"> путешествие с Пинк
       </div>
     </div>
 
   </header>
 
   <main class="page-main">
-    <div class="call">
+    <div class="call call--contest">
       <div class="call__wrapper">
         Поделитесь своей историей и получите
-        <br> шанс выиграть ценный приз — 1000
-        <br> миль на вашу бонусную карту!
+        <br class="mobile-break"> шанс выиграть
+        <br class="tablet-break"> ценный приз — 1000
+        <br class="mobile-break"> миль на
+        <br class="desktop-break"> вашу бонусную карту!
+        <span class="call__please">
+          <br class="tablet-break"> Пожалуста, заполните форму ниже: </span>
       </div>
     </div>
     <form class="contest-form" method="POST" action="https://echo.htmlacademy.ru">
@@ -63,71 +100,93 @@
         <div class="contest-form__group">
           <div class="contest-form__item">
             <label for="lastname">Фамилия:</label>
-            <input id="lastname" name="lastname" placeholder="Укажите фамилию*">
+            <input class="contest-form__input" id="lastname" name="lastname" placeholder="Укажите фамилию*">
           </div>
         </div>
         <div class="contest-form__group">
           <div class="contest-form__item">
             <label for="name">Имя:</label>
-            <input id="name" name="name" placeholder="Введите ваше имя*">
+            <input class="contest-form__input" id="name" name="name" placeholder="Введите ваше имя*">
           </div>
         </div>
         <div class="contest-form__group">
           <div class="contest-form__item">
             <label for="patronymic">Отчество:</label>
-            <input id="patronymic" name="patronymic" placeholder="Ну и отчество тоже*">
+            <input class="contest-form__input" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже*">
           </div>
         </div>
       </div>
       <div class="contest-form__section contest-form__section--jorneys">
-        <div class="contest-form__title">
-          Ваши безбашенные
-          <br> достижения в путешествии
-        </div>
-        <div class="contest-form__achievements">
-          <div class="contest-form__achievement">
-            <div class="contest-form__check">
+        <fieldset class="contest-form__fieldset">
+          <legend class="contest-form__legeng">
+            <div class="contest-form__title">
+              Ваши безбашенные
+              <br> достижения в путешествии
             </div>
-            <div class="contest-form__achievement-text">Сделал селфи с акулой</div>
-          </div>
-          <div class="contest-form__achievement">
-            <div class="contest-form__check">
+          </legend>
+          <div class="contest-form__achievements">
+            <div class="contest-form__achievement">
+              <div class="contest-form__check-wrap">
+                <svg class="contest-form__check" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                  xml:space="preserve">
+                  <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                  />
+                </svg>
+              </div>
+              <div class="contest-form__achievement-text">Сделал селфи с акулой</div>
             </div>
-            <div class="contest-form__achievement-text">Обгорел на пляже</div>
-          </div>
-          <div class="contest-form__achievement">
-            <div class="contest-form__check">
+            <div class="contest-form__achievement">
+              <div class="contest-form__check-wrap">
+                <svg class="contest-form__check" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                  xml:space="preserve">
+                  <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                  />
+                </svg>
+              </div>
+              <div class="contest-form__achievement-text">Обгорел на пляже</div>
             </div>
-            <div class="contest-form__achievement-text">Видел Чака Норриса</div>
-          </div>
-          <div class="contest-form__achievement">
-            <div class="contest-form__check">
+            <div class="contest-form__achievement">
+              <div class="contest-form__check-wrap">
+              </div>
+              <div class="contest-form__achievement-text">Видел Чака Норриса</div>
             </div>
-            <div class="contest-form__achievement-text">Накупил сувенирова</div>
-          </div>
-          <div class="contest-form__achievement">
-            <div class="contest-form__check">
+            <div class="contest-form__achievement">
+              <div class="contest-form__check-wrap">
+              </div>
+              <div class="contest-form__achievement-text">Накупил сувениров</div>
             </div>
-            <div class="contest-form__achievement-text">Удержал башню</div>
-          </div>
-          <div class="contest-form__achievement">
-            <div class="contest-form__check">
+            <div class="contest-form__achievement">
+              <div class="contest-form__check-wrap">
+                <svg class="contest-form__check" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                  xml:space="preserve">
+                  <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"
+                  />
+                </svg>
+              </div>
+              <div class="contest-form__achievement-text">Удержал башню</div>
             </div>
-            <div class="contest-form__achievement-text">Разгоромил отель</div>
+            <div class="contest-form__achievement">
+              <div class="contest-form__check-wrap">
+              </div>
+              <div class="contest-form__achievement-text">Разгромил отель</div>
+            </div>
           </div>
-        </div>
+        </fieldset>
       </div>
       <div class="contest-form__contacts">
         <div class="contest-form__group">
           <div class="contest-form__item">
             <label for="phone">Номер телефона:</label>
-            <input id="phone" name="phone" placeholder="Номер пожалуйста">
+            <input class="contest-form__input" id="phone" name="phone" placeholder="Номер, пожалуйста">
           </div>
         </div>
         <div class="contest-form__group">
           <div class="contest-form__item">
             <label for="email">Адрес почты:</label>
-            <input id="email" name="email" placeholder="Введите почту*">
+            <input class="contest-form__input" id="email" name="email" placeholder="Введите почту*">
           </div>
         </div>
       </div>

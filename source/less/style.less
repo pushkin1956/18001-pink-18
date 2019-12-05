@@ -35,3 +35,43 @@ body {
 body * {
   box-sizing: border-box;
 }
+
+.tablet-break {
+  display: none;
+}
+
+.desktop-break {
+  display: none;
+}
+
+.mobile-break {
+  display: inline;
+}
+
+@media (min-width: @tablet-width) {
+  .mobile-break {
+    display: none;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .tablet-break {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .mobile-break {
+    display: none;
+  }
+
+  .tablet-break {
+    display: none;
+  }
+
+  .desktop-break {
+    display: inline;
+  }
+}

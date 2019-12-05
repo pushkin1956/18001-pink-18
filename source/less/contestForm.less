@@ -6,19 +6,33 @@
     font-size: 14px;
     line-height: 30px;
     text-transform: uppercase;
+    margin-left: 22px;
   }
+}
+
+.contest-form__input {
+  width: 276px;
+  height: 59px;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  border: solid 2px @almostGrey;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 7px;
+  margin-bottom: 19px;
 }
 
 .contest-form__section--names {
   background-color: @white;
-  padding-bottom: 50px;
+  padding-bottom: 26px;
   padding-left: 20px;
 }
 
 .contest-form__section--jorneys {
   padding-top: 40px;
   padding-left: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 33px;
   background-color: @light-grey;
 }
 
@@ -41,11 +55,13 @@
 .contest-form__legeng {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 32px;
 }
 
 .contest-form__contacts {
   background-color: @white;
   padding: 40px 20px;
+  padding-top: 32px;
 }
 
 .contest-form__emotions-area {
@@ -55,6 +71,55 @@
 
 .contest-form__send {
   text-align: center;
+}
+
+.contest-form__title {
+  font-size: 14px;
+  line-height: 18px;
+  color: @lipstick;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  left: -10px;
+  top: -3px;
+}
+
+.contest-form__fieldset {
+  border: none;
+  padding-left: 0;
+}
+
+.contest-form__check-wrap {
+  width: 35px;
+  height: 35px;
+  border: solid 2px @almostGrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 32px;
+  background-color: @white;
+}
+
+.contest-form__check {
+  width: 22px;
+  height: 16px;
+  fill: @lipstick;
+}
+
+.contest-form__achievement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 47px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contest-form__achievement-text {
+  font-size: 18px;
+  line-height: 30px;
+  color: @dark;
 }
 
 @media (min-width: @tablet-width) {
@@ -87,7 +152,7 @@
     fieldset {
       margin: 0;
       padding: 0;
-      border: solid 2px #e5e5e5;
+      border: solid 2px @almostGrey;
     }
   }
 

@@ -1,5 +1,5 @@
 .call {
-  height: 185px;
+  min-height: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,10 +8,48 @@
   line-height: 30px;
   text-align: center;
   font-size: 14px;
+  padding-top: 12px;
+}
+
+.call--photos {
+  margin-bottom: 14px;
+}
+
+.call--contest {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.call__please {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .call {
     font-size: 18px;
+    margin-top: 29px;
+    margin-bottom: 28px;
+  }
+
+  .call--contest {
+    margin-bottom: 0;
+    margin-top: 44px;
+  }
+
+  .call__please {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .call {
+    font-size: 18px;
+    margin-top: 29px;
+    margin-bottom: 37px;
+  }
+
+  .call--last {
+    min-height: auto;
+    margin-top: 7px;
   }
 }
