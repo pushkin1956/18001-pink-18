@@ -207,22 +207,22 @@
         xml:space="preserve">
         <polygon fill="#ffffff" points="1200,0 0,0 0,94.074 " />
       </svg>
-      <table class="plans__table" style="display:non2e">
+      <table class="plans__table">
         <thead>
           <tr>
             <th class="plans__header-left"></th>
-            <th>
+            <th class="plans__header-base">
               <span class="plans__header-text">База</span>
               <br>
               <span class="plans__header-price">1,99 USD</span>
             </th>
-            <th class="plans__hit plans__active">
+            <th class="plans__hit plans__header-standard">
               <img class="plans__hit-image" src="img/bg-hit.svg" alt="plans hit">
               <span class="plans__header-text">Стандарт</span>
               <br>
               <span class="plans__header-price">3,99 USD</span>
             </th>
-            <th>
+            <th class="plans__header-unlim">
               <span class="plans__header-text">Анлим</span>
               <br>
               <span class="plans__header-price">9,99 USD</span>
@@ -232,12 +232,12 @@
         <tbody>
           <tr>
             <td class="plans__cell--first plans__header-left">
-              <span class="plans__cell-caption--left">Розовый фильтр</span>
+              Розовый фильтр
             </td>
             <td>
               <div>
                 <div class="plans__cell">
-                  Розовый фильтр
+                  <span class="plans__cell-caption">Розовый фильтр</span>
                   <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
                     xml:space="preserve">
@@ -249,7 +249,7 @@
             </td>
             <td>
               <div class="plans__cell">
-                Розовый фильтр
+                <span class="plans__cell-caption">Розовый фильтр</span>
                 <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
                   xml:space="preserve">
@@ -260,7 +260,7 @@
             </td>
             <td>
               <div class="plans__cell">
-                Розовый фильтр
+                <span class="plans__cell-caption">Розовый фильтр</span>
                 <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
                   xml:space="preserve">
@@ -325,7 +325,7 @@
             </td>
             <td>
               <div class="plans__cell">
-                Комментарии
+                <span class="plans__cell-caption">Комментарии</span>
                 <svg class="plans__no" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px" y="0px" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752"
                   xml:space="preserve">
@@ -336,7 +336,7 @@
             </td>
             <td>
               <div class="plans__cell">
-                Комментарии
+                <span class="plans__cell-caption">Комментарии</span>
                 <svg class="plans__yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px" y="0px" width="31px" height="21px" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
                   xml:space="preserve">
@@ -360,38 +360,40 @@
         Остались вопросы?
         <br> Свяжитесь с нами!
       </div>
-      <div class="contacts__item">
-        <div class="contacts__item--title">
-          Звоните:
+      <div class="contact__items">
+        <div class="contacts__item contacts__item--call">
+          <div class="contacts__item--title">
+            Звоните:
+          </div>
+          <div class="contacts__item--description">
+            +7 (812) 555-66-66
+          </div>
         </div>
-        <div class="contacts__item--description">
-          +7 (812) 555-66-66
+        <div class="contacts__item contacts__item--write">
+          <div class="contacts__item--title">
+            Пишите:
+          </div>
+          <div class="contacts__item--description">
+            mail@htmlacademy.ru
+          </div>
+        </div>
+        <div class="contacts__item contacts__item--guest">
+          <div class="contacts__item--title">
+            Приезжайте в гости:
+          </div>
+          <div class="contacts__item--description">
+            ул. Большая
+            <br>Конюшенная, 19/8
+          </div>
         </div>
       </div>
-      <div class="contacts__item">
-        <div class="contacts__item--title">
-          Пишите:
-        </div>
-        <div class="contacts__item--description">
-          mail@htmlacademy.ru
-        </div>
-      </div>
-      <div class="contacts__item">
-        <div class="contacts__item--title">
-          Приезжайте в гости:
-        </div>
-        <div class="contacts__item--description">
-          ул. Большая
-          <br>Конюшенная, 19/8
-        </div>
-      </div>
+
     </div>
     <div class="map">
-      <svg class="map-triangle" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px" y="0px" width="595.28px" height="61.905px" viewBox="0 0 595.28 61.905" enable-background="new 0 0 595.28 61.905"
-        xml:space="preserve">
-        <polygon fill="#ffffff" points="297.64,61.905 0,0 595.28,0 " />
+      <svg class="map-triangle" xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 595.28 61.905">
+        <path d="M297.64 61.905L0 0h595.28z" />
       </svg>
+
       <div class="map__image"></div>
       <svg class="map__marker" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px" y="0px" width="35.983px" height="35.983px" viewBox="0 0 35.983 35.983" enable-background="new 0 0 35.983 35.983"
@@ -437,7 +439,7 @@
       </div>
     </div>
     <div class="made-by">
-      <div class="made-by__text">Рарзработано</div>
+      <div class="made-by__text">Разработано</div>
       <svg class="made-by__logo" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" version="1" viewBox="0 0 26.943 34.09">
         <path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"
         />

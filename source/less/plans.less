@@ -8,28 +8,14 @@
 
   td {
     border: solid 1px @almostGrey;
-    padding: 0;
     height: 61px;
   }
 
   th {
-    width: 276px;
     height: 97px;
     padding: 0;
+    padding-bottom: 6px;
     border: solid 1px @white;
-  }
-
-  .plans__header-text {
-    font-family: "OpenSansBold", "Helvetica", sans-serif;
-    font-size: 18px;
-    line-height: 30px;
-    text-transform: uppercase;
-  }
-
-  .plans__header-price {
-    font-family: "OpenSansLight", "Helvetica", sans-serif;
-    font-size: 24px;
-    line-height: 30px;
   }
 
   thead {
@@ -37,13 +23,6 @@
     color: @white;
   }
 
-  .plans__table {
-    background-color: @white;
-    border-collapse: collapse;
-    position: absolute;
-    width: calc(276px * 3);
-    left: -256px;
-  }
 
   .plans__yes {
     fill: @leafy-green;
@@ -52,6 +31,27 @@
   .plans__no {
     fill: @orange-red;
   }
+}
+
+.plans__header-text {
+  font-family: "OpenSansBold", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.plans__header-price {
+  font-family: "OpenSansLight", "Helvetica", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.plans__table {
+  background-color: @white;
+  border-collapse: collapse;
+  position: absolute;
+  width: calc(276px * 3);
+  left: -255px;
 }
 
 .plans__triangle {
@@ -65,35 +65,20 @@
   color: @white;
 }
 
-.plans__table-row {
-  display: flex;
-  justify-content: space-around;
-}
-
-.plans__table-cell {
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-}
-
-.plans__table-col1 {
-  flex-basis: 100px;
-}
-
-.plans__table-col2 {
-  position: absolute;
-  left: -100px;
-}
-
-.plans__table-col4 {
-  position: absolute;
-}
 
 .plans__header-left {
   display: none;
 }
 
-.plans__active {
+.plans__header-base {
+  width: 276px;
+}
+
+.plans__header-standard {
+  width: 276px;
+}
+
+.plans__header-unlim {
   width: 276px;
 }
 
@@ -145,13 +130,89 @@
 
 @media (min-width: @tablet-width) {
   .plans {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-bottom: 100px;
+    padding-left: 22px;
+    padding-right: 20px;
+    padding-bottom: 68px;
+    padding-top: 90px;
+    min-height: 0;
 
-    &::before {
-      transform: skew(0, -5deg);
+    th {
+      padding: 0;
+      height: 78px;
+      padding-top: 3px;
     }
+
+    td {
+      height: 47px;
+    }
+
+  }
+
+  .plans__triangle {
+    top: -43px;
+    left: 0;
+  }
+
+  .plans__cell-caption {
+    display: none;
+  }
+
+  .plans__table {
+    position: static;
+    width: 618px;
+  }
+
+  .plans__header-left {
+    display: block;
+    padding-left: 15px;
+    padding-top: 7px;
+    font-size: 14px;
+    line-height: 30px;
+    width: 154px;
+  }
+
+  .plans__header-base {
+    width: 157px;
+  }
+
+  .plans__header-standard {
+    width: 159px;
+  }
+
+  .plans__header-unlim {
+    width: 159px;
+  }
+
+  .plans__header-text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .plans__header-price {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .plans__hit-image {
+    width: 61px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .plans__hit {
+    &::before {
+      left: 8px;
+      top: 4px;
+    }
+  }
+
+  .plans__cell {
+    justify-content: center;
+  }
+
+  .plans__slider-toggles {
+    display: none;
   }
 }
 
@@ -159,12 +220,14 @@
   .plans {
     font-size: 18px;
     line-height: 30px;
-    padding-top: 88px;
     display: flex;
     justify-content: center;
+    padding-top: 169px;
+    min-height: 546px;
 
     th {
-      height: 94px;
+      height: 100px;
+      padding-top: 0;
     }
 
     td {
@@ -173,12 +236,17 @@
     }
 
     &::before {
-      display: none;
+      content: "";
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      top: -2px;
+      background-color: @white;
     }
   }
 
   .plans__table {
-    width: 936px;
+    width: 946px;
   }
 
   .plans__cell--first {
@@ -213,6 +281,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: 74px;
+    height: 74px;
   }
 
   .plans__header-text {
@@ -225,7 +295,32 @@
     line-height: 30px;
   }
 
-  .plans__slider-toggles {
-    display: none;
+  .plans__triangle {
+    top: 16px;
   }
+
+  .plans__header-left {
+    font-size: 18px;
+    line-height: 30px;
+    width: 236px;
+    padding-left: 22px;
+    padding-top: 14px;
+  }
+
+  .plans__header-base {
+    width: 243px;
+  }
+
+  .plans__header-standard {
+    width: 237px;
+  }
+
+  .plans__header-unlim {
+    width: 245px;
+  }
+
+  .plans__cell {
+    padding-top: 5px;
+  }
+
 }

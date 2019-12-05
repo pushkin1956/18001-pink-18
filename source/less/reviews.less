@@ -55,6 +55,7 @@
   }
 
   .reviews__description {
+    min-width: 617px;
     margin-bottom: 37px;
     font-size: 18px;
     line-height: 30px;
@@ -72,13 +73,22 @@
   }
 
   .reviews__position {
+    display: block;
     font-size: 14px;
     line-height: 30px;
     color: @dark;
   }
+
+  .reviews__slider-toggles {
+    bottom: -47px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .reviews {
+    margin-bottom: 17px;
+  }
+
   .reviews__slider-wrap {
     padding-top: 30px;
   }
@@ -86,6 +96,7 @@
   .reviews__slider-quote {
     display: inline;
     fill: @light-grey;
+    margin-bottom: 46px;
   }
 
   .reviews__item {
