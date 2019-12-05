@@ -1,31 +1,35 @@
 .plans {
   background-color: @light-grey;
   color: @dark;
-  padding-top: 60px;
+  padding-top: 110px;
   position: relative;
-
-  &::before {
-    content: "";
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: -32px;
-    height: 60px;
-    transform: skew(0, -10deg);
-    background-color: #f2f2f2;
-  }
+  overflow-x: hidden;
+  min-height: 491px;
 
   td {
-
     border: solid 1px @almostGrey;
+    padding: 0;
+    height: 61px;
+  }
+
+  th {
+    width: 276px;
+    height: 97px;
+    padding: 0;
+    border: solid 1px @white;
   }
 
   .plans__header-text {
     font-family: "OpenSansBold", "Helvetica", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
   }
 
   .plans__header-price {
     font-family: "OpenSansLight", "Helvetica", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
   }
 
   thead {
@@ -36,6 +40,9 @@
   .plans__table {
     background-color: @white;
     border-collapse: collapse;
+    position: absolute;
+    width: calc(276px * 3);
+    left: -256px;
   }
 
   .plans__yes {
@@ -45,6 +52,95 @@
   .plans__no {
     fill: @orange-red;
   }
+}
+
+.plans__triangle {
+  position: absolute;
+  top: -50px;
+}
+
+.plans__table-head {
+  display: flex;
+  background-color: @dark;
+  color: @white;
+}
+
+.plans__table-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.plans__table-cell {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.plans__table-col1 {
+  flex-basis: 100px;
+}
+
+.plans__table-col2 {
+  position: absolute;
+  left: -100px;
+}
+
+.plans__table-col4 {
+  position: absolute;
+}
+
+.plans__header-left {
+  display: none;
+}
+
+.plans__active {
+  width: 276px;
+}
+
+.plans__cell {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-left: 22px;
+  padding-right: 18px;
+  font-size: 14px;
+  line-height: 30px;
+  color: @dark;
+  text-transform: uppercase;
+}
+
+.plans__hit {
+  position: relative;
+
+  &::before {
+    content: "ХИТ";
+    position: absolute;
+    font-family: "OpenSansBold", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    color: @white;
+    z-index: 1;
+    left: 10px;
+    top: 11px;
+    transform: rotate(-45deg);
+  }
+}
+
+.plans__hit-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.plans__slider-toggles {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 56px;
 }
 
 @media (min-width: @tablet-width) {
@@ -93,6 +189,7 @@
   .plans__cell {
     padding-top: 24px;
     text-align: center;
+    display: flex;
   }
 
   .plans__hit {
