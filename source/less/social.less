@@ -29,10 +29,6 @@
   width: 180px;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 50px;
-}
-
-.footer__logo {
   margin-bottom: 40px;
 }
 
@@ -43,8 +39,13 @@
     justify-content: space-between;
     margin-bottom: 36px;
     position: relative;
-    left: 3px;
+    left: -12px;
     top: 2px;
   }
 }
 
+@media (min-width: @tablet-width) {
+  .social-icons {
+    left: 7px;
+  }
+}
