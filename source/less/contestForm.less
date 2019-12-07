@@ -1,6 +1,6 @@
 .contest-form {
   color: @dark;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
 }
 
 .contest-form--extra {
@@ -70,6 +70,10 @@
   line-height: 30px;
   color: @lipstick;
   text-transform: uppercase;
+}
+
+.contest-form__legend--app {
+  margin-bottom: 36px;
 }
 
 .contest-form__legend--emotions {
@@ -165,6 +169,7 @@
   border: solid 2px @almostGrey;
   border-radius: 50%;
   margin-right: 33px;
+  background-color: @white;
 }
 
 .contest-form__radio--checked {
@@ -343,7 +348,7 @@
       padding: 0;
       border: solid 2px @almostGrey;
     }
-    padding-top: 5px;
+    padding-top: 8px;
   }
 
   .contest-form__emotions-area {
@@ -396,6 +401,7 @@
   .contest-form__title--jorneys {
     left: 0;
     top: 0;
+
     br {
       display: none;
     }
@@ -409,7 +415,7 @@
 
   .contest-form__achievement {
     margin-left: 57px;
-    margin-top: 13px;
+    margin-top: 11px;
   }
 
   .contest-form__button {
@@ -432,10 +438,18 @@
   }
 
   .contest-form__legend--jorneys {
-    padding-left: 14px;
+    padding-left: 26px;
     padding-right: 27px;
-    padding-left: 11px;
-    width: 100%;
+    width: 70%;
+  }
+
+  .contest-form__legend--emotions {
+    width: 42%;
+  }
+
+  .contest-form__achievements {
+    padding-top: 0;
+    padding-left: 0;
   }
 
 }
@@ -602,6 +616,29 @@
 
   .contest-form__title--app {
     left: -1px;
+  }
+
+  .contest-form__legend--app {
+    padding-left: 0;
+    padding-right: 0;
+    width: 80%;
+    margin-bottom: 31px;
+  }
+
+  .contest-form__legend--contacts {
+    width: 28%;
+  }
+
+  .contest-form__legend--jorneys {
+    width: 47%;
+  }
+
+  .contest-form__legend--emotions {
+    width: 28%;
+  }
+
+  .contest-form__contacts {
+    margin-bottom: 0;
   }
 
 }
