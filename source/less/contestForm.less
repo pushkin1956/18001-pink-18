@@ -1,22 +1,28 @@
 .contest-form {
   color: @dark;
+  margin-bottom: 64px;
+}
 
-  label {
-    color: @lipstick;
-    font-size: 14px;
-    line-height: 30px;
-    text-transform: uppercase;
-    margin-left: 22px;
-  }
+.contest-form--extra {
+  display: none;
+}
+
+.contest-form__label {
+  color: @lipstick;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-left: 22px;
 }
 
 .contest-form__input {
-  width: 276px;
+  font-family: inherit;
+  width: 280px;
   height: 59px;
-  padding-top: 22px;
-  padding-bottom: 18px;
+  padding-top: 15px;
+  padding-bottom: 12px;
   padding-left: 20px;
-  border: solid 2px @almostGrey;
+  border: solid 2px #e5e5e5;
   font-size: 18px;
   line-height: 30px;
   margin-top: 7px;
@@ -32,17 +38,21 @@
 .contest-form__section--jorneys {
   padding-top: 40px;
   padding-left: 20px;
-  padding-bottom: 33px;
+  padding-bottom: 46px;
   background-color: @light-grey;
 }
 
 .contest-form__section--app {
   background-color: @light-grey;
   padding-left: 20px;
+  padding-top: 39px;
+  padding-bottom: 44px;
 }
 
 .contest-form__section--emotions {
   padding: 40px 20px;
+  padding-top: 32px;
+  padding-bottom: 45px;
   background-color: @white;
 
   fieldset {
@@ -52,25 +62,41 @@
   }
 }
 
-.contest-form__legeng {
+.contest-form__legend {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 30px;
+  color: @lipstick;
+  text-transform: uppercase;
+}
+
+.contest-form__legend--emotions {
+  margin-bottom: 10px;
 }
 
 .contest-form__contacts {
   background-color: @white;
-  padding: 40px 20px;
+  padding: 0 20px;
   padding-top: 32px;
+  padding-bottom: 22px;
 }
 
 .contest-form__emotions-area {
-  width: 276px;
-  height: 197px;
+  width: 280px;
+  height: 202px;
+  border: solid 2px @almostGrey;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: inherit;
+  padding-left: 19px;
+  padding-top: 16px;
 }
 
 .contest-form__send {
   text-align: center;
+  margin-bottom: 17px;
 }
 
 .contest-form__title {
@@ -80,13 +106,23 @@
   text-transform: uppercase;
   text-align: center;
   position: relative;
+}
+
+.contest-form__title-app {
+  margin-bottom: 34px;
   left: -10px;
   top: -3px;
 }
 
+.contest-form__title--jorneys {
+  left: -10px;
+  top: -4px;
+}
+
 .contest-form__fieldset {
   border: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .contest-form__check-wrap {
@@ -122,22 +158,169 @@
   color: @dark;
 }
 
+.contest-form__radio {
+  width: 37px;
+  height: 37px;
+  position: relative;
+  border: solid 2px @almostGrey;
+  border-radius: 50%;
+  margin-right: 33px;
+}
+
+.contest-form__radio--checked {
+  &::before {
+    position: absolute;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background: @lipstick;
+    border-radius: 50%;
+  }
+}
+
+.contest-form__radio-text {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contest-form__app {
+  display: flex;
+  align-items: center;
+  margin-bottom: 37px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contest-form__button {
+  width: 276px;
+  height: 59px;
+  font-family: "OpenSansBold", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  border: solid 2px @lightGreen;
+  background-color: @lightGreen;
+  color: @white;
+  text-transform: uppercase;
+  margin-bottom: 37px;
+}
+
+.contest-form__required {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.contest-form--asterix {
+  color: @lipstick;
+}
+
+.contest-form__icon {
+  display: none;
+}
+
+.contest-form__achievements {
+  padding-top: 6px;
+  padding-left: 3px;
+}
+
+.contest-form__legend--contacts {
+  display: none;
+}
+
+.contest-form__title--app {
+  left: -10px;
+}
+
 @media (min-width: @tablet-width) {
   .contest-form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 13px;
+  }
+
+  .contest-form__label {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+
+  .contest-form__input {
+    height: 63px;
+    flex: 1;
+    padding-left: 19px;
+    margin-left: 5px;
+  }
+
+  .contest-form__input--contacts {
+    flex: none;
+    margin-left: 0;
+    height: 62px;
+    width: 496px;
+    margin-bottom: 4px;
+    padding-left: 18px;
+    padding-top: 9px;
+  }
+
+  .contest-form__icon {
+    display: block;
+    fill: @lipstick;
+    position: absolute;
+    right: 80px;
+    top: 28px;
+    z-index: 1;
+  }
+
+  .contest-form__item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+
+  .contest-form__item--contacts {
+    flex-direction: column-reverse;
+    margin-left: 58px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: @almostGrey;
+      right: 59px;
+      top: 9px;
+    }
   }
 
   .contest-form__section {
     padding-left: 20px;
   }
 
+  .contest-form__title--app {
+    br {
+      display: none;
+    }
+  }
+
   .contest-form__section--names {
     order: -5;
+    margin-right: 20px;
+    padding-bottom: 22px;
+
   }
 
   .contest-form__section--app {
+    width: 616px;
+    margin: 0 auto;
     order: -4;
+    padding: 0;
+    background-color: @white;
   }
 
   .contest-form__contacts {
@@ -146,6 +329,12 @@
 
   .contest-form__send {
     order: 10;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 26px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
   }
 
   .contest-form__section--emotions {
@@ -154,11 +343,101 @@
       padding: 0;
       border: solid 2px @almostGrey;
     }
+    padding-top: 5px;
   }
 
   .contest-form__emotions-area {
+    height: 196px;
+    width: 496px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .contest-form__fieldset {
+    border: solid 2px @almostGrey;
+    min-height: 305px;
+  }
+
+  .contest-form__fieldset--jorneys {
+    padding-bottom: 44px;
+  }
+
+  .contest-form__apps {
+    margin-left: 57px;
+    margin-top: 10px;
+  }
+
+  .contest-form__radio {
+    margin-right: 22px;
+  }
+
+  .contest-form__contacts {
+    padding-top: 56px;
+  }
+
+  .contest-form__label-phone {
+    margin-left: 19px;
+    margin-top: 4px;
+  }
+
+  .contest-form__label-mail {
+    margin-left: 20px;
+    margin-top: 6px;
+  }
+
+  .contest-form__section--jorneys {
+    background-color: @white;
+    padding-right: 22px;
+    padding-left: 22px;
+    padding-top: 37px;
+  }
+
+  .contest-form__title--jorneys {
+    left: 0;
+    top: 0;
+    br {
+      display: none;
+    }
+  }
+
+  .contest-form__check-wrap {
+    width: 36px;
+    height: 36px;
+    margin-right: 22px;
+  }
+
+  .contest-form__achievement {
+    margin-left: 57px;
+    margin-top: 13px;
+  }
+
+  .contest-form__button {
+    width: 296px;
+  }
+
+  .contest-form__required {
+    margin-right: 19px;
+  }
+
+  .contest-form__legend--app {
+    padding-left: 32px;
+    padding-right: 15px;
+    width: 60%;
+  }
+
+  .contest-form__legend--contacts {
+    display: block;
+    width: 43%;
+  }
+
+  .contest-form__legend--jorneys {
+    padding-left: 14px;
+    padding-right: 27px;
+    padding-left: 11px;
     width: 100%;
   }
+
 }
 
 @media (min-width: @desktop-width) {
@@ -176,14 +455,153 @@
 
   .contest-form__section--names {
     padding-left: 0;
-    width: 50%;
+    width: calc(50% - 3.5%);
+    margin-right: 7%;
+    padding-bottom: 12px;
+  }
+
+  .contest-form__apps {
+    margin-left: 78px;
+    margin-top: 15px;
   }
 
   .contest-form__section--app {
-    width: 50%;
+    width: calc(50% - 3.5%);
+    margin: 0;
+    margin-top: -6px;
+  }
+
+  .contest-form__input--contacts {
+    width: 371px;
+    margin-bottom: 6px;
   }
 
   .contest-form__contacts {
     padding-left: 0;
+    width: 100%;
+    padding-top: 0;
+    padding-right: 0;
+    margin-bottom: 6px;
   }
+
+  .contest-form__groups {
+    display: flex;
+  }
+
+
+  .contest-form__legend--contacts {
+    margin-bottom: 25px;
+  }
+
+  .contest-form__item--contacts {
+    &::after {
+      right: 0;
+    }
+  }
+
+  .contest-form__icon {
+    right: 17px;
+  }
+
+  .contest-form__fieldset--contacts {
+    height: 167px;
+    min-height: 0;
+  }
+
+  .contest-form__section--jorneys {
+    padding-right: 0;
+  }
+
+  .contest-form__achievements {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 59px;
+    margin-top: 12px;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .contest-form__achievement {
+    margin: 0;
+    width: 30%;
+
+    &:nth-child(1) {
+      order: -10;
+      margin-bottom: 46px;
+    }
+
+    &:nth-child(3) {
+      order: -9;
+      margin-bottom: 46px;
+      margin-left: 52px;
+    }
+
+    &:nth-child(5) {
+      order: -8;
+      margin-bottom: 46px;
+      margin-left: 33px;
+    }
+
+    &:nth-child(2) {
+      order: -7;
+    }
+
+    &:nth-child(4) {
+      margin-left: 54px;
+    }
+
+    &:nth-child(6) {
+      margin-left: 31px;
+    }
+
+  }
+  .contest-form__fieldset--jorneys {
+    padding: 0;
+    height: 237px;
+    min-height: auto;
+  }
+
+  .contest-form__section--emotions {
+    padding-right: 0;
+    min-height: 0;
+    height: 232px;
+    margin-bottom: 47px;
+  }
+
+  .contest-form__fieldset--emotions {
+    height: 232px;
+    min-height: 0;
+  }
+
+  .contest-form__emotions-area {
+    width: 823px;
+    height: 130px;
+  }
+
+  .contest-form__send {
+    margin-left: 2px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .contest-form--extra {
+    display: inline;
+  }
+
+  .contest-form__required {
+    margin: 0;
+  }
+
+  .contest-form__item--mail {
+    margin-left: 75px;
+  }
+
+  .contest-form__item--name {
+    margin-bottom: 27px
+  }
+
+  .contest-form__title--app {
+    left: -1px;
+  }
+
 }

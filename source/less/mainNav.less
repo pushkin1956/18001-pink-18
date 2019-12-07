@@ -29,8 +29,9 @@
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  text-transform: uppercase;
   font-family: "OpenSansBold", "Helvetica", sans-serif;
-  box-shadow: 0 1px 0 0 @black-two;
+  box-shadow: 0px 1px 0 0 @black-two, inset 0px 1px 0 0 rgba(255, 255, 255, 0.15);
 
   a {
     text-decoration: none;
@@ -107,5 +108,9 @@
     justify-content: space-between;
     position: relative;
     margin-top: -3px;
+  }
+
+  .main-nav__item {
+    text-transform: none;
   }
 }
