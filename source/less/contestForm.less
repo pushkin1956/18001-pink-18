@@ -176,7 +176,6 @@
   &::before {
     position: absolute;
     content: "";
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -317,7 +316,6 @@
     order: -5;
     margin-right: 20px;
     padding-bottom: 22px;
-
   }
 
   .contest-form__section--app {
@@ -330,6 +328,7 @@
 
   .contest-form__contacts {
     order: -3;
+    padding-top: 56px;
   }
 
   .contest-form__send {
@@ -375,10 +374,6 @@
 
   .contest-form__radio {
     margin-right: 22px;
-  }
-
-  .contest-form__contacts {
-    padding-top: 56px;
   }
 
   .contest-form__label-phone {
@@ -451,7 +446,6 @@
     padding-top: 0;
     padding-left: 0;
   }
-
 }
 
 @media (min-width: @desktop-width) {
@@ -492,10 +486,10 @@
 
   .contest-form__contacts {
     padding-left: 0;
-    width: 100%;
     padding-top: 0;
     padding-right: 0;
-    margin-bottom: 6px;
+    margin-bottom: 0;
+    width: 28%;
   }
 
   .contest-form__groups {
@@ -567,8 +561,8 @@
     &:nth-child(6) {
       margin-left: 31px;
     }
-
   }
+
   .contest-form__fieldset--jorneys {
     padding: 0;
     height: 237px;
@@ -611,7 +605,7 @@
   }
 
   .contest-form__item--name {
-    margin-bottom: 27px
+    margin-bottom: 27px;
   }
 
   .contest-form__title--app {
@@ -625,10 +619,6 @@
     margin-bottom: 31px;
   }
 
-  .contest-form__legend--contacts {
-    width: 28%;
-  }
-
   .contest-form__legend--jorneys {
     width: 47%;
   }
@@ -636,9 +626,4 @@
   .contest-form__legend--emotions {
     width: 28%;
   }
-
-  .contest-form__contacts {
-    margin-bottom: 0;
-  }
-
 }
