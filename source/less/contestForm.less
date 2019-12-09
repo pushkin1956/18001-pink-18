@@ -15,6 +15,10 @@
   margin-left: 22px;
 }
 
+.contest-form__radio {
+  display: none;
+}
+
 .contest-form__input {
   font-family: inherit;
   width: 280px;
@@ -46,7 +50,7 @@
   background-color: @light-grey;
   padding-left: 20px;
   padding-top: 39px;
-  padding-bottom: 44px;
+  padding-bottom: 53px;
 }
 
 .contest-form__section--emotions {
@@ -186,15 +190,44 @@
   }
 }
 
-.contest-form__radio-text {
+.contest-form__radio-label {
   font-size: 18px;
   line-height: 30px;
+  position: relative;
+  padding-left: 69px;
+  top: 6px;
+
+  &::before {
+    content: "";
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    border: solid 2px #e5e5e5;
+    border-radius: 50%;
+    margin-right: 33px;
+    background-color: #ffffff;
+    left: -2px;
+    top: -7px;
+  }
+}
+
+.contest-form__radio:checked ~ .contest-form__radio-label {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background: @lipstick;
+    border-radius: 50%;
+  }
 }
 
 .contest-form__app {
   display: flex;
   align-items: center;
-  margin-bottom: 37px;
+  margin-bottom: 44px;
 
   &:last-child {
     margin-bottom: 0;
@@ -253,12 +286,15 @@
     margin-right: 15px;
   }
 
-
   .contest-form__input {
     height: 63px;
     flex: 1;
     padding-left: 19px;
     margin-left: 5px;
+  }
+
+  .contest-form__radio-label {
+    padding-left: 58px;
   }
 
   .contest-form__input--contacts {
@@ -369,7 +405,11 @@
 
   .contest-form__apps {
     margin-left: 57px;
-    margin-top: 10px;
+    margin-top: 6px;
+  }
+
+  .contest-form__app {
+    margin-bottom: 45px;
   }
 
   .contest-form__radio {
@@ -626,5 +666,9 @@
 
   .contest-form__legend--emotions {
     width: 28%;
+  }
+
+  .contest-form__app {
+    margin-bottom: 44px;
   }
 }
