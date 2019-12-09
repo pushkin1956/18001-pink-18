@@ -13,7 +13,7 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("pic/pink-index-mobile.jpg");
+      background-image: url("pic/pink-index-mobile-closed.jpg");
     }
 
     /* Tablet */
@@ -21,7 +21,7 @@
     @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url("pic/pink-index-tablet.jpg");
+        background-image: url("pic/pink-index-tablet-closed.jpg");
       }
     }
 
@@ -41,63 +41,61 @@
 
 <body>
   <header class="page-header page-header--index">
+    <div class="page-header-wrap page-header-wrap--index">
+      <nav class="main-nav">
+        <div class="main-nav__header">
+          <a class="page-header__logo">
+            <picture>
+              <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
+              <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+              <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
+                alt="Pink logo">
+            </picture>
+          </a>
+          <button class="main-nav__toggle" type="button">
+          </button>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photos.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="contest.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
 
-    <nav class="main-nav">
-      <div class="main-nav__header">
-        <a class="page-header__logo">
-          <picture>
-            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
-            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
-            <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
-            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
-              alt="Pink logo">
-          </picture>
-        </a>
-        <button class="main-nav__toggle" type="button">
-          <!-- <img src="img/icon-menu-burger.svg" /> -->
+      <div class="header header--index">
+        Взгляните
+        <br class="tablet-break">
+        <br class="desktop-break">на жизнь
+        <br class="mobile-break">
+        <br class="desktop-break">
+        <br class="tablet-break"> иначе!
+      </div>
+      <div class="page-header__image"></div>
+      <div class="apps">
+        <button class="apps__download-button">
+          Скачать приложение
         </button>
-      </div>
-      <ul class="main-nav__list main-nav__list--open">
-        <li class="main-nav__item">
-          <a>Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="photos.html">Фотографии</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="contest.html">Конкурс</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="https://htmlacademy.ru">HTML Academy</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="header header--index">
-      Взгляните
-      <br class="tablet-break">
-      <br class="desktop-break">на жизнь
-      <br class="mobile-break">
-      <br class="desktop-break">
-      <br class="tablet-break"> иначе!
-    </div>
-    <div class="page-header__image"></div>
-    <div class="apps">
-      <button class="apps__download-button">
-        Скачать приложение
-      </button>
-      <div class="apps__items">
-        <img class="apps__item apps__item--ios" src="img/logo-apple.svg" />
-        <img class="apps__item apps__item--android" src="img/logo-android.svg" />
-        <img class="apps__item apps__item--win" src="img/logo-microsoft.svg" />
-      </div>
-      <div class="apps__info">
-        Доступно для IPhone, IPad, Android
-        <br> Windows Phone, OS X, Windows 8
+        <div class="apps__items">
+          <img class="apps__item apps__item--ios" src="img/logo-apple.svg" />
+          <img class="apps__item apps__item--android" src="img/logo-android.svg" />
+          <img class="apps__item apps__item--win" src="img/logo-microsoft.svg" />
+        </div>
+        <div class="apps__info">
+          Доступно для IPhone, IPad, Android
+          <br> Windows Phone, OS X, Windows 8
+        </div>
       </div>
     </div>
-
-
   </header>
   <main class="page-main">
     <div class="offer">
@@ -446,6 +444,8 @@
       </svg>
     </div>
   </footer>
+
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
