@@ -6,23 +6,10 @@
   overflow-x: hidden;
   min-height: 491px;
 
-  td {
-    border: solid 1px @almostGrey;
-    height: 61px;
-  }
-
-  th {
-    height: 97px;
-    padding: 0;
-    padding-bottom: 6px;
-    border: solid 1px @white;
-  }
-
   thead {
     background-color: @dark;
     color: @white;
   }
-
 
   .plans__yes {
     fill: @leafy-green;
@@ -31,6 +18,23 @@
   .plans__no {
     fill: @orange-red;
   }
+}
+
+.plans__empty {
+  background-color: @light-grey;
+  border: none;
+}
+
+.plans__td {
+  border: solid 1px @almostGrey;
+  height: 61px;
+}
+
+.plans__th {
+  height: 97px;
+  padding: 0;
+  padding-bottom: 6px;
+  border: solid 1px @white;
 }
 
 .plans__header-text {
@@ -64,7 +68,6 @@
   background-color: @dark;
   color: @white;
 }
-
 
 .plans__header-left {
   display: none;
@@ -135,16 +138,21 @@
     padding-bottom: 68px;
     padding-top: 90px;
     min-height: 0;
+  }
 
-    th {
-      padding: 0;
-      height: 78px;
-      padding-top: 3px;
-    }
+  .plans__empty {
+    background-color: @light-grey;
+    border: none;
+  }
 
-    td {
-      height: 47px;
-    }
+  .plans__td {
+    height: 47px;
+  }
+
+  .plans__th {
+    padding: 0;
+    height: 78px;
+    padding-top: 3px;
   }
 
   .plans__triangle {
@@ -163,6 +171,8 @@
 
   .plans__header-left {
     display: block;
+    border-right: none;
+    border-bottom: none;
     padding-left: 15px;
     padding-top: 7px;
     font-size: 14px;
@@ -224,16 +234,6 @@
     padding-top: 169px;
     min-height: 546px;
 
-    th {
-      height: 100px;
-      padding-top: 0;
-    }
-
-    td {
-      width: 234px;
-      height: 59px;
-    }
-
     &::before {
       content: "";
       width: 100%;
@@ -242,6 +242,21 @@
       top: -2px;
       background-color: @white;
     }
+  }
+
+  .plans__empty {
+    background-color: @light-grey;
+    border: none;
+  }
+
+  .plans__td {
+    width: 234px;
+    height: 59px;
+  }
+
+  .plans__th {
+    height: 100px;
+    padding-top: 0;
   }
 
   .plans__table {
