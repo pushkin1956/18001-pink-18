@@ -133,37 +133,58 @@
   margin: 0;
 }
 
-.contest-form__check-wrap {
-  width: 35px;
-  height: 35px;
-  border: solid 2px @almostGrey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 32px;
-  background-color: @white;
+.contest-form__check {
+  display: none;
 }
 
-.contest-form__check {
+.contest-form__check-wrap {
+  position: relative;
+  padding-left: 40px;
+}
+
+.contest-form__check-image {
   width: 22px;
   height: 16px;
   fill: @lipstick;
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  display: none;
+  pointer-events: none;
+}
+
+.contest-form__check:checked ~ .contest-form__check-image {
+  display: block;
+}
+
+.contest-form__check-label {
+  font-size: 18px;
+  line-height: 30px;
+  color: @dark;
+  display: block;
+  padding-left: 26px;
+  padding-top: 2px;
+
+  &::before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    border: solid 2px @almostGrey;
+    position: absolute;
+    left: -3px;
+    top: -1px;
+    background-color: @white;
+  }
 }
 
 .contest-form__achievement {
   display: flex;
   align-items: center;
-  margin-bottom: 47px;
+  margin-bottom: 50px;
 
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.contest-form__achievement-text {
-  font-size: 18px;
-  line-height: 30px;
-  color: @dark;
 }
 
 .contest-form__radio {
@@ -297,6 +318,16 @@
     padding-left: 58px;
   }
 
+  .contest-form__check-label {
+    padding-left: 18px;
+    padding-top: 6px;
+
+    &::before {
+      left: -1px;
+      top: 3px;
+    }
+  }
+
   .contest-form__input--contacts {
     flex: none;
     margin-left: 0;
@@ -400,7 +431,7 @@
   }
 
   .contest-form__fieldset--jorneys {
-    padding-bottom: 44px;
+    padding-bottom: 52px;
   }
 
   .contest-form__apps {
@@ -442,15 +473,10 @@
     }
   }
 
-  .contest-form__check-wrap {
-    width: 36px;
-    height: 36px;
-    margin-right: 22px;
-  }
-
   .contest-form__achievement {
     margin-left: 57px;
     margin-top: 11px;
+    margin-bottom: 46px;
   }
 
   .contest-form__button {
