@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("pic/pink-photo-mobile.jpg");
+    }
+
+    /* Tablet */
+
+    @media ( min-width: 660px) {
+      HTML {
+        /* Tablet layout */
+        background-image: url("pic/pink-photo-tablet.jpg");
+      }
+    }
+
+    /* Desktop */
+
+    @media ( min-width: 1200px) {
+      HTML {
+        /* Desktop layout */
+        background-image: url("pic/pink-photo-desktop.jpg");
+      }
+    }
+  </style>
+  <link href="/pic/styles.css" rel="stylesheet">
+  <script src="/pic/script.js"></script>
+  <base href="https://htmlacademy-adaptive.github.io/18001-pink-18/13/">
+</head>
+
+<body>
+  <header class="page-header page-header--photo">
+    <nav class="main-nav">
+      <div class="main-nav__header">
+        <a class="page-header__logo">
+          <picture>
+            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
+            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+            <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
+            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
+              alt="Pink logo">
+          </picture>
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <img src="img/icon-menu-burger.svg" />
+        </button>
+      </div>
+      <ul class="main-nav__list main-nav__list--opened">
+        <li class="main-nav__item">
+          <a>Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="photos.html">Фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="contest.html">Конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header">
+      Фотографии
+      <br>пользователей
+    </div>
+  </header>
+
+
+  <main class="page-main">
+    <div class="call__wrapper">
+      <div class="call call--photos">
+        Взгляните на фотографии, которые
+        <br class="mobile-break"> выкладывают
+        <br class="tablet-break"> пользователи!
+        <br class="mobile-break desktop-break"> Видите, как не хватает ваших?
+      </div>
+    </div>
+    <div class="panorama">
+      <div alt="panorama" class="panorama__image"></div>
+      <div class="panorama__text">Панорама дня</div>
+    </div>
+    <div class="comment comment--short">
+      <span class="comment__author">Анна</span>
+      <span class="comment__time">(5 минут назад)</span>
+      <div class="comment__text">
+        Прыгать или нет? Напишите в
+        <br class="mobile-break"> комментарии свой совет и
+        <br class="mobile-break"> смотрите прямую
+        <br class="tablet-break"> трансляцию в
+        <br class="mobile-break"> перископе, задавайте свои вопросы!
+      </div>
+      <div class="comment__footer">
+        <div class="comment-likes comment-likes--short">
+          <div class="comment-likes__text comment-likes__text--short">
+            <svg class="comment-likes__icon comment-likes__icon--short" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="521.939 473.064 12.545 11.99"
+              enable-background="new 521.939 473.064 12.545 11.99" xml:space="preserve">
+              <g>
+                <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"
+                />
+              </g>
+            </svg>
+            Нравится: 215</div>
+        </div>
+      </div>
+    </div>
+    <div class="photos">
+      <div class="photos__item">
+        <img class="image--mobile" src="img/photo-car-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-car-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-car-desktop@1x.jpg" alt="photo">
+
+        <div class="comment">
+          <div>
+            <span class="comment__author">Левон</span>
+            <span class="comment__time">(5 часов назад)</span>
+            <div class="comment__text">
+              Вчера он на луну летал, сегодня в
+              <br> руки к нам попал.
+            </div>
+          </div>
+
+          <div class="comment__footer">
+            <div class="comment-likes">
+              <div class="comment-likes__text">
+                <svg class="comment-likes__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="13px" height="12px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
+                  xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"
+                    />
+                  </g>
+                </svg>Нравится: 356</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="photos__item">
+        <img class="image--mobile" src="img/photo-drumset-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-drumset-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-drumset-desktop@1x.jpg" alt="photo">
+        <div class="comment">
+          <div>
+            <span class="comment__author">Антон</span>
+            <span class="comment__time">(12 часов назад)</span>
+            <div class="comment__text">
+              Соседи будут рады!
+            </div>
+          </div>
+          <div class="comment__footer">
+            <div class="comment-likes">
+              <div class="comment-likes__text">
+                <svg class="comment-likes__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="13px" height="12px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
+                  xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"
+                    />
+                  </g>
+                </svg>
+                Нравится: 666
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="photos__item">
+        <img class="image--mobile" src="img/photo-window-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-window-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-window-desktop@1x.jpg" alt="photo">
+        <div class="comment">
+          <div>
+            <span class="comment__author">Борис</span>
+            <span class="comment__time">(20 часов назад)</span>
+            <div class="comment__text">
+              Здесь могла быть ваша цитата о
+              <br> высоком и вечном.
+            </div>
+          </div>
+          <div class="comment__footer">
+            <div class="comment-likes">
+              <div class="comment-likes__text">
+                <svg class="comment-likes__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="13px" height="12px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
+                  xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"
+                    />
+                  </g>
+                </svg>Нравится: 215</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="photos__item">
+        <img class="image--mobile" src="img/photo-fair-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-fair-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-fair-desktop@1x.jpg" alt="photo">
+        <div class="comment">
+          <div>
+            <span class="comment__author">Сергей</span>
+            <span class="comment__time">(25 часов назад)</span>
+            <div class="comment__text">
+              Самая кубанская в мире!
+            </div>
+          </div>
+          <div class="comment__footer">
+            <div class="comment-likes">
+              <div class="comment-likes__text">
+                <svg class="comment-likes__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="13px" height="12px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
+                  xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"
+                    />
+                  </g>
+                </svg>Нравится: 4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="photos__item">
+        <img class="image--mobile" src="img/photo-pov-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-pov-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-pov-desktop@1x.jpg" alt="photo">
+        <div class="comment">
+          <div>
+            <span class="comment__author">Максим</span>
+            <span class="comment__time">(40 часов назад)</span>
+            <div class="comment__text">
+              Где снег-то?
+            </div>
+          </div>
+          <div class="comment__footer">
+            <div class="comment-likes">
+              <div class="comment-likes__text">
+                <svg class="comment-likes__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px" y="0px" width="13px" height="12px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
+                  xml:space="preserve">
+                  <g>
+                    <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"
+                    />
+                  </g>
+                </svg>
+                Нравится: 150
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="photos__item">
+        <img class="image--mobile" src="img/photo-wing-mobile@1x.jpg" alt="photo">
+        <img class="image--tablet" src="img/photo-wing-tablet@1x.jpg" alt="photo">
+        <img class="image--desktop" src="img/photo-wing-desktop@1x.jpg" alt="photo">
+        <div class="comment">
+          <div>
+            <span class="comment__author">Надежда</span>
+            <span class="comment__time">(45 часов назад)</span>
+            <div class="comment__text">
+              Всем GM и взаимные лайки!
+            </div>
+          </div>
+          <div class="comment__footer">
+            <div class="comment-likes"></div>
+            <div class="comment-likes__text">
+              <svg class="comment-likes__icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="13px" height="12px" viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
+                xml:space="preserve">
+                <g>
+                  <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"
+                  />
+                </g>
+              </svg>
+              Нравится: 2560
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="call call--photos-last">
+      <div class="call__wrapper">
+        Затмите их всех!
+        <br class="mobile-break tablet-break desktop-break"> Выкладывайте все, что накопилось в
+        <br class="mobile-break"> телефоне!
+      </div>
+    </div>
+    <div class="upload-photo">
+      <picture>
+        <source srcset="img/photo-road-desktop@1x.jpg" media="(min-width: 1200px)">
+        <source srcset="img/photo-road-tablet@1x.jpg" media="(min-width: 660px)">
+        <img class="upload-photo__image" src="img/photo-road-mobile@1x.jpg" alt="upload image">
+      </picture>
+      <div class="upload-photo__wrap">
+        <div class="upload-photo__controls">
+          <div class="upload-photo__controls-item">
+            <svg class="upload-photo__crop" width="44px" height="44px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+              <path fill="none" d="M0,0h48v48H0V0z" />
+              <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
+            </svg>
+            <div class="upload-photo--scale-crop"></div>
+          </div>
+          <div class="upload-photo__controls-item">
+            <svg class="upload-photo__fill" width="44px" height="44px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+              <path fill="none" d="M0,0h48v48H0V0z" />
+              <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"
+              />
+              <rect y="40" width="48" height="3" />
+            </svg>
+            <div class="upload-photo--scale-fill"></div>
+          </div>
+          <div class="upload-photo__controls-item">
+            <svg class="upload-photo__contrast" width="44px" height="44px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92"
+              xml:space="preserve">
+              <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"
+              />
+              <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
+            </svg>
+            <div class="upload-photo--scale-contrast"></div>
+          </div>
+        </div>
+        <div class="upload-photo--scale"></div>
+        <div class="upload-photo__buttons">
+          <button class="upload-photo__button">Запостить</button>
+          <button class="upload-photo__button upload-photo__button--disabled">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="img/logo-pink-blue-mobile.svg" alt="footer-logo">
+    </div>
+    <div class="social-icons">
+      <div class="social-icons__item">
+        <svg class="social-icons__image" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663"
+          xml:space="preserve">
+          <g id="W6EeEF_1_">
+            <g>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="social-icons__item">
+        <svg class="social-icons__image" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944"
+          xml:space="preserve">
+          <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"
+          />
+        </svg>
+      </div>
+      <div class="social-icons__item">
+        <svg class="social-icons__image" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96"
+          xml:space="preserve">
+          <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="made-by">
+      <div class="made-by__text">Разработано</div>
+      <svg class="made-by__logo" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" version="1" viewBox="0 0 26.943 34.09">
+        <path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"
+        />
+      </svg>
+    </div>
+  </footer>
+</body>
+
+</html>
