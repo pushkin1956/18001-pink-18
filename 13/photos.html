@@ -13,7 +13,7 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("pic/pink-photo-mobile.jpg");
+      background-image: url("pic/pink-photo-mobile-closed.jpg");
     }
 
     /* Tablet */
@@ -21,7 +21,7 @@
     @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url("pic/pink-photo-tablet.jpg");
+        background-image: url("pic/pink-photo-tablet-closed.jpg");
       }
     }
 
@@ -41,39 +41,40 @@
 
 <body>
   <header class="page-header page-header--photo">
-    <nav class="main-nav">
-      <div class="main-nav__header">
-        <a class="page-header__logo">
-          <picture>
-            <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
-            <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
-            <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
-            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
-              alt="Pink logo">
-          </picture>
-        </a>
-        <button class="main-nav__toggle" type="button">
-          <img src="img/icon-menu-burger.svg" />
-        </button>
+    <div class="page-header-wrap page-header-wrap--photo">
+      <nav class="main-nav">
+        <div class="main-nav__header">
+          <a class="page-header__logo">
+            <picture>
+              <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)" width="147" height="40">
+              <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+              <source srcset="img/logo-pink-white-mobile.svg" media="(min-width: 320px)">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75px" height="22px" class="page-header__logo-image"
+                alt="Pink logo">
+            </picture>
+          </a>
+          <button class="main-nav__toggle" type="button">
+          </button>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="/">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photos.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="contest.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header">
+        Фотографии
+        <br>пользователей
       </div>
-      <ul class="main-nav__list main-nav__list--opened">
-        <li class="main-nav__item">
-          <a>Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="photos.html">Фотографии</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="contest.html">Конкурс</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="https://htmlacademy.ru">HTML Academy</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header">
-      Фотографии
-      <br>пользователей
     </div>
   </header>
 
@@ -309,7 +310,7 @@
               <path fill="none" d="M0,0h48v48H0V0z" />
               <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
             </svg>
-            <div class="upload-photo--scale-crop"></div>
+            <input class="upload-photo--scale-crop" type="range" name="scale" id="scale" value="79">
           </div>
           <div class="upload-photo__controls-item">
             <svg class="upload-photo__fill" width="44px" height="44px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
@@ -318,7 +319,7 @@
               />
               <rect y="40" width="48" height="3" />
             </svg>
-            <div class="upload-photo--scale-fill"></div>
+            <input class="upload-photo--scale-fill" type="range" name="scale" id="scale" value="13">
           </div>
           <div class="upload-photo__controls-item">
             <svg class="upload-photo__contrast" width="44px" height="44px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92"
@@ -327,10 +328,10 @@
               />
               <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
             </svg>
-            <div class="upload-photo--scale-contrast"></div>
+            <input class="upload-photo--scale-contrast" type="range" name="scale" id="scale" value="52">
           </div>
         </div>
-        <div class="upload-photo--scale"></div>
+        <input class="upload-photo--scale" type="range" name="scale" id="scale" value="85">
         <div class="upload-photo__buttons">
           <button class="upload-photo__button">Запостить</button>
           <button class="upload-photo__button upload-photo__button--disabled">Отмена</button>
@@ -380,6 +381,7 @@
       </svg>
     </div>
   </footer>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
