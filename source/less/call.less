@@ -24,6 +24,11 @@
   display: none;
 }
 
+.call--photos-last {
+  min-height: 124px;
+  margin-bottom: 32px;
+}
+
 @media (min-width: @tablet-width) {
   .call {
     font-size: 18px;
@@ -32,12 +37,17 @@
   }
 
   .call--contest {
-    margin-bottom: 0;
+    margin-bottom: 31px;
     margin-top: 44px;
   }
 
   .call__please {
     display: inline;
+  }
+
+  .call--photos-last {
+    margin-top: 6px;
+    margin-bottom: 42px;
   }
 }
 
@@ -51,5 +61,19 @@
   .call--last {
     min-height: auto;
     margin-top: 7px;
+  }
+
+  .call--photos-last {
+    margin-top: -30px;
+  }
+
+  .call--contest {
+    margin-bottom: 29px;
+  }
+
+  .call--photos {
+    margin-bottom: 67px;
+    margin-top: 0;
+    padding-top: 73px;
   }
 }

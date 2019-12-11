@@ -1,19 +1,31 @@
 .page-header {
-  width: 320px;
-  background-color: #233243;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position-y: 325px;
-  background-size: cover;
-  // background-position-y: 246px;
-  background-repeat: no-repeat;
   color: @white;
-  position: relative;
-  margin: 0 auto;
-  min-height: 495px;
 
   a {
     color: @white;
   }
+}
+
+.page-header-wrap {
+  min-height: 495px;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  background-color: #233243;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position-y: 260px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.page-header-wrap--closed {
+  background-position-y: 0;
+  min-height: 235px;
+  background-size: cover;
+}
+
+.page-header-wrap--index {
+  background-size: contain;
 }
 
 .page-header__logo {
@@ -34,21 +46,41 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header-wrap {
+    position: relative;
     width: @tablet-width;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position-y: 388px;
-    position: relative;
     min-height: 696px;
   }
 
-  .page-header--index {
-    height: 985px;
+  .page-header-wrap--index {
+    background-position-y: 254px;
+    background-position-x: -271px;
+    min-height: 985px;
+    background-size: auto;
+  }
+
+  .page-header-wrap--photo {
+    background-position-y: 253px;
+    background-size: auto;
+    background-position-x: -271px;
+    min-height: 696px;
   }
 
   .page-header__logo-image {
     width: 147px;
     height: 40px;
+  }
+
+  .page-header-wrap--closed {
+    background-position-y: 0;
+    background-position-x: -272px;
+    min-height: 440px;
+    background-size: auto;
+  }
+
+  .page-header-wrap--closed.page-header-wrap--index {
+    min-height: 730px;
   }
 
   .page-header__image {
@@ -59,20 +91,35 @@
     right: 20px;
     top: 440px;
   }
+
+  .page-header__image--closed {
+    top: calc(440px - 255px);
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    width: @desktop-width;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-    position: relative;
-    object-fit: contain;
-    background-position: center;
     min-height: 395px;
+  }
+
+  .page-header-wrap {
+    width: @desktop-width;
+    position: relative;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center;
+    min-height: auto;
+  }
+
+  .page-header-wrap--closed {
+    height: 395px;
   }
 
   .page-header--index {
     height: 853px;
+  }
+
+  .page-header-wrap--closed.page-header-wrap--index {
+    min-height: 855px;
   }
 
   .page-header__image {

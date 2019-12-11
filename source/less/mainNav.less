@@ -1,5 +1,4 @@
 .main-nav {
-  min-height: 240px;
   width: 320px;
 }
 
@@ -11,6 +10,17 @@
   background: transparent;
   border: none;
   position: relative;
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+  background-image: url("../img/icon-menu-cross.svg");
+  background-repeat: no-repeat;
+  background-position-x: 27px;
+}
+
+.main-nav__toggle--closed {
+  background-image: url("../img/icon-menu-burger.svg");
+  background-position-x: 0;
 }
 
 .main-nav__header {
@@ -21,6 +31,17 @@
   justify-content: space-between;
   padding: 22px 20px;
   box-shadow: 0 1px 0 0 @black-two;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    background-color: @black-30;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .main-nav__item {
@@ -29,8 +50,10 @@
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  text-transform: uppercase;
   font-family: "OpenSansBold", "Helvetica", sans-serif;
-  box-shadow: 0 1px 0 0 @black-two;
+  box-shadow: 0 1px 0 0 @black-two, inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+
 
   a {
     text-decoration: none;
@@ -43,20 +66,16 @@
   padding: 0;
   margin-top: 1px;
   list-style-type: none;
+  display: block;
 }
 
 .main-nav__list--closed {
   display: none;
 }
 
-.main-nav__list--open {
-  display: block;
-}
-
 @media (min-width: @tablet-width) {
   .main-nav {
     width: @tablet-width;
-    min-height: 240px;
 
     &::before {
       position: absolute;
@@ -79,6 +98,7 @@
   .main-nav__header {
     margin-right: 152px;
     padding-top: 11px;
+    box-shadow: none;
   }
 
   .main-nav {
@@ -107,5 +127,24 @@
     justify-content: space-between;
     position: relative;
     margin-top: -3px;
+  }
+
+  .main-nav__item {
+    text-transform: none;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .main-nav__item--active {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 2px;
+      background: @white;
+      left: 50%;
+      bottom: 7px;
+      transform: translateX(-50%);
+    }
   }
 }
