@@ -98,6 +98,7 @@
   .main-nav__header {
     margin-right: 152px;
     padding-top: 11px;
+    box-shadow: none;
   }
 
   .main-nav {
@@ -130,5 +131,20 @@
 
   .main-nav__item {
     text-transform: none;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .main-nav__item--active {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 2px;
+      background: @white;
+      left: 50%;
+      bottom: 7px;
+      transform: translateX(-50%);
+    }
   }
 }
