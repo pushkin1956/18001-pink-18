@@ -1,5 +1,16 @@
 .main-nav {
   width: 320px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    background-color: @black-30;
+    height: 69px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .main-nav__check {
@@ -32,16 +43,6 @@
   padding: 22px 20px;
   box-shadow: 0 1px 0 0 @black-two;
   position: relative;
-
-  &::before {
-    content: "";
-    width: 100%;
-    background-color: @black-30;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
 }
 
 .main-nav__item {
@@ -91,6 +92,17 @@
   .main-nav__header {
     height: 110px;
     position: relative;
+  }
+
+  .main-nav__item {
+    &:hover a {
+      color: @lipstick;
+    }
+
+    &:active a {
+      color: @white;
+      opacity: 0.3;
+    }
   }
 }
 

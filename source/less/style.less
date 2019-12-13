@@ -38,15 +38,15 @@ body * {
   box-sizing: border-box;
 }
 
-.tablet-break {
+.tablet-visible {
   display: none;
 }
 
-.desktop-break {
+.desktop-visible {
   display: none;
 }
 
-.mobile-break {
+.mobile-visible {
   display: inline;
 }
 
@@ -55,29 +55,29 @@ body * {
 }
 
 @media (min-width: @tablet-width) {
-  .mobile-break {
+  .mobile-visible {
     display: none;
   }
 
-  .desktop-break {
+  .desktop-visible {
     display: none;
   }
 
-  .tablet-break {
+  .tablet-visible {
     display: inline;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .mobile-break {
+  .mobile-visible {
     display: none;
   }
 
-  .tablet-break {
+  .tablet-visible {
     display: none;
   }
 
-  .desktop-break {
+  .desktop-visible {
     display: inline;
   }
 }
