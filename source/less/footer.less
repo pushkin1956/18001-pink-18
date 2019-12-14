@@ -15,8 +15,16 @@
 }
 
 .footer__logo-image {
-  width: 147px;
-  height: 40px;
+  fill: #283645;
+
+  &:hover {
+    fill: @lipstick;
+  }
+
+  &:active {
+    fill: #283645;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
