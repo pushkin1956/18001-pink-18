@@ -22,27 +22,7 @@
 }
 
 .reviews__arrow {
-  position: absolute;
-  opacity: 0.3;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &:active {
-    opacity: 0.1;
-  }
-}
-
-.reviews__arrow-left {
-  left: 130px;
-  top: 170px;
-}
-
-.reviews__arrow-right {
-  right: 130px;
-  top: 170px;
+  display: none;
 }
 
 .reviews__slider-quote {
@@ -146,5 +126,29 @@
 
   .reviews__slider-toggles {
     display: none;
+  }
+
+  .reviews__arrow {
+    position: absolute;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .reviews__arrow-left {
+    left: 130px;
+    top: 170px;
+  }
+
+  .reviews__arrow-right {
+    right: 130px;
+    top: 170px;
   }
 }
