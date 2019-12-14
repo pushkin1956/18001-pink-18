@@ -1,6 +1,7 @@
 function Page() {
   this.wrapper = document.querySelector('.page-header-wrap');
   this.mainNavList = document.querySelector('.main-nav__list');
+  this.mainNav = document.querySelector('.main-nav');
   this.navToggle = document.querySelector('.main-nav__toggle');
   this.header = document.querySelector('.header');
   this.headerImage = document.querySelector('.page-header__image');
@@ -8,11 +9,12 @@ function Page() {
 }
 
 Page.prototype.setupMenu = function () {
-  this.mainNavList.classList.remove('main-nav__list--open')
+  this.mainNav.classList.add('main-nav--closed');
   this.mainNavList.classList.add('main-nav__list--closed');
   this.wrapper.classList.add('page-header-wrap--closed');
   this.navToggle.classList.add('main-nav__toggle--closed');
   this.header.classList.add('header--closed');
+
 
   if (this.headerImage) {
     this.headerImage.classList.add('page-header__image--closed');
@@ -26,6 +28,7 @@ Page.prototype.setupMenu = function () {
 }
 
 Page.prototype.toggleMenu = function () {
+  this.mainNav.classList.toggle('main-nav--closed');
   this.navToggle.classList.toggle('main-nav__toggle--closed');
   this.mainNavList.classList.toggle('main-nav__list--closed');
   this.wrapper.classList.toggle('page-header-wrap--closed');

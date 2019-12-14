@@ -6,12 +6,12 @@
 .photos__item {
   display: flex;
   flex-direction: column;
+}
 
-  img {
-    width: 280px;
-    height: 180px;
-    object-fit: contain;
-  }
+.photos__image {
+  width: 280px;
+  height: 180px;
+  object-fit: contain;
 }
 
 @media (min-width: @tablet-width) {
@@ -22,13 +22,11 @@
     justify-content: space-between;
   }
 
-  .photos__item {
-    img {
-      width: 300px;
-      height: 300px;
-      object-fit: contain;
-    }
+  .photos__image {
+    width: 300px;
+    height: 300px;
   }
+
 }
 
 @media (min-width: @desktop-width) {
@@ -39,11 +37,10 @@
 
   .photos__item {
     margin-right: 0;
+  }
 
-    img {
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
+  .photos__image {
+    width: 300px;
+    height: 400px;
   }
 }
