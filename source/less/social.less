@@ -1,22 +1,20 @@
 .social-icons__item {
   width: 46px;
   height: 46px;
-  border: solid 3px @dark;
+  border: solid 3px @almostGrey;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 
+  &:active {
+    border-color: @almostGrey;
+    opacity: 0.3;
+  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 46px;
-    height: 46px;
-    opacity: 0.1;
-    background-color: #fefefe;
-    border-radius: 50%;
+  &:hover {
+    border-color: @dark;
   }
 }
 

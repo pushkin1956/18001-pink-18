@@ -27,6 +27,15 @@
   line-height: 30px;
   margin-top: 7px;
   margin-bottom: 19px;
+
+  &:focus {
+    border-color: @lipstick;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: @dark;
+  }
 }
 
 .contest-form__section--names {
@@ -136,6 +145,14 @@
 .contest-form__check-wrap {
   position: relative;
   padding-left: 40px;
+
+  &:hover .contest-form__check-label::before {
+    border-color: @dark;
+  }
+
+  &:active .contest-form__check-label::before {
+    border-color: @lipstick;
+  }
 }
 
 .contest-form__check-image {
@@ -243,6 +260,14 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &:hover .contest-form__radio-label::before {
+    border-color: @dark;
+  }
+
+  &:active .contest-form__radio-label::before {
+    border-color: @lipstick;
+  }
 }
 
 .contest-form__button {
@@ -256,6 +281,23 @@
   color: @white;
   text-transform: uppercase;
   margin-bottom: 37px;
+
+  &:hover {
+    background-color: @darkGreen;
+  }
+
+  &:active {
+    .contest-form__button-text {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    color: @white;
+    background: @almostGrey;
+    border-color: @almostGrey;
+    opacity: 1;
+  }
 }
 
 .contest-form__required {
@@ -351,8 +393,8 @@
     &::after {
       content: "";
       position: absolute;
-      width: 60px;
-      height: 60px;
+      width: 58px;
+      height: 58px;
       background-color: @almostGrey;
       right: 59px;
       top: 9px;
@@ -559,7 +601,7 @@
 
   .contest-form__item--contacts {
     &::after {
-      right: 0;
+      right: 2px;
     }
   }
 
