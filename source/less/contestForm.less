@@ -60,8 +60,8 @@
 
 .contest-form__section--emotions {
   padding: 40px 20px;
-  padding-top: 32px;
-  padding-bottom: 45px;
+  padding-top: 42px;
+  padding-bottom: 41px;
   background-color: @white;
 
   fieldset {
@@ -86,7 +86,7 @@
 }
 
 .contest-form__legend--emotions {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .contest-form__contacts {
@@ -104,7 +104,7 @@
   line-height: 30px;
   font-family: inherit;
   padding-left: 19px;
-  padding-top: 16px;
+  padding-top: 13px;
 }
 
 .contest-form__send {
@@ -113,6 +113,7 @@
 }
 
 .contest-form__title {
+  display: flex;
   font-size: 14px;
   line-height: 18px;
   color: @lipstick;
@@ -411,6 +412,18 @@
     }
   }
 
+  .contest-form__title--app {
+    left: -8px;
+  }
+
+  .contest-form__title--contacts {
+    left: 31px;
+  }
+
+  .contest-form__title--emotions {
+    left: 35px;
+  }
+
   .contest-form__section--names {
     order: -5;
     margin-right: 20px;
@@ -446,7 +459,7 @@
       padding: 0;
       border: solid 2px @almostGrey;
     }
-    padding-top: 8px;
+    padding-top: 12px;
   }
 
   .contest-form__emotions-area {
@@ -493,11 +506,11 @@
     background-color: @white;
     padding-right: 22px;
     padding-left: 22px;
-    padding-top: 37px;
+    padding-top: 38px;
   }
 
   .contest-form__title--jorneys {
-    left: 0;
+    left: 2px;
     top: 0;
 
     br {
@@ -563,7 +576,7 @@
     padding-left: 0;
     width: calc(50% - 3.5%);
     margin-right: 7%;
-    padding-bottom: 12px;
+    padding-bottom: 5px;
   }
 
   .contest-form__apps {
@@ -574,7 +587,7 @@
   .contest-form__section--app {
     width: calc(50% - 3.5%);
     margin: 0;
-    margin-top: -6px;
+    margin-top: -5px;
   }
 
   .contest-form__input--contacts {
@@ -584,10 +597,9 @@
 
   .contest-form__contacts {
     padding-left: 0;
-    padding-top: 0;
+    padding-top: 6px;
     padding-right: 0;
     margin-bottom: 0;
-    width: 28%;
   }
 
   .contest-form__groups {
@@ -596,7 +608,7 @@
   }
 
   .contest-form__legend--contacts {
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
 
   .contest-form__item--contacts {
@@ -611,7 +623,7 @@
   }
 
   .contest-form__fieldset--contacts {
-    height: 167px;
+    height: 170px;
     min-height: 0;
   }
 
@@ -664,7 +676,7 @@
 
   .contest-form__fieldset--jorneys {
     padding: 0;
-    height: 237px;
+    height: 240px;
     min-height: auto;
   }
 
@@ -675,14 +687,22 @@
     margin-bottom: 47px;
   }
 
+  .contest-form__section--jorneys {
+    padding-top: 35px;
+  }
+
   .contest-form__fieldset--emotions {
-    height: 232px;
+    height: 225px;
     min-height: 0;
+  }
+
+  .contest-form__fieldset--app {
+    min-height: 314px;
   }
 
   .contest-form__emotions-area {
     width: 823px;
-    height: 130px;
+    height: 127px;
   }
 
   .contest-form__send {
@@ -708,18 +728,31 @@
   }
 
   .contest-form__title--app {
-    left: -1px;
+    left: 25px;
+  }
+
+  .contest-form__title--contacts {
+    left: 100px;
+  }
+
+  .contest-form__title--emotions {
+    left: 37px;
+  }
+
+  .contest-form__title--jorneys {
+    left: 7px;
   }
 
   .contest-form__legend--app {
     padding-left: 0;
     padding-right: 0;
-    width: 80%;
-    margin-bottom: 31px;
+    width: 85%;
+    margin-bottom: 26px;
   }
 
   .contest-form__legend--jorneys {
     width: 47%;
+    margin-bottom: 30px;
   }
 
   .contest-form__legend--emotions {
