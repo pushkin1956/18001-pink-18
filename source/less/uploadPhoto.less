@@ -47,9 +47,18 @@
 }
 
 .upload-photo__button--cancel {
-  color: @dark;
-  opacity: 0.1;
-  border-color: @dark;
+  color: @white-seven;
+  border-color: @white-seven;
+
+  &:hover {
+    color: @grayOne;
+    border-color: @grayOne;
+  }
+
+  &:active {
+    background-color: @grayOne;
+    color: @white-six;
+  }
 }
 
 .upload-photo--scale-contrast {
