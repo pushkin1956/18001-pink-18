@@ -63,7 +63,7 @@ gulp.task("css", function () {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -102,4 +102,5 @@ gulp.task('html', function () {
 
 
 gulp.task("start", gulp.series("css", "server"));
-gulp.task("build", gulp.series("clean", "files", "webp", "css", "html"));
+// gulp.task("build", gulp.series("clean", "files", "webp", "css", "html"));
+gulp.task("build", gulp.series("clean", "files", "css", "html"));

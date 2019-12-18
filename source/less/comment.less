@@ -100,16 +100,25 @@
 }
 
 @media (min-width: @desktop-width) {
-  .comment--short {
+  .comment__wrap {
+    background-color: @white;
+    width: @desktop-width;
+    margin: 0 auto;
+    position: relative;
     margin-bottom: 50px;
-    width: calc(100% - 260px);
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 96px;
   }
 
   .comment {
     margin-bottom: 52px;
+  }
+
+  .comment--short {
+    width: 940px;
+    min-height: 96px;
+    left: 111px;
+    top: 0;
+    overflow: hidden;
+    margin-bottom: 0;
   }
 
   .comment-likes__text {
