@@ -70,16 +70,26 @@
     margin-bottom: 44px;
   }
 
-  .map__image {
-    width: 100%;
-    object-position: 0 -288px;
+  .map__picture{
+    display: block;
+    position: relative;
+    overflow: hidden;
     height: 494px;
-    transform: scale(1);
+  }
+
+  .map__image {
+    width: @desktop-width;
+    object-position: 0 0;
+    position: absolute;
+    top: -290px;
+    left: 1px;
+    height: auto;
   }
 
   .map-triangle {
     top: -13px;
     transform: scale(1, 0.8);
+    height: 124px;
   }
 
   .map__marker {

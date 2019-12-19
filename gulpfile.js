@@ -100,7 +100,20 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task("server-prod", function () {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
 
-gulp.task("start", gulp.series("css", "server"));
+  gulp.watch("source/less/**/*.less", gulp.series("build"));
+  gulp.watch("source/*.html").on("change", server.reload);
+});
+
+
+gulp.task("start", gulp.series("css", "server-prod"));
 // gulp.task("build", gulp.series("clean", "files", "webp", "css", "html"));
 gulp.task("build", gulp.series("clean", "files", "css", "html"));

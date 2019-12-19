@@ -388,6 +388,7 @@
 
   .contest-form__item--contacts {
     flex-direction: column-reverse;
+    align-items: flex-start;
     margin-left: 58px;
     position: relative;
 
@@ -579,7 +580,7 @@
 
   .contest-form__apps {
     margin-left: 78px;
-    margin-top: 15px;
+    padding-top: 15px;
   }
 
   .contest-form__section--app {
@@ -634,8 +635,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 59px;
-    margin-top: 12px;
-    padding-top: 0;
+    padding-top: 12px;
     padding-left: 0;
   }
 
@@ -692,12 +692,18 @@
   }
 
   .contest-form__fieldset--app {
-    min-height: 314px;
+    min-height: 308px;
+  }
+
+  .contest-form__emotions {
+    padding-top: 20px;
   }
 
   .contest-form__emotions-area {
     width: 823px;
     height: 127px;
+    margin-top: 0;
+    padding-top: 13px;
   }
 
   .contest-form__send {
@@ -757,4 +763,9 @@
   .contest-form__app {
     margin-bottom: 44px;
   }
+}
+
+@media all and (-ms-high-contrast:none) {
+
+
 }
