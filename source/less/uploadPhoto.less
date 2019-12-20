@@ -47,9 +47,18 @@
 }
 
 .upload-photo__button--cancel {
-  color: @dark;
-  opacity: 0.1;
-  border-color: @dark;
+  color: @white-seven;
+  border-color: @white-seven;
+
+  &:hover {
+    color: @grayOne;
+    border-color: @grayOne;
+  }
+
+  &:active {
+    background-color: @grayOne;
+    color: @white-six;
+  }
 }
 
 .upload-photo--scale-contrast {
@@ -177,32 +186,29 @@
     display: block;
     width: 202px;
     margin: 0 auto;
-    height: 2px;
-    background-color: @dark;
     position: relative;
     margin-left: 31px;
+    padding: 0;
   }
 
   .upload-photo--scale-fill {
     display: block;
     width: 202px;
     margin: 0 auto;
-    height: 2px;
-    background-color: @dark;
     position: relative;
     margin-left: 29px;
     top: -2px;
+    padding: 0;
   }
 
   .upload-photo--scale-contrast {
     display: block;
     width: 202px;
     margin: 0 auto;
-    height: 2px;
-    background-color: @dark;
     position: relative;
     margin-left: 26px;
     top: -4px;
+    padding: 0;
   }
 }
 

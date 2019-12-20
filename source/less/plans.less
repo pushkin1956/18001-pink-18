@@ -210,7 +210,7 @@
     width: 61px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -6px;
   }
 
   .plans__hit {
@@ -231,21 +231,14 @@
 
 @media (min-width: @desktop-width) {
   .plans {
+    width: @desktop-width;
+    margin: 0 auto;
     font-size: 18px;
     line-height: 30px;
     display: flex;
     justify-content: center;
-    padding-top: 169px;
+    padding-top: 162px;
     min-height: 546px;
-
-    &::before {
-      content: "";
-      width: 100%;
-      height: 20px;
-      position: absolute;
-      top: -2px;
-      background-color: @white;
-    }
   }
 
   .plans__empty {
@@ -314,7 +307,7 @@
   }
 
   .plans__triangle {
-    top: 16px;
+    top: 0;
   }
 
   .plans__header-left {

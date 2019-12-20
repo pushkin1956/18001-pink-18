@@ -7,6 +7,51 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+var inject = require('gulp-inject');
+const webp = require('gulp-webp');
+const del = require("del");
+const fileinclude = require('gulp-file-include');
+const imagemin = require('gulp-imagemin');
+var csso = require('gulp-csso');
+
+gulp.task('clean', function () {
+  return del('public/');
+});
+
+gulp.task("files", function () {
+  gulp.src("source/img/*.png")
+    // .pipe(imagemin())
+    .pipe(gulp.dest("build/img"))
+
+  gulp.src("source/img/*.jpg")
+    // .pipe(imagemin())
+    .pipe(gulp.dest("build/img"))
+
+  gulp.src("source/pic/*.*")
+    .pipe(gulp.dest("build/pic"))
+
+  gulp.src("source/js/*.*")
+    .pipe(gulp.dest("build/js"))
+
+  gulp.src("source/fonts/*.*")
+    .pipe(gulp.dest("build/fonts"))
+
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build"))
+});
+
+gulp.task('webp', () => {
+  gulp.src('source/img/*.jpg')
+    .pipe(webp())
+    .pipe(gulp.dest('build/img'));
+
+  return gulp.src('source/img/*.png')
+    .pipe(webp())
+    .pipe(gulp.dest('build/img'))
+});
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -18,6 +63,8 @@ gulp.task("css", function () {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
+    // .pipe(csso())
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
@@ -34,4 +81,39 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task('html', function () {
+  var svgs = gulp
+    .src('source/img/*.svg')
+    .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents(filePath, file) {
+    return file.contents.toString();
+  }
+
+  return gulp
+    .src('source/*.html')
+    .pipe(inject(svgs, { transform: fileContents }))
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task("server-prod", function () {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("source/less/**/*.less", gulp.series("build"));
+  gulp.watch("source/*.html").on("change", server.reload);
+});
+
+
+gulp.task("start", gulp.series("css", "server-prod"));
+// gulp.task("build", gulp.series("clean", "files", "webp", "css", "html"));
+gulp.task("build", gulp.series("clean", "files", "css", "html"));

@@ -27,7 +27,7 @@
 .map-triangle {
   width: 100%;
   position: absolute;
-  top: 14px;
+  top: 0;
   fill: #ffffff;
   z-index: 1;
 }
@@ -65,23 +65,35 @@
 
 @media (min-width: @desktop-width) {
   .map {
-    margin-bottom: 44px;
+    width: @desktop-width;
+    margin: 0 auto;
+    margin-bottom: 54px;
+  }
+
+  .map__picture {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 494px;
   }
 
   .map__image {
-    width: 100%;
-    object-position: 0 -288px;
-    height: 494px;
-    transform: scale(1);
+    width: @desktop-width;
+    object-position: 0 0;
+    position: absolute;
+    top: -289px;
+    left: 25px;
+    height: auto;
   }
 
   .map-triangle {
     top: -13px;
     transform: scale(1, 0.8);
+    height: 124px;
   }
 
   .map__marker {
-    top: 255px;
+    top: 248px;
     left: 583px;
   }
 }
