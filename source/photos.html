@@ -91,7 +91,7 @@
 
 
   <main class="page-main">
-    <div class="call__wrapper">
+    <div class="call-wrapper">
       <div class="call call--photos">
         Взгляните на фотографии, которые
         <br class="mobile-visible"> выкладывают
@@ -111,7 +111,7 @@
       </picture>
       <div class="panorama__text">Панорама дня</div>
     </div>
-    <div class="comment__wrap">
+    <div class="comment-wrap">
       <!-- <div style="width: 940px;background:salmon;margin-bottom: 40px;">Hello world!</div> -->
       <div class="comment comment--short">
         <span class="comment__author">Анна</span>
@@ -129,7 +129,8 @@
               <svg width="13" height="12" class="comment-likes__icon comment-likes__icon--short">
                 <use xlink:href="#icon-heart" />
               </svg>
-              Нравится: 215</div>
+              Нравится: 215
+            </div>
           </div>
         </div>
       </div>
@@ -306,18 +307,19 @@
             </div>
           </div>
           <div class="comment__footer">
-            <div class="comment-likes"></div>
-            <div class="comment-likes__text">
-              <svg width="13" height="12" class="comment-likes__icon">
-                <use xlink:href="#icon-heart" />
-              </svg>
-              Нравится: 2560
+            <div class="comment-likes">
+              <div class="comment-likes__text">
+                <svg width="13" height="12" class="comment-likes__icon">
+                  <use xlink:href="#icon-heart" />
+                </svg>
+                Нравится: 2560
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="call__wrapper call__wrapper--last">
+    <div class="call-wrapper call-wrapper--last">
       <div class="call call--photos-last">
         Затмите их всех!
         <br class="mobile-visible tablet-visible desktop-visible"> Выкладывайте все, что накопилось в
@@ -340,22 +342,22 @@
             <svg class="upload-photo__crop" width="44px" height="44px">
               <use xlink:href="#icon-editor-crop" />
             </svg>
-            <input class="upload-photo--scale-crop" type="range" name="scale" id="scale-crop" value="79">
+            <input class="upload-photo__scale-crop" type="range" name="scale" id="scale-crop" value="79">
           </div>
           <div class="upload-photo__controls-item">
             <svg class="upload-photo__fill" width="44px" height="44px">
               <use xlink:href="#icon-editor-fill" />
             </svg>
-            <input class="upload-photo--scale-fill" type="range" name="scale" id="scale-fill" value="13">
+            <input class="upload-photo__scale-fill" type="range" name="scale" id="scale-fill" value="13">
           </div>
           <div class="upload-photo__controls-item">
             <svg class="upload-photo__contrast" width="44px" height="44px">
               <use xlink:href="#icon-editor-contrast" />
             </svg>
-            <input class="upload-photo--scale-contrast" type="range" name="scale" id="scale-contrast" value="52">
+            <input class="upload-photo__scale-contrast" type="range" name="scale" id="scale-contrast" value="52">
           </div>
         </div>
-        <input class="upload-photo--scale" type="range" name="scale" id="scale-contrast" value="52">
+        <input class="upload-photo__scale" type="range" name="scale" id="scale-contrast" value="52">
         <div class="upload-photo__buttons">
           <button class="upload-photo__button upload-photo__button-post">
             <span class="upload-photo__button-text">

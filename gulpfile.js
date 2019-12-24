@@ -28,17 +28,17 @@ gulp.task("jsmin", function () {
 });
 
 gulp.task('js', function () {
-  gulp.src("source/js/*.*")
+  return gulp.src("source/js/*.*")
     .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("files", function () {
   gulp.src("source/img/*.png")
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
 
   gulp.src("source/img/*.jpg")
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
 
   gulp.src("source/pic/*.*")
