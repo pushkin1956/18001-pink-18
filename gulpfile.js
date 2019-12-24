@@ -24,7 +24,9 @@ gulp.task('clean', function () {
 });
 
 gulp.task("jsmin", function () {
-  return gulp.src('source/js/*.js').pipe(uglify()).pipe(gulp.dest("build/js"));
+  return gulp.src('source/js/*.js')
+    // .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task('js', function () {
@@ -48,7 +50,7 @@ gulp.task("files", function () {
     .pipe(gulp.dest("build/fonts"))
 
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
 });
 

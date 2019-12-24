@@ -9,12 +9,12 @@
 .page-header-wrap {
   min-height: 495px;
   position: relative;
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   background-color: #233243;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position-y: 260px;
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
 
   @media (min-resolution: @retina-dppx) {
@@ -58,7 +58,7 @@
 @media (min-width: @tablet-width) {
   .page-header-wrap {
     position: relative;
-    width: @tablet-width;
+    width: 100%;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     min-height: 696px;
 
@@ -122,10 +122,10 @@
   }
 
   .page-header-wrap--closed {
-    background-position-y: -15px;
-    background-position-x: -304px;
+    background-position-y: 4px;
+    background-position-x: -265px;
     min-height: 440px;
-    background-size: 200%;
+    background-size: 180%;
   }
 
   .page-header__image {
