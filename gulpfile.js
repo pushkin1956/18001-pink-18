@@ -63,21 +63,22 @@ gulp.task("css", function () {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    // .pipe(csso())
+    .pipe(csso())
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/less/**/*.less", gulp.series("clean", "files", "css", "html"));
+  gulp.watch("source/*.html", gulp.series("clean", "files", "css", "html"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
@@ -100,20 +101,6 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task("server-prod", function () {
-  server.init({
-    server: "build/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
+gulp.task("start", gulp.series("clean", "files", "css", "html", "server"));
+gulp.task("build", gulp.series("clean", "files", "webp", "css", "html"));
 
-  gulp.watch("source/less/**/*.less", gulp.series("build"));
-  gulp.watch("source/*.html").on("change", server.reload);
-});
-
-
-gulp.task("start", gulp.series("css", "server-prod"));
-// gulp.task("build", gulp.series("clean", "files", "webp", "css", "html"));
-gulp.task("build", gulp.series("clean", "files", "css", "html"));
