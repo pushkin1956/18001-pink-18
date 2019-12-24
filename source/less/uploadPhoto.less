@@ -87,10 +87,18 @@
 .upload-photo__crop {
   width: 44px;
   height: 44px;
-  fill: @lipstick;
   position: relative;
   left: 10px;
   top: 1px;
+  fill: @grayOne;
+
+  &:hover {
+    fill: @grayTwo;
+  }
+
+  &:active {
+    fill: @lipstick;
+  }
 }
 
 .upload-photo__fill {
@@ -99,6 +107,15 @@
   position: relative;
   left: -6px;
   top: 3px;
+  fill: @grayOne;
+
+  &:hover {
+    fill: @grayTwo;
+  }
+
+  &:active {
+    fill: @lipstick;
+  }
 }
 
 .upload-photo__contrast {
@@ -106,6 +123,15 @@
   height: 32px;
   position: relative;
   left: -20px;
+  fill: @grayOne;
+
+  &:hover {
+    fill: @grayTwo;
+  }
+
+  &:active {
+    fill: @lipstick;
+  }
 }
 
 .upload-photo--scale {
@@ -171,7 +197,6 @@
     top: 0;
     width: 24px;
     height: 22px;
-    fill: @lipstick;
   }
 
   .upload-photo__contrast {
@@ -179,7 +204,6 @@
     top: -9px;
     width: 27px;
     height: 16px;
-    fill: @lipstick;
   }
 
   .upload-photo--scale {
@@ -194,6 +218,7 @@
     margin-left: 31px;
     padding: 0;
     height: 22px;
+    background-color: @light-grey;
   }
 
   .upload-photo--scale-fill {
@@ -205,6 +230,7 @@
     top: -2px;
     padding: 0;
     height: 22px;
+    background-color: @light-grey;
   }
 
   .upload-photo--scale-contrast {
@@ -216,6 +242,7 @@
     top: -9px;
     padding: 0;
     height: 22px;
+    background-color: @light-grey;
   }
 }
 
@@ -255,29 +282,11 @@
   .upload-photo__crop {
     width: 44px;
     height: 44px;
-    fill: @grayOne;
-
-    &:hover {
-      fill: @grayTwo;
-    }
-
-    &:active {
-      fill: @lipstick;
-    }
   }
 
   .upload-photo__fill {
     width: 48px;
     height: 43px;
-    fill: @grayOne;
-
-    &:hover {
-      fill: @grayTwo;
-    }
-
-    &:active {
-      fill: @lipstick;
-    }
   }
 
   .upload-photo__contrast {
@@ -285,15 +294,6 @@
     height: 32px;
     left: 5px;
     top: -3px;
-    fill: @grayOne;
-
-    &:hover {
-      fill: @grayTwo;
-    }
-
-    &:active {
-      fill: @lipstick;
-    }
   }
 
   .upload-photo--scale-crop {

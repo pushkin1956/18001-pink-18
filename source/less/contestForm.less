@@ -193,6 +193,10 @@
   }
 }
 
+.contest-form__check:checked ~ .contest-form__check-label::before {
+  border-color: @lipstick;
+}
+
 .contest-form__achievement {
   display: flex;
   align-items: center;
@@ -253,6 +257,10 @@
     background: @lipstick;
     border-radius: 50%;
   }
+}
+
+.contest-form__radio:checked ~ .contest-form__radio-label::before {
+  border-color: @lipstick;
 }
 
 .contest-form__app {
