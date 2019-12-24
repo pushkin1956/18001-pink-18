@@ -16,40 +16,49 @@ const del = require("del");
 const fileinclude = require('gulp-file-include');
 const imagemin = require('gulp-imagemin');
 var csso = require('gulp-csso');
+var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-html-minifier');
 
 gulp.task('clean', function () {
   return del('public/');
 });
 
+gulp.task("jsmin", function () {
+  return gulp.src('source/js/*.js').pipe(uglify()).pipe(gulp.dest("build/js"));
+});
+
+gulp.task('js', function () {
+  gulp.src("source/js/*.*")
+    .pipe(gulp.dest("build/js"))
+});
+
 gulp.task("files", function () {
   gulp.src("source/img/*.png")
-    // .pipe(imagemin())
+    .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
 
   gulp.src("source/img/*.jpg")
-    // .pipe(imagemin())
+    .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
 
   gulp.src("source/pic/*.*")
     .pipe(gulp.dest("build/pic"))
 
-  gulp.src("source/js/*.*")
-    .pipe(gulp.dest("build/js"))
-
   gulp.src("source/fonts/*.*")
     .pipe(gulp.dest("build/fonts"))
 
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
 });
 
 gulp.task('webp', () => {
   gulp.src('source/img/*.jpg')
-    .pipe(webp())
+    // .pipe(webp())
     .pipe(gulp.dest('build/img'));
 
   return gulp.src('source/img/*.png')
-    .pipe(webp())
+    // .pipe(webp())
     .pipe(gulp.dest('build/img'))
 });
 
@@ -77,7 +86,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("clean", "files", "css", "html"));
+  gulp.watch("source/less/**/*.less", gulp.series("clean", "files", "js", "css", "html"));
   gulp.watch("source/*.html", gulp.series("clean", "files", "css", "html"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
@@ -101,5 +110,5 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task("start", gulp.series("clean", "files", "css", "html", "server"));
-gulp.task("build", gulp.series("clean", "files", "webp", "css", "html"));
+gulp.task("start", gulp.series("clean", "files", "css", "html", "js", "server"));
+gulp.task("build", gulp.series("clean", "files", "webp", "css", "jsmin", "html"));
