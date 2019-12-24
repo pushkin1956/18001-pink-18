@@ -4,6 +4,8 @@
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
+  width: @mobile-width;
   margin-bottom: 42px;
 }
 
@@ -79,7 +81,7 @@
   align-items: center;
   margin-top: 41px;
   position: relative;
-  margin-bottom: 21px;
+  margin-bottom: 26px;
 }
 
 .upload-photo__crop {
@@ -107,12 +109,13 @@
 }
 
 .upload-photo--scale {
+  display: block;
   width: 240px;
+  height: 20px;
+  background-color: @light-grey;
   margin: 0 auto;
-  height: 2px;
-  background-color: @dark;
-  position: relative;
-  margin-bottom: 39px;
+  margin-bottom: 32px;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -122,6 +125,7 @@
     padding-bottom: 54px;
     padding-top: 60px;
     margin-bottom: 18px;
+    width: @tablet-width;
   }
 
   .upload-photo__buttons {
@@ -171,8 +175,8 @@
   }
 
   .upload-photo__contrast {
-    left: 0;
-    top: -4px;
+    left: 2px;
+    top: -9px;
     width: 27px;
     height: 16px;
     fill: @lipstick;
@@ -189,6 +193,7 @@
     position: relative;
     margin-left: 31px;
     padding: 0;
+    height: 22px;
   }
 
   .upload-photo--scale-fill {
@@ -199,6 +204,7 @@
     margin-left: 29px;
     top: -2px;
     padding: 0;
+    height: 22px;
   }
 
   .upload-photo--scale-contrast {
@@ -207,17 +213,17 @@
     margin: 0 auto;
     position: relative;
     margin-left: 26px;
-    top: -4px;
+    top: -9px;
     padding: 0;
+    height: 22px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
   .upload-photo {
-    max-width: 940px;
+    width: 940px;
     padding-bottom: 57px;
-    margin: 0 auto;
     padding-top: 57px;
     padding-left: 80px;
     margin-bottom: 82px;
