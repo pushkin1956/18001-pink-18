@@ -1,21 +1,21 @@
 .map {
   position: relative;
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+.map__picture {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 200px;
 }
 
 .map__image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: 0 -434px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: @white;
-    width: 100%;
-    height: 20px;
-    top: -6px;
-  }
+  width: @mobile-width;
+  position: absolute;
+  top: -433px;
+  left: 0;
 }
 
 .map__marker {
@@ -30,6 +30,8 @@
   top: 0;
   fill: #ffffff;
   z-index: 1;
+  transform: scale(1.5, 1.5);
+  height: 33px;
 }
 
 
@@ -37,14 +39,17 @@
   .map {
     margin-bottom: 20px;
     overflow: hidden;
+    width: @tablet-width;
+  }
+
+  .map__picture {
+    height: 372px;
   }
 
   .map__image {
     object-fit: cover;
-    height: 370px;
     width: 100%;
-
-    object-position: 0 -318px;
+    top: -323px;
     transform: scale(1.06);
 
     &::before {
@@ -53,7 +58,8 @@
   }
 
   .map-triangle {
-    top: 0;
+    top: 13px;
+    transform: scale(2.5, 2.5);
   }
 
   .map__marker {
@@ -71,9 +77,6 @@
   }
 
   .map__picture {
-    display: block;
-    position: relative;
-    overflow: hidden;
     height: 494px;
   }
 

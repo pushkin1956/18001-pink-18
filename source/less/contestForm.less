@@ -1,6 +1,8 @@
 .contest-form {
   color: @dark;
+  margin: 0 auto;
   margin-bottom: 60px;
+  width: @mobile-width;
 }
 
 .contest-form--extra {
@@ -101,7 +103,7 @@
   height: 202px;
   border: solid 2px @almostGrey;
   font-size: 18px;
-  line-height: 30px;
+  lpaddingight: 30px;
   font-family: inherit;
   padding-left: 19px;
   padding-top: 13px;
@@ -191,6 +193,10 @@
   }
 }
 
+.contest-form__check:checked ~ .contest-form__check-label::before {
+  border-color: @lipstick;
+}
+
 .contest-form__achievement {
   display: flex;
   align-items: center;
@@ -251,6 +257,10 @@
     background: @lipstick;
     border-radius: 50%;
   }
+}
+
+.contest-form__radio:checked ~ .contest-form__radio-label::before {
+  border-color: @lipstick;
 }
 
 .contest-form__app {
@@ -331,6 +341,7 @@
 @media (min-width: @tablet-width) {
   .contest-form {
     display: flex;
+    width: @tablet-width;
     flex-direction: column;
     margin-bottom: 13px;
   }
@@ -421,6 +432,7 @@
 
   .contest-form__title--emotions {
     left: 35px;
+    top: 6px;
   }
 
   .contest-form__section--names {
@@ -459,6 +471,7 @@
       border: solid 2px @almostGrey;
     }
     padding-top: 12px;
+    padding-bottom: 47px;
   }
 
   .contest-form__emotions-area {
@@ -466,7 +479,11 @@
     width: 496px;
     margin: 0 auto;
     display: block;
-    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .contest-form__emotions {
+    padding-top: 25px;
   }
 
   .contest-form__fieldset {
@@ -475,7 +492,7 @@
   }
 
   .contest-form__fieldset--jorneys {
-    padding-bottom: 52px;
+    padding-bottom: 18px;
   }
 
   .contest-form__apps {
@@ -506,6 +523,7 @@
     padding-right: 22px;
     padding-left: 22px;
     padding-top: 38px;
+    padding-bottom: 38px;
   }
 
   .contest-form__title--jorneys {
@@ -519,8 +537,9 @@
 
   .contest-form__achievement {
     margin-left: 57px;
-    margin-top: 11px;
-    margin-bottom: 46px;
+    padding-top: 11px;
+    padding-bottom: 35px;
+    margin-bottom: 0;
   }
 
   .contest-form__button {
@@ -550,6 +569,8 @@
 
   .contest-form__legend--emotions {
     width: 42%;
+    margin-bottom: 0;
+    padding-bottom: 16px;
   }
 
   .contest-form__achievements {
@@ -561,6 +582,7 @@
 @media (min-width: @desktop-width) {
   .contest-form {
     max-width: 940px;
+    width: 940px;
     margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -642,21 +664,22 @@
   .contest-form__achievement {
     margin: 0;
     width: 30%;
+    padding-top: 0;
 
     &:nth-child(1) {
       order: -10;
-      margin-bottom: 46px;
+      padding-bottom: 46px;
     }
 
     &:nth-child(3) {
       order: -9;
-      margin-bottom: 46px;
+      padding-bottom: 46px;
       margin-left: 52px;
     }
 
     &:nth-child(5) {
       order: -8;
-      margin-bottom: 46px;
+      padding-bottom: 46px;
       margin-left: 33px;
     }
 
@@ -687,7 +710,7 @@
   }
 
   .contest-form__fieldset--emotions {
-    height: 225px;
+    height: 231px;
     min-height: 0;
   }
 
@@ -696,7 +719,7 @@
   }
 
   .contest-form__emotions {
-    padding-top: 20px;
+    padding-top: 27px;
   }
 
   .contest-form__emotions-area {
@@ -708,6 +731,7 @@
 
   .contest-form__send {
     margin-left: 2px;
+    margin-top: 32px;
     width: 100%;
     justify-content: space-between;
   }

@@ -52,8 +52,6 @@
   display: block;
   position: relative;
   object-fit: contain;
-  left: -31px;
-  width: 320px;
   height: 287px;
 }
 
@@ -145,11 +143,19 @@
     left: 0;
     object-fit: cover;
   }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .page-header__image {
+      transform: scale(1.05, 1);
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     min-height: 395px;
+    width: @desktop-width;
+    margin: 0 auto;
   }
 
   .page-header-wrap {
@@ -174,7 +180,6 @@
     height: 853px;
   }
 
-
   .page-header-wrap--closed.page-header-wrap--index {
     min-height: 855px;
     background-position-y: 11px;
@@ -196,5 +201,11 @@
     right: 4px;
     left: auto;
     top: 210px;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .page-header__image {
+      transform: scale(1, 1);
+    }
   }
 }
