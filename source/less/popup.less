@@ -59,6 +59,36 @@
   height: auto;
 }
 
+.popup__button {
+  width: 276px;
+  height: 59px;
+  font-family: "OpenSansBold", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  border: solid 2px @lightGreen;
+  background-color: @lightGreen;
+  color: @white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @darkGreen;
+  }
+
+  &:active {
+    .contest-form__button-text {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    color: @white;
+    background: @almostGrey;
+    border-color: @almostGrey;
+    opacity: 1;
+  }
+}
+
+
 @media (min-width: @tablet-width) {
   .popup {
     width: 460px;
@@ -94,6 +124,10 @@
     line-height: 24px;
   }
 
+  .popup__button {
+    width: 300px;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
@@ -109,11 +143,18 @@
   }
 
   .popup__wrap {
-    padding: 105px 187px 38px 187px;
+    padding: 45px 187px 38px;
   }
 
   .popup__wrap--fail {
-    padding: 45px 187px 38px;
     padding-bottom: 66px;
+  }
+
+  .popup__button {
+    width: 460px;
+  }
+
+  .popup__button--fail {
+    width: 300px;
   }
 }
