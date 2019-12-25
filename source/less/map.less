@@ -1,6 +1,6 @@
 .map {
   position: relative;
-  width: @mobile-width;
+  width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -13,7 +13,7 @@
 }
 
 .map__image {
-  width: @mobile-width;
+  width: 100%;
   position: absolute;
   top: -433px;
   left: 0;
@@ -41,7 +41,6 @@
   .map {
     margin-bottom: 20px;
     overflow: hidden;
-    width: @tablet-width;
   }
 
   .map__picture {
@@ -50,7 +49,6 @@
 
   .map__image {
     object-fit: cover;
-    width: 100%;
     top: -323px;
     transform: scale(1.06);
 
@@ -73,7 +71,6 @@
 
 @media (min-width: @desktop-width) {
   .map {
-    width: @desktop-width;
     margin: 0 auto;
     margin-bottom: 54px;
   }
@@ -83,7 +80,6 @@
   }
 
   .map__image {
-    width: @desktop-width;
     object-position: 0 0;
     position: absolute;
     top: -289px;

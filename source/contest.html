@@ -13,7 +13,7 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("pic/pink-form-mobile-closed.jpg");
+      background-image: url("pic/pink-form-mobile-popup.jpg");
     }
 
     /* Tablet */
@@ -21,7 +21,7 @@
     @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url("pic/pink-form-tablet-closed.jpg");
+        background-image: url("pic/pink-form-tablet-popup1.jpg");
       }
     }
 
@@ -30,7 +30,7 @@
     @media ( min-width: 1200px) {
       HTML {
         /* Desktop layout */
-        background-image: url("pic/pink-form-desktop.jpg");
+        background-image: url("pic/pink-form-desktop-popup.jpg");
       }
     }
   </style>
@@ -274,6 +274,38 @@
   </main>
 
   @@include('./_footer.html')
+  <div class="popup popup--ok">
+    <div class="popup__wrap">
+      <div class="popup__title">
+        Ваша заявка отправлена
+      </div>
+      <div class="popup__body">
+        Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+      </div>
+    </div>
+    <div class="popup__footer popup__footer--ok">
+      <button class="contest-form__button contest-form__button--popup">
+        Закрыть окно
+      </button>
+    </div>
+  </div>
+
+  <div class="popup popup--fail">
+    <div class="popup__wrap popup__wrap--fail">
+      <div class="popup__title">
+        Что-то пошло
+        <br class="tablet-visible">не так!
+      </div>
+      <div class="popup__body">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </div>
+    </div>
+    <div class="popup__footer popup__footer--fail">
+      <button class="contest-form__button contest-form__button--popup">
+        OK
+      </button>
+    </div>
+  </div>
 
   <script src="./js/picturefill.js"></script>
   <script src="./js/app.js"></script>
