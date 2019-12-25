@@ -12,7 +12,7 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("pic/pink-index-mobile-closed.jpg");
+      background-image: url("pic/pink-index-mobile.jpg");
     }
 
     /* Tablet */
@@ -20,7 +20,7 @@
     @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url("pic/pink-index-tablet-closed.jpg");
+        background-image: url("pic/pink-index-tablet.jpg");
       }
     }
 
@@ -84,42 +84,43 @@
           </li>
         </ul>
       </nav>
-
-      <div class="header header--index">
-        Взгляните
-        <br class="tablet-visible">
-        <br class="desktop-visible">на жизнь
-        <br class="mobile-visible">
-        <br class="desktop-visible">
-        <br class="tablet-visible"> иначе!
-      </div>
-      <picture>
-        <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x" type="image/webp">
-        <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
-        <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x" type="image/webp">
-        <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-        <source media="(min-width: 320px)" srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x" type="image/webp">
-        <img class="page-header__image" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@1x.png 1x, img/iphone-hand-mobile@2x.png 2x"
-          alt="Iphone photo">
-      </picture>
-      <div class="apps">
-        <button class="apps__download-button">
-          Скачать приложение
-        </button>
-        <div class="apps__items">
-          <svg class="apps__item apps__item--ios" width="47" height="56">
-            <use xlink:href="#logo-apple" />
-          </svg>
-          <svg class="apps__item apps__item--android" width="43" height="47">
-            <use xlink:href="#logo-android" />
-          </svg>
-          <svg class="apps__item apps__item--win" width="44" height="41">
-            <use xlink:href="#logo-microsoft" />
-          </svg>
+      <div class="page-header-inner">
+        <div class="header header--index">
+          Взгляните
+          <br class="tablet-visible">
+          <br class="desktop-visible">на жизнь
+          <br class="mobile-visible">
+          <br class="desktop-visible">
+          <br class="tablet-visible"> иначе!
         </div>
-        <div class="apps__info">
-          Доступно для IPhone, IPad, Android
-          <br> Windows Phone, OS X, Windows 8
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+          <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+          <source media="(min-width: 320px)" srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x" type="image/webp">
+          <img class="page-header__image" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@1x.png 1x, img/iphone-hand-mobile@2x.png 2x"
+            alt="Iphone photo">
+        </picture>
+        <div class="apps">
+          <button class="apps__download-button">
+            Скачать приложение
+          </button>
+          <div class="apps__items">
+            <svg class="apps__item apps__item--ios" width="47" height="56">
+              <use xlink:href="#logo-apple" />
+            </svg>
+            <svg class="apps__item apps__item--android" width="43" height="47">
+              <use xlink:href="#logo-android" />
+            </svg>
+            <svg class="apps__item apps__item--win" width="44" height="41">
+              <use xlink:href="#logo-microsoft" />
+            </svg>
+          </div>
+          <div class="apps__info">
+            Доступно для IPhone, IPad, Android
+            <br> Windows Phone, OS X, Windows 8
+          </div>
         </div>
       </div>
     </div>
