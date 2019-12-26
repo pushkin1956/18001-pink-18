@@ -40,11 +40,11 @@ gulp.task("files", function () {
 
 
   gulp.src("source/img/*.png")
-    // .pipe(imagemin())
+    .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
 
   gulp.src("source/img/*.jpg")
-    // .pipe(imagemin())
+    .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
 
   gulp.src("source/pic/*.*")
@@ -54,17 +54,17 @@ gulp.task("files", function () {
     .pipe(gulp.dest("build/fonts"))
 
   return gulp.src("source/*.html")
-    // .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
 });
 
 gulp.task('webp', () => {
   gulp.src('source/img/*.jpg')
-    // .pipe(webp())
+    .pipe(webp())
     .pipe(gulp.dest('build/img'));
 
   return gulp.src('source/img/*.png')
-    // .pipe(webp())
+    .pipe(webp())
     .pipe(gulp.dest('build/img'))
 });
 
