@@ -13,7 +13,7 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("pic/pink-photo-mobile.jpg");
+      background-image: url("pic/pink-photo-mobile-closed.jpg");
     }
 
     /* Tablet */
@@ -21,7 +21,7 @@
     @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url("pic/pink-photo-tablet.jpg");
+        background-image: url("pic/pink-photo-tablet-closed.jpg");
       }
     }
 
@@ -47,7 +47,7 @@
     <div class="page-header-wrap page-header-wrap--photo">
       <nav class="main-nav">
         <div class="main-nav__header">
-          <a class="page-header__logo">
+          <a class="page-header__logo" href="/">
             <svg width="146.3px" height="40.375px" class="desktop-visible">
               <use xlink:href="#logo-pink-white-desktop" class="page-header__logo-image" />
             </svg>
@@ -78,7 +78,7 @@
             <a href="contest.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -112,7 +112,6 @@
       <div class="panorama__text">Панорама дня</div>
     </div>
     <div class="comment-wrap">
-      <!-- <div style="width: 940px;background:salmon;margin-bottom: 40px;">Hello world!</div> -->
       <div class="comment comment--short">
         <span class="comment__author">Анна</span>
         <span class="comment__time">(5 минут назад)</span>
@@ -138,15 +137,17 @@
 
     <div class="photos">
       <div class="photos__item">
-        <picture class="photos__image">
-          <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
-          <source media="(min-width: 320px)" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@1x.webp 2x" type="image/webp">
-          <img class="photos__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@1x.jpg 2x"
-            alt="image" />
-        </picture>
+        <a href="img/photo-car-desktop@2x.jpg">
+          <picture class="photos__image">
+            <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+            <source media="(min-width: 320px)" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@1x.webp 2x" type="image/webp">
+            <img class="photos__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@1x.jpg 2x"
+              alt="image" />
+          </picture>
+        </a>
         <div class="comment">
           <div>
             <span class="comment__author">Левон</span>
@@ -170,15 +171,17 @@
         </div>
       </div>
       <div class="photos__item">
-        <picture class="photos__image">
-          <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
-          <source media="(min-width: 320px)" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x" type="image/webp">
-          <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@2x.jpg 2x"
-            alt="image" />
-        </picture>
+        <a href="img/photo-drumset-desktop@2x.jpg">
+          <picture class="photos__image">
+            <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+            <source media="(min-width: 320px)" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x" type="image/webp">
+            <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@2x.jpg 2x"
+              alt="image" />
+          </picture>
+        </a>
         <div class="comment">
           <div>
             <span class="comment__author">Антон</span>
@@ -200,15 +203,17 @@
         </div>
       </div>
       <div class="photos__item">
-        <picture class="photos__image">
-          <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
-          <source media="(min-width: 320px)" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x" type="image/webp">
-          <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/photo-window-mobile@2x.jpg 2x" alt="image"
-          />
-        </picture>
+        <a href="img/photo-window-desktop@2x.jpg">
+          <picture class="photos__image">
+            <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+            <source media="(min-width: 320px)" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x" type="image/webp">
+            <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/photo-window-mobile@2x.jpg 2x" alt="image"
+            />
+          </picture>
+        </a>
         <div class="comment">
           <div>
             <span class="comment__author">Борис</span>
@@ -230,15 +235,17 @@
         </div>
       </div>
       <div class="photos__item">
-        <picture class="photos__image">
-          <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
-          <source media="(min-width: 320px)" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x" type="image/webp">
-          <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@2x.jpg 2x" alt="image"
-          />
-        </picture>
+        <a href="img/photo-fair-desktop@2x.jpg">
+          <picture class="photos__image">
+            <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+            <source media="(min-width: 320px)" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x" type="image/webp">
+            <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@2x.jpg 2x" alt="image"
+            />
+          </picture>
+        </a>
         <div class="comment">
           <div>
             <span class="comment__author">Сергей</span>
@@ -259,15 +266,17 @@
         </div>
       </div>
       <div class="photos__item">
-        <picture class="photos__image">
-          <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
-          <source media="(min-width: 320px)" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x" type="image/webp">
-          <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@2x.jpg 2x" alt="image"
-          />
-        </picture>
+        <a href="img/photo-pov-desktop@2x.jpg">
+          <picture class="photos__image">
+            <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+            <source media="(min-width: 320px)" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x" type="image/webp">
+            <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@2x.jpg 2x" alt="image"
+            />
+          </picture>
+        </a>
         <div class="comment">
           <div>
             <span class="comment__author">Максим</span>
@@ -289,15 +298,17 @@
         </div>
       </div>
       <div class="photos__item">
-        <picture class="photos__image">
-          <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
-          <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
-          <source media="(min-width: 320px)" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x" type="image/webp">
-          <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@2x.jpg 2x" alt="image"
-          />
-        </picture>
+        <a href="img/photo-wing-desktop@2x.jpg">
+          <picture class="photos__image">
+            <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+            <source media="(min-width: 320px)" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x" type="image/webp">
+            <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@2x.jpg 2x" alt="image"
+            />
+          </picture>
+        </a>
         <div class="comment">
           <div>
             <span class="comment__author">Надежда</span>
@@ -342,7 +353,7 @@
             <svg class="upload-photo__crop" width="44px" height="44px">
               <use xlink:href="#icon-editor-crop" />
             </svg>
-            <input class="upload-photo__scale-crop" type="range" name="scale" id="scale-crop" value="79">
+            <input class="upload-photo__scale-crop upload-photo__scale-crop--active" type="range" name="scale" id="scale-crop" value="79">
           </div>
           <div class="upload-photo__controls-item">
             <svg class="upload-photo__fill" width="44px" height="44px">
@@ -357,7 +368,6 @@
             <input class="upload-photo__scale-contrast" type="range" name="scale" id="scale-contrast" value="52">
           </div>
         </div>
-        <input class="upload-photo__scale" type="range" name="scale" id="scale-contrast" value="52">
         <div class="upload-photo__buttons">
           <button class="upload-photo__button upload-photo__button-post">
             <span class="upload-photo__button-text">

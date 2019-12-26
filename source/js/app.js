@@ -1,5 +1,3 @@
-var shouldShowFailPopup = Math.random() > 0.5;
-
 function Page() {
   this.wrapper = document.querySelector('.page-header-wrap');
   this.mainNavList = document.querySelector('.main-nav__list');
@@ -13,6 +11,8 @@ function Page() {
   this.failPopup = document.querySelector('.popup--fail');
   this.okPopupButton = document.querySelector('.popup__footer--ok button');
   this.failPopupButton = document.querySelector('.popup__footer--fail button');
+  this.phoneInput = document.querySelector('input[type="tel"]');
+  this.emailInput = document.querySelector('input[type="email"]');
 }
 
 Page.prototype.setupMenu = function () {
@@ -65,6 +65,8 @@ Page.prototype.setupPopup = function () {
 }
 
 Page.prototype.openPopup = function (e) {
+  var shouldShowFailPopup = !this.phoneInput.validity.valid && !this.emailInput.validity.valid;
+
   e.preventDefault();
 
   if (shouldShowFailPopup) {

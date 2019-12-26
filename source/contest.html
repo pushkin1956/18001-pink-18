@@ -13,7 +13,7 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url("pic/pink-form-mobile-popup.jpg");
+      background-image: url("pic/pink-form-mobile-closed.jpg");
     }
 
     /* Tablet */
@@ -21,7 +21,7 @@
     @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url("pic/pink-form-tablet-popup1.jpg");
+        background-image: url("pic/pink-form-tablet-closed.jpg");
       }
     }
 
@@ -30,7 +30,7 @@
     @media ( min-width: 1200px) {
       HTML {
         /* Desktop layout */
-        background-image: url("pic/pink-form-desktop-popup.jpg");
+        background-image: url("pic/pink-form-desktop.jpg");
       }
     }
   </style>
@@ -47,7 +47,7 @@
     <div class="page-header-wrap page-header-wrap--contest">
       <nav class="main-nav">
         <div class="main-nav__header">
-          <a class="page-header__logo">
+          <a class="page-header__logo" href="/">
             <svg width="146.3px" height="40.375px" class="desktop-visible">
               <use xlink:href="#logo-pink-white-desktop" class="page-header__logo-image" />
             </svg>
@@ -78,7 +78,7 @@
             <a href="contest.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a href="https://htmlacademy.ru">HTML Academy</a>
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -205,7 +205,8 @@
             <div class="contest-form__group">
               <div class="contest-form__item contest-form__item--contacts">
                 <label class="contest-form__label contest-form__label-phone" for="phone">Номер телефона:</label>
-                <input class="contest-form__input contest-form__input--contacts" id="phone" name="phone" placeholder="Номер, пожалуйста">
+                <input class="contest-form__input contest-form__input--contacts" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required type="tel"
+                  id="phone" name="phone" placeholder="Номер, пожалуйста">
                 <svg class="contest-form__icon" width="19.697px" height="19.696px">
                   <use xlink:href="#icon-phone" />
                 </svg>
@@ -214,7 +215,7 @@
             <div class="contest-form__group">
               <div class="contest-form__item contest-form__item--contacts contest-form__item--mail">
                 <label class="contest-form__label contest-form__label-mail" for="email">Адрес почты:</label>
-                <input class="contest-form__input contest-form__input--contacts" id="email" name="email" placeholder="Введите почту*">
+                <input class="contest-form__input contest-form__input--contacts" type="email" id="email" name="email" required placeholder="Введите почту*">
                 <svg class="contest-form__icon" version="1.1" x="0px" y="0px" width="17.988px" height="13.966px">
                   <use xlink:href="#icon-mail" />
                 </svg>
@@ -274,6 +275,8 @@
   </main>
 
   @@include('./_footer.html')
+
+
   <div class="popup popup--ok">
     <div class="popup__wrap">
       <div class="popup__title">

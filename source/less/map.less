@@ -5,6 +5,12 @@
   overflow-x: hidden;
 }
 
+.map__frame {
+  width: 100%;
+  height: 207px;
+  border: none;
+}
+
 .map__picture {
   position: relative;
   display: block;
@@ -39,8 +45,12 @@
 
 @media (min-width: @tablet-width) {
   .map {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     overflow: hidden;
+  }
+
+  .map__frame {
+    height: 371px;
   }
 
   .map__picture {
@@ -73,6 +83,10 @@
   .map {
     margin: 0 auto;
     margin-bottom: 54px;
+  }
+
+  .map__frame {
+    height: 491px;
   }
 
   .map__picture {

@@ -35,6 +35,10 @@ gulp.task('js', function () {
 });
 
 gulp.task("files", function () {
+  gulp.src("source/favicon.ico")
+    .pipe(gulp.dest("build"))
+
+
   gulp.src("source/img/*.png")
     // .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
