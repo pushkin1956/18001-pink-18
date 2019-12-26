@@ -14,18 +14,18 @@
   margin-bottom: 20px;
 }
 
-.contacts__item--title {
+.contacts__item-title {
   font-family: "OpenSansBold", "Helvetica", sans-serif;
   font-size: 18px;
 }
 
-.contacts__item--description {
+.contacts__item-description {
   font-family: "OpenSansLight", "Helvetica", sans-serif;
   font-size: 24px;
   color: @lipstick;
 }
 
-.contacts__item--description--mail {
+.contacts__item-description--mail {
   text-decoration: none;
 
   &:hover {
@@ -52,9 +52,11 @@
 @media (min-width: @tablet-width) {
   .contacts {
     padding-top: 41px;
+    width: @tablet-width;
+    margin: 0 auto;
   }
 
-  .contact__items {
+  .contacts__items {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -89,12 +91,12 @@
     padding-left: 2px;
   }
 
-  .contacts__item--title {
+  .contacts__item-title {
     font-size: 18px;
     margin-bottom: 0;
   }
 
-  .contacts__item--description {
+  .contacts__item-description {
     text-transform: none;
   }
 }
@@ -106,7 +108,7 @@
     padding-top: 71px;
   }
 
-  .contact__items {
+  .contacts__items {
     width: 81%;
     margin: 0 auto;
     margin-bottom: 0;
@@ -137,7 +139,7 @@
     margin-bottom: 12px;
   }
 
-  .contacts__item--title {
+  .contacts__item-title {
     margin-bottom: 19px;
   }
 }

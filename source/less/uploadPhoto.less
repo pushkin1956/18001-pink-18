@@ -4,6 +4,8 @@
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
+  width: @mobile-width;
   margin-bottom: 42px;
 }
 
@@ -61,16 +63,27 @@
   }
 }
 
-.upload-photo--scale-contrast {
+.upload-photo__scale-contrast {
   display: none;
 }
 
-.upload-photo--scale-crop {
+.upload-photo__scale-crop {
   display: none;
 }
 
-.upload-photo--scale-fill {
+.upload-photo__scale-fill {
   display: none;
+}
+
+.upload-photo__scale-crop--active {
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  padding: 0;
+  position: absolute;
+  left: 20px;
+  top: 85px;
 }
 
 .upload-photo__controls {
@@ -79,16 +92,24 @@
   align-items: center;
   margin-top: 41px;
   position: relative;
-  margin-bottom: 21px;
+  margin-bottom: 78px;
 }
 
 .upload-photo__crop {
   width: 44px;
   height: 44px;
-  fill: @lipstick;
   position: relative;
   left: 10px;
   top: 1px;
+  fill: @grayOne;
+
+  &:hover {
+    fill: @grayTwo;
+  }
+
+  &:active {
+    fill: @lipstick;
+  }
 }
 
 .upload-photo__fill {
@@ -97,6 +118,15 @@
   position: relative;
   left: -6px;
   top: 3px;
+  fill: @grayOne;
+
+  &:hover {
+    fill: @grayTwo;
+  }
+
+  &:active {
+    fill: @lipstick;
+  }
 }
 
 .upload-photo__contrast {
@@ -104,15 +134,15 @@
   height: 32px;
   position: relative;
   left: -20px;
-}
+  fill: @grayOne;
 
-.upload-photo--scale {
-  width: 240px;
-  margin: 0 auto;
-  height: 2px;
-  background-color: @dark;
-  position: relative;
-  margin-bottom: 39px;
+  &:hover {
+    fill: @grayTwo;
+  }
+
+  &:active {
+    fill: @lipstick;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -121,7 +151,8 @@
     justify-content: space-between;
     padding-bottom: 54px;
     padding-top: 60px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+    width: @tablet-width;
   }
 
   .upload-photo__buttons {
@@ -130,8 +161,9 @@
 
   .upload-photo__button {
     width: 260px;
-    height: 55px;
+    height: 57px;
     margin-bottom: 24px;
+    padding-right: 12px;
 
     &:last-child {
       margin-bottom: 0;
@@ -154,6 +186,7 @@
   .upload-photo__controls {
     display: block;
     margin-top: 8px;
+    margin-bottom: 0;
   }
 
   .upload-photo__crop {
@@ -167,31 +200,31 @@
     top: 0;
     width: 24px;
     height: 22px;
-    fill: @lipstick;
   }
 
   .upload-photo__contrast {
-    left: 0;
-    top: -4px;
+    left: 2px;
+    top: -9px;
     width: 27px;
     height: 16px;
-    fill: @lipstick;
   }
 
-  .upload-photo--scale {
+  .upload-photo__scale {
     display: none;
   }
 
-  .upload-photo--scale-crop {
+  .upload-photo__scale-crop {
     display: block;
     width: 202px;
     margin: 0 auto;
     position: relative;
     margin-left: 31px;
     padding: 0;
+    height: 22px;
+    background-color: @light-grey;
   }
 
-  .upload-photo--scale-fill {
+  .upload-photo__scale-fill {
     display: block;
     width: 202px;
     margin: 0 auto;
@@ -199,25 +232,33 @@
     margin-left: 29px;
     top: -2px;
     padding: 0;
+    height: 22px;
+    background-color: @light-grey;
   }
 
-  .upload-photo--scale-contrast {
+  .upload-photo__scale-contrast {
     display: block;
     width: 202px;
     margin: 0 auto;
     position: relative;
     margin-left: 26px;
-    top: -4px;
+    top: -9px;
     padding: 0;
+    height: 22px;
+    background-color: @light-grey;
+  }
+
+  .upload-photo__scale-crop--active {
+    position: static;
+    width: 202px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
   .upload-photo {
-    max-width: 940px;
+    width: 940px;
     padding-bottom: 57px;
-    margin: 0 auto;
     padding-top: 57px;
     padding-left: 80px;
     margin-bottom: 82px;
@@ -249,29 +290,11 @@
   .upload-photo__crop {
     width: 44px;
     height: 44px;
-    fill: @grayOne;
-
-    &:hover {
-      fill: @grayTwo;
-    }
-
-    &:active {
-      fill: @lipstick;
-    }
   }
 
   .upload-photo__fill {
     width: 48px;
     height: 43px;
-    fill: @grayOne;
-
-    &:hover {
-      fill: @grayTwo;
-    }
-
-    &:active {
-      fill: @lipstick;
-    }
   }
 
   .upload-photo__contrast {
@@ -279,18 +302,9 @@
     height: 32px;
     left: 5px;
     top: -3px;
-    fill: @grayOne;
-
-    &:hover {
-      fill: @grayTwo;
-    }
-
-    &:active {
-      fill: @lipstick;
-    }
   }
 
-  .upload-photo--scale-crop {
+  .upload-photo__scale-crop {
     width: 288px;
     margin-left: 48px;
 
@@ -300,7 +314,7 @@
     }
   }
 
-  .upload-photo--scale-fill {
+  .upload-photo__scale-fill {
     width: 288px;
     margin-left: 45px;
 
@@ -309,7 +323,7 @@
     }
   }
 
-  .upload-photo--scale-contrast {
+  .upload-photo__scale-contrast {
     width: 288px;
     margin-left: 59px;
     top: -2px;

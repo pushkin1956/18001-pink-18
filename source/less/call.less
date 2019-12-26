@@ -1,5 +1,4 @@
 .call {
-  min-height: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,16 +7,28 @@
   line-height: 30px;
   text-align: center;
   font-size: 14px;
-  padding-top: 12px;
+}
+
+.call-wrapper {
+  position: relative;
+  min-height: 170px;
+  margin-bottom: 14px;
 }
 
 .call--photos {
+  width: 100%;
   margin-bottom: 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .call--contest {
   margin-bottom: 0;
-  margin-top: 0;
+  height: 162px;
+  margin-top: 9px;
+  position: relative;
 }
 
 .call__please {
@@ -25,8 +36,17 @@
 }
 
 .call--photos-last {
-  min-height: 124px;
   margin-bottom: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.call-wrapper--last {
+  min-height: 137px;
+  margin-bottom: 18px;
 }
 
 @media (min-width: @tablet-width) {
@@ -36,8 +56,18 @@
     margin-bottom: 28px;
   }
 
+  .call-wrapper {
+    min-height: 228px;
+    margin-bottom: 0;
+  }
+
+  .call-wrapper--last {
+    min-height: 174px;
+  }
+
   .call--contest {
-    margin-bottom: 31px;
+    height: 184px;
+    margin-bottom: 16px;
     margin-top: 44px;
   }
 
@@ -45,22 +75,30 @@
     display: inline;
   }
 
+  .call--photos {
+    margin: 0;
+    top: 54%;
+  }
+
   .call--photos-last {
     margin-top: 6px;
     margin-bottom: 42px;
+    top: 40%;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .call__wrapper {
+  .call-wrapper {
     position: relative;
+    margin: 0 auto;
     margin-bottom: 68px;
     min-height: 171px;
+    width: @desktop-width;
   }
 
-  .call__wrapper--last {
-    min-height: 0;
-    margin-bottom: 61px;
+  .call-wrapper--last {
+    min-height: 85px;
+    margin-bottom: 46px;
   }
 
   .call {
@@ -83,9 +121,10 @@
 
   .call--contest {
     display: block;
-    margin-top: 78px;
+    margin-top: 91px;
     margin-bottom: 77px;
     min-height: 60px;
+    height: 60px;
   }
 
   .call--photos {

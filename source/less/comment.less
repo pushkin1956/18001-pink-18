@@ -8,6 +8,13 @@
   width: 280px;
 }
 
+.comment-wrap {
+  background-color: @white;
+  width: @mobile-width;
+  margin: 0 auto;
+  position: relative;
+}
+
 .comment--short {
   margin-left: 20px;
   margin-right: 20px;
@@ -47,6 +54,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .comment-wrap {
+    width: @tablet-width;
+  }
+
   .comment {
     flex: 1;
     padding-left: 27px;
@@ -100,11 +111,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .comment__wrap {
-    background-color: @white;
+  .comment-wrap {
     width: @desktop-width;
-    margin: 0 auto;
-    position: relative;
     margin-bottom: 50px;
   }
 

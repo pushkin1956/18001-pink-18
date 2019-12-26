@@ -34,7 +34,9 @@
     }
   </style>
   <link href="/pic/styles.css" rel="stylesheet">
-
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="./fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="./fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin />
   <script src="/pic/script.js"></script>
 </head>
 
@@ -82,55 +84,63 @@
           </li>
         </ul>
       </nav>
-
-      <div class="header header--index">
-        Взгляните
-        <br class="tablet-visible">
-        <br class="desktop-visible">на жизнь
-        <br class="mobile-visible">
-        <br class="desktop-visible">
-        <br class="tablet-visible"> иначе!
-      </div>
-      <picture>
-        <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
-        <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x">
-        <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x">
-        <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-        <source media="(min-width: 320px)" srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x">
-        <img class="page-header__image" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@1x.png 1x, img/iphone-hand-mobile@2x.png 2x"
-          alt="Iphone photo">
-      </picture>
-      <div class="apps">
-        <button class="apps__download-button">
-          Скачать приложение
-        </button>
-        <div class="apps__items">
-          <svg class="apps__item apps__item--ios" width="47" height="56">
-            <use xlink:href="#logo-apple" />
-          </svg>
-          <svg class="apps__item apps__item--android" width="43" height="47">
-            <use xlink:href="#logo-android" />
-          </svg>
-          <svg class="apps__item apps__item--win" width="44" height="41">
-            <use xlink:href="#logo-microsoft" />
-          </svg>
+      <div class="page-header-inner">
+        <div class="header header--index">
+          Взгляните
+          <br class="tablet-visible">
+          <br class="desktop-visible">на жизнь
+          <br class="mobile-visible">
+          <br class="desktop-visible">
+          <br class="tablet-visible"> иначе!
         </div>
-        <div class="apps__info">
-          Доступно для IPhone, IPad, Android
-          <br> Windows Phone, OS X, Windows 8
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+          <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+          <source media="(min-width: 320px)" srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x" type="image/webp">
+          <img class="page-header__image" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@1x.png 1x, img/iphone-hand-mobile@2x.png 2x"
+            alt="Iphone photo">
+        </picture>
+        <div class="apps">
+          <a class="apps__download-button" href="https://www.apple.com/ru/ios/app-store/">
+            Скачать приложение
+          </a>
+          <div class="apps__items">
+            <a href="https://www.apple.com/ru/ios/app-store/">
+              <svg class="apps__item apps__item--ios" width="47" height="56">
+                <use xlink:href="#logo-apple" />
+              </svg>
+            </a>
+            <a href="https://play.google.com/store/apps/">
+              <svg class="apps__item apps__item--android" width="43" height="47">
+                <use xlink:href="#logo-android" />
+              </svg>
+            </a>
+            <a href="https://www.microsoft.com/ru-ru/store/b/home">
+              <svg class="apps__item apps__item--win" width="44" height="41">
+                <use xlink:href="#logo-microsoft" />
+              </svg>
+            </a>
+          </div>
+          <div class="apps__info">
+            Доступно для IPhone, IPad, Android
+            <br> Windows Phone, OS X, Windows 8
+          </div>
         </div>
       </div>
     </div>
   </header>
   <main class="page-main">
     <div class="offer">
-      <div class="offer__question">Устали от серости мегаполиса?
+      <div class="offer__question">Устали от серости
+        <br class="mobile-visible"> мегаполиса?
         <br>
       </div>
       <div class="offer__answer">
         <span>Нам есть, что вам</span>
         <br>
-        <span class="offer__answer--last">предложить</span>
+        <span class="offer__answer-last">предложить</span>
       </div>
     </div>
     <div class="advantages slider">
@@ -145,7 +155,8 @@
           </div>
           <picture class="desktop-visible advantages__image">
             <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x"
+              type="image/webp">
             <img src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x"
               alt="image" />
           </picture>
@@ -160,7 +171,8 @@
           </div>
           <picture class="desktop-visible advantages__image">
             <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x"
+              type="image/webp">
             <img src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x"
               alt="image" />
           </picture>
@@ -174,11 +186,13 @@
             Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
           </div>
           <picture class="advantages__image">
+            <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x"
+              type="image/webp">
             <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x">
-            <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x">
+            <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x"
+              type="image/webp">
             <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
-            <source media="(min-width: 320px)" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x">
+            <source media="(min-width: 320px)" srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x" type="image/webp">
             <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@1x.png 1x, img/iphone-screen-mobile@2x.png 2x"
               alt="image" />
           </picture>
@@ -267,7 +281,7 @@
         </thead>
         <tbody>
           <tr>
-            <td class="plans__cell--first plans__header-left plans__td">
+            <td class="plans__cell-first plans__header-left plans__td">
               Розовый фильтр
             </td>
             <td class="plans__td">
@@ -298,7 +312,7 @@
             </td>
           </tr>
           <tr>
-            <td class="plans__td plans__cell--first plans__header-left">
+            <td class="plans__td plans__cell-first plans__header-left">
               Смайлики
             </td>
             <td class="plans__td">
@@ -327,7 +341,7 @@
             </td>
           </tr>
           <tr>
-            <td class="plans__td plans__cell--first plans__header-left plans__header-left--last">
+            <td class="plans__td plans__cell-first plans__header-left plans__header-left--last">
               Комментарии
             </td>
             <td class="plans__td">
@@ -369,52 +383,41 @@
         Остались вопросы?
         <br> Свяжитесь с нами!
       </div>
-      <div class="contact__items">
+      <div class="contacts__items">
         <div class="contacts__item contacts__item--call">
-          <div class="contacts__item--title">
+          <div class="contacts__item-title">
             Звоните:
           </div>
-          <div class="contacts__item--description">
+          <div class="contacts__item-description">
             +7 (812) 555-66-66
           </div>
         </div>
         <div class="contacts__item contacts__item--write">
-          <div class="contacts__item--title">
+          <div class="contacts__item-title">
             Пишите:
           </div>
-          <a href="mailto:webmaster@htmlacademy.ru" class="contacts__item--description contacts__item--description--mail">
+          <a href="mailto:webmaster@htmlacademy.ru" class="contacts__item-description contacts__item-description--mail">
             mail@htmlacademy.ru
           </a>
         </div>
         <div class="contacts__item contacts__item--guest">
-          <div class="contacts__item--title">
+          <div class="contacts__item-title">
             Приезжайте в гости:
           </div>
-          <div class="contacts__item--description">
+          <div class="contacts__item-description">
             ул. Большая
             <br>Конюшенная, 19/8
           </div>
         </div>
       </div>
-
-    </div>
-    <div class="map">
-      <svg class="map-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 61.905">
-        <use xlink:href="#bg-triangle-white-footer" />
-      </svg>
-      <picture class="map__picture">
-        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-        <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-        <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-        <source media="(min-width: 320px)" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-        <img class="map__image" src="img/bg-map-desktop@2x.png" alt="Map">
-      </picture>
-      <svg class="map__marker" width="35.983px" height="35.983px">
-        <use xlink:href="#icon-map-marker" />
-      </svg>
     </div>
   </main>
+  <div class="map">
+    <svg class="map-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 61.905">
+      <use xlink:href="#bg-triangle-white-footer" />
+    </svg>
+    <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/-/CGt9EPJV"></iframe>
+  </div>
 
   @@include('./_footer.html', { "cls": "footer--hidden" })
 

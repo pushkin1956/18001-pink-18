@@ -1,7 +1,7 @@
 .apps {
   background-color: #16202d;
   color: white;
-  width: 320px;
+  width: 100%;
   height: 271px;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,10 @@
 }
 
 .apps__download-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   width: 280px;
   height: 55px;
   font-family: "OpenSansBold", "Helvetica", sans-serif;
@@ -69,12 +73,13 @@
   .apps {
     background: transparent;
     position: absolute;
-    top: 604px;
+    top: 241px;
     left: 9px;
+    width: 320px;
   }
 
   .apps--closed {
-    top: calc(604px - 255px);
+    top: calc(604px - 365px);
   }
 
   .apps__download-button {
