@@ -113,7 +113,7 @@
 @media (min-width: @desktop-width) {
   .comment-wrap {
     width: @desktop-width;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .comment {
@@ -122,14 +122,17 @@
 
   .comment--short {
     width: 940px;
+    margin: 0 auto;
     min-height: 96px;
-    left: 111px;
-    top: 0;
     overflow: hidden;
-    margin-bottom: 0;
   }
 
   .comment-likes__text {
     align-items: baseline;
+  }
+
+  .comment-likes--short {
+    right: -1px;
+    top: 22px;
   }
 }
