@@ -5,20 +5,12 @@
   text-align: center;
   width: 320px;
   margin: 0 auto;
+}
 
-
-  &::before {
-    content: "";
-    left: 0;
-    top: 0;
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 50px 320px 0 0;
-    border-color: #ffffff transparent transparent transparent;
-  }
+.advantages__triangle {
+  position: absolute;
+  width: 1200px;
+  top: 0;
 }
 
 .advantages__item {
@@ -131,17 +123,18 @@
     justify-content: center;
     padding-bottom: 0;
     height: auto;
-    width: @desktop-width;
+    width: 100%;
     margin: 0 auto;
 
     &::before {
-      border-width: 85px @desktop-width 0 0;
+      display: none;
+      border-width: 85px 1200px 0 0;
     }
   }
 
   .advantages__wrapper {
     display: flex;
-    width: 97%;
+    width: 931px;
     justify-content: space-between;
     top: -100px;
     right: auto;

@@ -26,7 +26,7 @@
 
     /* Desktop */
 
-    @media ( min-width: 1200px) {
+    @media ( min-width: 960px) {
       HTML {
         /* Desktop layout */
         background-image: url("pic/pink-index-desktop.jpg");
@@ -94,8 +94,8 @@
           <br class="tablet-visible"> иначе!
         </div>
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+          <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
           <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x" type="image/webp">
           <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
           <source media="(min-width: 320px)" srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x" type="image/webp">
@@ -144,6 +144,9 @@
       </div>
     </div>
     <div class="advantages slider">
+      <svg width="960" height="94.074" class="advantages__triangle">
+        <use xlink:href="#bg-triangle-white" />
+      </svg>
       <div class="advantages__wrapper">
         <div class="advantages__item">
           <div class="advantages__title">
@@ -154,8 +157,8 @@
             Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
           </div>
           <picture class="desktop-visible advantages__image">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x"
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x"
               type="image/webp">
             <img src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x"
               alt="image" />
@@ -170,8 +173,8 @@
             Сделайте снимок и украстье его смайликом или текстовой подписью чтобы усилить эффект
           </div>
           <picture class="desktop-visible advantages__image">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x"
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x"
               type="image/webp">
             <img src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x"
               alt="image" />
@@ -186,9 +189,9 @@
             Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
           </div>
           <picture class="advantages__image">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x"
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x"
               type="image/webp">
-            <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
             <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x"
               type="image/webp">
             <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
@@ -200,22 +203,23 @@
       </div>
     </div>
     <div class="effect">
-      <div class="effect__diagramm-wrap">
-        <svg class="effect__diagramm">
-          <use xlink:href="#icon-timer" />
-        </svg>
-      </div>
-
-      <div class="effect__description">
-        <div class="effect__title">Эффект
-          <br> на 24 часа!</div>
-        <div class="effect__text">
-          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+      <div class="effect__wrap">
+        <div class="effect__diagramm-wrap">
+          <svg class="effect__diagramm">
+            <use xlink:href="#icon-timer" />
+          </svg>
         </div>
 
-        <a class="effect__more" href="#">Узнать больше об исследовании</a>
-
+        <div class="effect__description">
+          <div class="effect__title">Эффект
+            <br> на 24 часа!</div>
+          <div class="effect__text">
+            Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+          </div>
+          <a class="effect__more" href="#">Узнать больше об исследовании</a>
+        </div>
       </div>
+
     </div>
     <div class="reviews slider">
       <div class="reviews__slider-wrap">
