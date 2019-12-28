@@ -5,12 +5,17 @@
 
 @media (min-width: @tablet-width) {
   .effect {
-    display: flex;
+    display: block;
     padding-top: 60px;
-    margin: 0 auto;
     margin-bottom: 96px;
     fill: @almostGrey;
+    width: 100%;
+  }
+
+  .effect__wrap {
     width: @tablet-width;
+    display: flex;
+    margin: 0 auto;
   }
 
   .effect__diagramm {
@@ -90,7 +95,6 @@
   }
 
   .effect__wrap {
-    display: flex;
     width: @desktop-width;
     margin: 0 auto;
   }

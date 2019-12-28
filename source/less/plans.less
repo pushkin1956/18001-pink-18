@@ -2,11 +2,10 @@
   background-color: @light-grey;
   color: @dark;
   padding-top: 110px;
-  position: relative;
-  overflow-x: hidden;
-  min-height: 491px;
-  width: @mobile-width;
+  min-height: 381px;
+  width: 100%;
   margin: 0 auto;
+  position: relative;
 
   thead {
     background-color: @dark;
@@ -20,6 +19,14 @@
   .plans__no {
     fill: @orange-red;
   }
+}
+
+.plans__wrap {
+  width: @mobile-width;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 381px;
 }
 
 .plans__empty {
@@ -61,8 +68,11 @@
 }
 
 .plans__triangle {
+  width: 100%;
+  min-width: @desktop-width;
   position: absolute;
-  top: -50px;
+  height: 40px;
+  top: -10px;
 }
 
 .plans__table-head {
@@ -135,12 +145,18 @@
 
 @media (min-width: @tablet-width) {
   .plans {
-    padding-left: 22px;
-    padding-right: 20px;
     padding-bottom: 68px;
     padding-top: 90px;
     min-height: 0;
+  }
+
+  .plans__wrap {
     width: @tablet-width;
+    overflow-y: hidden;
+    margin: 0 auto;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .plans__empty {
@@ -159,7 +175,7 @@
   }
 
   .plans__triangle {
-    top: -43px;
+    top: -3px;
     left: 0;
   }
 
@@ -238,11 +254,18 @@
     margin: 0 auto;
     font-size: 18px;
     line-height: 30px;
-    display: flex;
-    justify-content: center;
     padding: 0;
     padding-top: 166px;
     min-height: 546px;
+  }
+
+  .plans__wrap {
+    width: @desktop-width;
+    padding-left: 8px;
+  }
+
+  .plans__triangle {
+    height: 80px;
   }
 
   .plans__empty {

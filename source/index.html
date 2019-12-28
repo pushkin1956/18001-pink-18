@@ -6,38 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("pic/pink-index-mobile-closed.jpg");
-    }
-
-    /* Tablet */
-
-    @media ( min-width: 660px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("pic/pink-index-tablet-closed.jpg");
-      }
-    }
-
-    /* Desktop */
-
-    @media ( min-width: 960px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("pic/pink-index-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="/pic/styles.css" rel="stylesheet">
+  <link rel="icon" href="./img/favicon.ico">
   <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin/>
   <link rel="preload" href="./fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin/>
   <link rel="preload" href="./fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin />
-  <script src="/pic/script.js"></script>
 </head>
 
 <body>
@@ -256,130 +228,132 @@
       <svg width="1200" height="94.074" class="plans__triangle">
         <use xlink:href="#bg-triangle-white" />
       </svg>
-      <table class="plans__table">
-        <thead>
-          <tr>
-            <th class="plans__th plans__header-left plans__empty"></th>
-            <th class="plans__th plans__header-base">
-              <span class="plans__header-text">База</span>
-              <br>
-              <span class="plans__header-price">1,99 USD</span>
-            </th>
-            <th class="plans__th plans__hit plans__header-standard">
-              <svg class="plans__hit-image mobile-visible desktop-visible" width="74" height="73">
-                <use xlink:href="#bg-hit" />
-              </svg>
-              <svg class="plans__hit-image tablet-visible" width="74" height="73">
-                <use xlink:href="#bg-hit-tablet" />
-              </svg>
-              <span class="plans__header-text">Стандарт</span>
-              <br>
-              <span class="plans__header-price">3,99 USD</span>
-            </th>
-            <th class="plans__th plans__header-unlim">
-              <span class="plans__header-text">Анлим</span>
-              <br>
-              <span class="plans__header-price">9,99 USD</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="plans__cell-first plans__header-left plans__td">
-              Розовый фильтр
-            </td>
-            <td class="plans__td">
-              <div>
+      <div class="plans__wrap">
+        <table class="plans__table">
+          <thead>
+            <tr>
+              <th class="plans__th plans__header-left plans__empty"></th>
+              <th class="plans__th plans__header-base">
+                <span class="plans__header-text">База</span>
+                <br>
+                <span class="plans__header-price">1,99 USD</span>
+              </th>
+              <th class="plans__th plans__hit plans__header-standard">
+                <svg class="plans__hit-image mobile-visible desktop-visible" width="74" height="73">
+                  <use xlink:href="#bg-hit" />
+                </svg>
+                <svg class="plans__hit-image tablet-visible" width="74" height="73">
+                  <use xlink:href="#bg-hit-tablet" />
+                </svg>
+                <span class="plans__header-text">Стандарт</span>
+                <br>
+                <span class="plans__header-price">3,99 USD</span>
+              </th>
+              <th class="plans__th plans__header-unlim">
+                <span class="plans__header-text">Анлим</span>
+                <br>
+                <span class="plans__header-price">9,99 USD</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="plans__cell-first plans__header-left plans__td">
+                Розовый фильтр
+              </td>
+              <td class="plans__td">
+                <div>
+                  <div class="plans__cell">
+                    <span class="plans__cell-caption">Розовый фильтр</span>
+                    <svg width="31" height="21">
+                      <use xlink:href="#icon-yes" class="plans__yes" />
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td class="plans__td">
                 <div class="plans__cell">
                   <span class="plans__cell-caption">Розовый фильтр</span>
                   <svg width="31" height="21">
                     <use xlink:href="#icon-yes" class="plans__yes" />
                   </svg>
                 </div>
-              </div>
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Розовый фильтр</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-yes" class="plans__yes" />
-                </svg>
-              </div>
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Розовый фильтр</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-yes" class="plans__yes" />
-                </svg>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="plans__td plans__cell-first plans__header-left">
-              Смайлики
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Смайлики</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-no" class="plans__no" />
-                </svg>
-              </div>
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Смайлики</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-yes" class="plans__yes" />
-                </svg>
-              </div>
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Смайлики</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-yes" class="plans__yes" />
-                </svg>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="plans__td plans__cell-first plans__header-left plans__header-left--last">
-              Комментарии
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Комментарии</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-no" class="plans__no" />
-                </svg>
-              </div>
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Комментарии</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-no" class="plans__no" />
-                </svg>
-              </div>
-            </td>
-            <td class="plans__td">
-              <div class="plans__cell">
-                <span class="plans__cell-caption">Комментарии</span>
-                <svg width="31" height="21">
-                  <use xlink:href="#icon-yes" class="plans__yes" />
-                </svg>
-              </div>
-            </td>
-          </tr>
+              </td>
+              <td class="plans__td">
+                <div class="plans__cell">
+                  <span class="plans__cell-caption">Розовый фильтр</span>
+                  <svg width="31" height="21">
+                    <use xlink:href="#icon-yes" class="plans__yes" />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="plans__td plans__cell-first plans__header-left">
+                Смайлики
+              </td>
+              <td class="plans__td">
+                <div class="plans__cell">
+                  <span class="plans__cell-caption">Смайлики</span>
+                  <svg width="31" height="21">
+                    <use xlink:href="#icon-no" class="plans__no" />
+                  </svg>
+                </div>
+              </td>
+              <td class="plans__td">
+                <div class="plans__cell">
+                  <span class="plans__cell-caption">Смайлики</span>
+                  <svg width="31" height="21">
+                    <use xlink:href="#icon-yes" class="plans__yes" />
+                  </svg>
+                </div>
+              </td>
+              <td class="plans__td">
+                <div class="plans__cell">
+                  <span class="plans__cell-caption">Смайлики</span>
+                  <svg width="31" height="21">
+                    <use xlink:href="#icon-yes" class="plans__yes" />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="plans__td plans__cell-first plans__header-left plans__header-left--last">
+                Комментарии
+              </td>
+              <td class="plans__td">
+                <div class="plans__cell">
+                  <span class="plans__cell-caption">Комментарии</span>
+                  <svg width="31" height="21">
+                    <use xlink:href="#icon-no" class="plans__no" />
+                  </svg>
+                </div>
+              </td>
+              <td class="plans__td">
+                <div class="plans__cell">
+                  <span class="plans__cell-caption">Комментарии</span>
+                  <svg width="31" height="21">
+                    <use xlink:href="#icon-no" class="plans__no" />
+                  </svg>
+                </div>
+              </td>
+              <td class="plans__td">
+                <div class="plans__cell">
+                  <span class="plans__cell-caption">Комментарии</span>
+                  <svg width="31" height="21">
+                    <use xlink:href="#icon-yes" class="plans__yes" />
+                  </svg>
+                </div>
+              </td>
+            </tr>
 
-        </tbody>
-      </table>
-      <div class="plans__slider-toggles slider-toggles">
-        <div class="slider__toggle"></div>
-        <div class="slider__toggle slider__toggle--active"></div>
-        <div class="slider__toggle"></div>
+          </tbody>
+        </table>
+        <div class="plans__slider-toggles slider-toggles">
+          <div class="slider__toggle"></div>
+          <div class="slider__toggle slider__toggle--active"></div>
+          <div class="slider__toggle"></div>
+        </div>
       </div>
     </div>
     <div class="contacts">
@@ -423,7 +397,7 @@
     <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/-/CGt9EPJV"></iframe>
   </div>
 
-  @@include('./_footer.html', { "cls": "footer--hidden" })
+  @@include('./partials/_footer.html', { "cls": "footer--hidden" })
 
   <script src="./js/picturefill.js"></script>
   <script src="./js/ofi.js"></script>
