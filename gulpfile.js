@@ -20,12 +20,12 @@ var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-html-minifier');
 
 gulp.task('clean', function () {
-  return del('public/');
+  return del('build/');
 });
 
 gulp.task("jsmin", function () {
   return gulp.src('source/js/*.js')
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 
@@ -36,19 +36,15 @@ gulp.task('js', function () {
 
 gulp.task("files", function () {
   gulp.src("source/favicon.ico")
-    .pipe(gulp.dest("build"))
-
+    .pipe(gulp.dest("build/img"))
 
   gulp.src("source/img/*.png")
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
 
   gulp.src("source/img/*.jpg")
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest("build/img"))
-
-  gulp.src("source/pic/*.*")
-    .pipe(gulp.dest("build/pic"))
 
   gulp.src("source/fonts/*.*")
     .pipe(gulp.dest("build/fonts"))

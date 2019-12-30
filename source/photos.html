@@ -5,37 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="./css/style.css">
-
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("pic/pink-photo-mobile-closed.jpg");
-    }
-
-    /* Tablet */
-
-    @media ( min-width: 660px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("pic/pink-photo-tablet-closed.jpg");
-      }
-    }
-
-    /* Desktop */
-
-    @media ( min-width: 1200px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("pic/pink-photo-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="/pic/styles.css" rel="stylesheet">
-  <script src="/pic/script.js"></script>
+  @@include('./partials/_head.html')
 </head>
 
 <body>
@@ -101,8 +71,8 @@
     </div>
     <div class="panorama">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x" type="image/webp">
-        <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+        <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
         <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x" type="image/webp">
         <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
         <source media="(min-width: 320px)" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x" type="image/webp">
@@ -117,7 +87,7 @@
         <span class="comment__time">(5 минут назад)</span>
         <div class="comment__text">
           Прыгать или нет? Напишите в
-          <br class="mobile-visible"> комментарии свой совет и
+          <br class="mobile-visible"> коментарии свой совет и
           <br class="mobile-visible"> смотрите прямую
           <br class="tablet-visible"> трансляцию в
           <br class="mobile-visible"> перископе, задавайте свои вопросы!
@@ -139,8 +109,8 @@
       <div class="photos__item">
         <a href="img/photo-car-desktop@2x.jpg">
           <picture class="photos__image">
-            <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
             <source media="(min-width: 320px)" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@1x.webp 2x" type="image/webp">
@@ -173,8 +143,8 @@
       <div class="photos__item">
         <a href="img/photo-drumset-desktop@2x.jpg">
           <picture class="photos__image">
-            <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
             <source media="(min-width: 320px)" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x" type="image/webp">
@@ -205,8 +175,8 @@
       <div class="photos__item">
         <a href="img/photo-window-desktop@2x.jpg">
           <picture class="photos__image">
-            <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
             <source media="(min-width: 320px)" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x" type="image/webp">
@@ -237,8 +207,8 @@
       <div class="photos__item">
         <a href="img/photo-fair-desktop@2x.jpg">
           <picture class="photos__image">
-            <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
             <source media="(min-width: 320px)" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x" type="image/webp">
@@ -268,8 +238,8 @@
       <div class="photos__item">
         <a href="img/photo-pov-desktop@2x.jpg">
           <picture class="photos__image">
-            <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
             <source media="(min-width: 320px)" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x" type="image/webp">
@@ -300,8 +270,8 @@
       <div class="photos__item">
         <a href="img/photo-wing-desktop@2x.jpg">
           <picture class="photos__image">
-            <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x" type="image/webp">
-            <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+            <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
             <source media="(min-width: 320px)" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x" type="image/webp">
@@ -339,8 +309,8 @@
     </div>
     <div class="upload-photo">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x" type="image/webp">
-        <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+        <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
         <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x" type="image/webp">
         <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
         <source media="(min-width: 320px)" class="upload-photo__image" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x"
@@ -382,7 +352,7 @@
     </div>
   </main>
 
-  @@include('./_footer.html')
+  @@include('./partials/_footer.html', {"cls": ""})
 
   <script src="./js/picturefill.js"></script>
   <script src="./js/app.js"></script>
