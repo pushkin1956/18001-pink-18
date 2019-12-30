@@ -25,7 +25,7 @@ gulp.task('clean', function () {
 
 gulp.task("jsmin", function () {
   return gulp.src('source/js/*.js')
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 
@@ -37,7 +37,6 @@ gulp.task('js', function () {
 gulp.task("files", function () {
   gulp.src("source/favicon.ico")
     .pipe(gulp.dest("build/img"))
-
 
   gulp.src("source/img/*.png")
     // .pipe(imagemin())
