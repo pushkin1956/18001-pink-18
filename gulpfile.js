@@ -112,5 +112,5 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task("start", gulp.series("clean", "files", "css", "html", "js", "server"));
+gulp.task("start", gulp.series("clean", "files", "webp", "css", "html", "js", "server"));
 gulp.task("build", gulp.series("clean", "files", "webp", "css", "jsmin", "html"));
